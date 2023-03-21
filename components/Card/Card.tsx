@@ -1,10 +1,11 @@
 import { styled } from "@mui/system";
-import { Card as MuiCard, CardContent, CardMedia, Typography } from "@mui/material";
+import {
+  Card as MuiCard,
+  CardContent,
+  CardMedia,
+  Typography,
+} from "@mui/material";
 import React from "react";
-
-const Card = styled(MuiCard)({
-  maxWidth: 345,
-});
 
 const CardImage = styled(CardMedia)({
   height: 140,
@@ -25,9 +26,9 @@ const CardDescription = styled(Typography)({
   fontSize: "1rem",
 });
 
-const CardComponent = ({ image, title, description }) => {
+const Card = ({ image, title, description }) => {
   return (
-    <Card>
+    <MuiCard>
       <CardMedia component="img" image={image} alt={title} />
       <CardContentWrapper>
         <CardTitle gutterBottom variant="h5">
@@ -37,9 +38,8 @@ const CardComponent = ({ image, title, description }) => {
           {description}
         </CardDescription>
       </CardContentWrapper>
-    </Card>
+    </MuiCard>
   );
 };
 
-
-export default CardComponent;
+export default Card;
