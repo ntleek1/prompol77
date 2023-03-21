@@ -6,9 +6,17 @@ const Navbar = () => {
   return (
     <Box component="section" id="navbar" className={styles.navbar}>
       <Container className={styles.container}>
-        <Box>Logo</Box>
-        <Box>Menu</Box>
-        <Box>Buttons</Box>
+        <Box className={styles.logo}>Logo</Box>
+        <Box className={styles.categories}>
+          <a href="#">Виды полов</a>
+          <a href="#">Наши работы</a>
+          <a href="#">Гарантии</a>
+          <a href="#">Контакты</a>
+        </Box>
+        <Box className={styles.buttons}>
+          <button className={styles.button1}>Кнопка 1</button>
+          <button className={styles.button2}>Кнопка 2</button>
+        </Box>
       </Container>
     </Box>
   );
