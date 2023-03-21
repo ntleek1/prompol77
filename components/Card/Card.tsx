@@ -41,4 +41,5 @@ const CardComponent = ({ image, title, description }) => {
   );
 };
 
+
 export default CardComponent;
