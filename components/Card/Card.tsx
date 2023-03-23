@@ -17,8 +17,7 @@ const Card = ({
       sx={{
         width: "100%",
         borderRadius: 4,
-        p: 2,
-        mb: 3,
+
         backgroundColor: "#EEEEEE",
         position: "relative",
         transition: "transform 0.2s, background-color 0.2s", // добавлено свойство transition
@@ -34,10 +33,11 @@ const Card = ({
         fullWidth
         sx={{
           position: "absolute",
-          bottom: "150px",
+          bottom: "140px",
           width: "50%",
           right: 25,
           gap: "5px",
+          boxShadow: "none",
         }}
       >
         <Button
@@ -48,10 +48,9 @@ const Card = ({
             borderWidth: "1px",
             borderStyle: "solid",
             color: "white",
-            boxShadow: "none",
           }}
         >
-          Кнопка 1
+          Подробнее
         </Button>
         <Button
           onClick={onButtonClick2}
@@ -61,10 +60,9 @@ const Card = ({
             borderWidth: "1px",
             borderStyle: "solid",
             color: "white",
-            boxShadow: "none",
           }}
         >
-          Кнопка 2
+          Стоимость
         </Button>
       </ButtonGroup>
 

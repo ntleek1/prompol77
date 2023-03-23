@@ -2,6 +2,8 @@ import Head from "next/head";
 import Topbar from "@/components/Header/Topbar";
 import Navbar from "@/components/Header/Navbar";
 import Hero from "@/components/Hero/Hero";
+import Service from "@/components/Service/Service";
+
 
 export default function Home() {
   return (
@@ -16,7 +18,11 @@ export default function Home() {
         <Topbar />
         <Navbar />
         <Hero />
+        <Service />
+
+
       </main>
+      
     </>
   );
 }
