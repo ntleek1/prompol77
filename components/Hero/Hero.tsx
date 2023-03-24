@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Container, Typography, Button } from "@mui/material";
 import useHeroStyles from "./styles";
 import ButtonGroup from "@mui/material/ButtonGroup";
+import Image from "next/image";
 
 const Hero = () => {
   const { heroCSS } = useHeroStyles();
@@ -9,7 +10,7 @@ const Hero = () => {
   const IconWithText = ({ image, text }) => {
     return (
       <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-        <img src={image} alt="Icon" style={{ width: "24px", height: "24px" }} />
+        <Image src={image} alt="Icon" width="24" height="24" />
         <Box>{text}</Box>
       </Box>
     );
@@ -30,7 +31,7 @@ const Hero = () => {
       sx={{
         ...heroCSS,
         backgroundImage: `url(/pictures.png)`,
-        backgroundSize: "100% 100%",
+        backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >

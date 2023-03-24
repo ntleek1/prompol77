@@ -1,14 +1,14 @@
-import { SxProps, useTheme, } from "@mui/material/styles";
+import { SxProps, useTheme } from "@mui/material/styles";
 function useHeroStyles() {
   const theme = useTheme();
 
-  
   const heroCSS: SxProps = {
     display: "flex",
     flexDirection: "column",
     gap: theme.spacing(1),
     p: theme.spacing(4),
-    height: "100vh",
+    height: "calc(100vh - 80px - 36px)",
+    boxSizing: "border-box",
     backgroundColor: theme.palette.grey[900],
     textAlign: "center",
     fontFamily: "Montserrat, sans-serif",
@@ -33,17 +33,14 @@ function useHeroStyles() {
       left: 200, // Расстояние от левого края контейнера (при необходимости измените значение)
     },
     buttonPrimary: {
-      position: 'absolute',
+      position: "absolute",
       top: 600, // Расстояние от верхнего края контейнера (измените, если требуется)
       left: 0, // Расстояние от левого края контейнера (измените, если требуется)
     },
     buttonSecondary: {
-      
       top: 600, // Расстояние от верхнего края контейнера (измените, если требуется)
-      left: '1000px', // Расстояние от левого края контейнера (измените, если требуется)
+      left: "1000px", // Расстояние от левого края контейнера (измените, если требуется)
     },
-
-    
   };
 
   return {
