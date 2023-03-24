@@ -1,37 +1,50 @@
-import { styled } from "@mui/material/styles";
+import { SxProps, useTheme } from "@mui/material/styles";
 
-export const ServiceFlex = styled("div")({
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-between",
-  backgroundColor: "#EEEEEE",
-});
+function useServiceStyles() {
+  const theme = useTheme();
 
-export const ServiceGrid = styled("div")({
-  position: "relative",
-  display: "grid",
-  gridTemplateColumns: "1fr 1fr",
-  gap: "2rem",
-  padding: "1rem",
-  backgroundColor: "#EEEEEE",
+  const CSSService: SxProps = {
+    backgroundColor: theme.palette.grey[200],
+  };
 
-  "&::before": {
-    content: '""',
-    position: "absolute",
-    top: "0",
-    left: "5px",
-    width: "6px",
-    height: "100%",
-    backgroundColor: "red",
-  },
+  const CSSServiceContainer: SxProps = {
+    display: "flex",
+    flexDirection: "column",
+    gap: theme.spacing(4),
+    py: theme.spacing(8),
+  };
 
-  "&::after": {
-    content: '""',
-    position: "absolute",
-    top: "0",
-    right: "3px", // изменено свойство left на right
-    width: "5px",
-    height: "100%",
-    backgroundColor: "blue",
-  },
-});
+  const CSSGridWrapper: SxProps = {
+    position: "relative",
+
+    "&::before": {
+      content: '""',
+      position: "absolute",
+      top: "0",
+      left: "-2rem",
+      width: "6px",
+      height: "100%",
+      backgroundColor: theme.palette.error.main,
+      borderRadius: theme.shape.borderRadius,
+    },
+
+    "&::after": {
+      content: '""',
+      position: "absolute",
+      top: "0",
+      right: "-2rem",
+      width: "6px",
+      height: "100%",
+      backgroundColor: theme.palette.info.main,
+      borderRadius: theme.shape.borderRadius,
+    },
+  };
+
+  return {
+    CSSService,
+    CSSServiceContainer,
+    CSSGridWrapper,
+  };
+}
+
+export default useServiceStyles;

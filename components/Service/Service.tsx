@@ -1,202 +1,36 @@
 import React from "react";
-import CustomCard from "@/components/Card/Card";
-import { ServiceGrid, ServiceFlex } from "./styles";
-import { Container, Grid, Typography } from "@mui/material";
-import { Box } from "@mui/material";
-
-const handleButtonClick1 = () => {
-  console.log("Кнопка 1 нажата");
-};
-
-const handleButtonClick2 = () => {
-  console.log("Кнопка 2 нажата");
-};
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Unstable_Grid2";
+import Typography from "@mui/material/Typography";
+import Card from "@/components/Card/Card";
+import useService from "@/hooks/useService";
+import useServiceStyles from "./styles";
 
 const Service = () => {
+  const { title, subtitle, data } = useService();
+  const { CSSService, CSSServiceContainer, CSSGridWrapper } =
+    useServiceStyles();
+
   return (
-    <Box id="service" sx={{ py: 8, backgroundColor: "#EEEEEE" }}>
-      <Container maxWidth="lg">
-        <Typography variant="h2" sx={{ mb: 2, ml: 2 }}>
-          Промышленные полы
-        </Typography>
-        <Typography variant="body1" sx={{ mb: 4, ml: 2 }}>
-          Наша компания специализируется на производстве высококачественных
-          промышленных полов, мы используем только качественные материалы от
-          проверенных производителей. Предлагаем ознакомиться со списком видов
-          полов и их назначения.
-        </Typography>
-        <ServiceGrid sx={{ ml: -2, mr: -2 }}>
-          <Grid item xs={12} sm={6} sx={{ p: 2 }}>
-            <CustomCard
-              title={
-                <a
-                  href="https://example.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Заголовок карточки 1
-                </a>
-              }
-              description="Наша компания специализируется на производстве высококачественных промышленных полов, мы используем только качественные материалы от проверенных производителей."
-              imageSrc="https://www.polimer-s-group.ru/assets/images/resources/4/5.jpg"
-              onButtonClick1={handleButtonClick1}
-              onButtonClick2={handleButtonClick2}
-            />
+    <Box id="service" sx={CSSService}>
+      <Container maxWidth="lg" sx={CSSServiceContainer}>
+        <Typography variant="h2">{title}</Typography>
+        <Typography variant="body1">{subtitle}</Typography>
+        <Box sx={CSSGridWrapper}>
+          <Grid container spacing={2}>
+            {data.map(({ title, description, link, imageSrc }, index) => (
+              <Grid xs={12} sm={6} gap={1} key={index}>
+                <Card
+                  title={title}
+                  description={description}
+                  link={link}
+                  imageSrc={imageSrc}
+                />
+              </Grid>
+            ))}
           </Grid>
-          <Grid item xs={12} sm={6} sx={{ p: 2 }}>
-            <CustomCard
-              title={
-                <a
-                  href="https://example.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Заголовок карточки 1
-                </a>
-              }
-              description="Наша компания специализируется на производстве высококачественных промышленных полов, мы используем только качественные материалы от проверенных производителей."
-              imageSrc="https://www.polimer-s-group.ru/assets/images/resources/4/5.jpg"
-              onButtonClick1={handleButtonClick1}
-              onButtonClick2={handleButtonClick2}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} sx={{ p: 2 }}>
-            <CustomCard
-              title={
-                <a
-                  href="https://example.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Заголовок карточки 1
-                </a>
-              }
-              description="Наша компания специализируется на производстве высококачественных промышленных полов, мы используем только качественные материалы от проверенных производителей."
-              imageSrc="https://www.polimer-s-group.ru/assets/images/resources/4/5.jpg"
-              onButtonClick1={handleButtonClick1}
-              onButtonClick2={handleButtonClick2}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} sx={{ p: 2 }}>
-            <CustomCard
-              title={
-                <a
-                  href="https://example.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Заголовок карточки 1
-                </a>
-              }
-              description="Наша компания специализируется на производстве высококачественных промышленных полов, мы используем только качественные материалы от проверенных производителей."
-              imageSrc="https://www.polimer-s-group.ru/assets/images/resources/4/5.jpg"
-              onButtonClick1={handleButtonClick1}
-              onButtonClick2={handleButtonClick2}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} sx={{ p: 2 }}>
-            <CustomCard
-              title={
-                <a
-                  href="https://example.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Заголовок карточки 1
-                </a>
-              }
-              description="Наша компания специализируется на производстве высококачественных промышленных полов, мы используем только качественные материалы от проверенных производителей."
-              imageSrc="https://www.polimer-s-group.ru/assets/images/resources/4/5.jpg"
-              onButtonClick1={handleButtonClick1}
-              onButtonClick2={handleButtonClick2}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} sx={{ p: 2 }}>
-            <CustomCard
-              title={
-                <a
-                  href="https://example.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Заголовок карточки 1
-                </a>
-              }
-              description="Наша компания специализируется на производстве высококачественных промышленных полов, мы используем только качественные материалы от проверенных производителей."
-              imageSrc="https://www.polimer-s-group.ru/assets/images/resources/4/5.jpg"
-              onButtonClick1={handleButtonClick1}
-              onButtonClick2={handleButtonClick2}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} sx={{ p: 2 }}>
-            <CustomCard
-              title={
-                <a
-                  href="https://example.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Заголовок карточки 1
-                </a>
-              }
-              description="Наша компания специализируется на производстве высококачественных промышленных полов, мы используем только качественные материалы от проверенных производителей."
-              imageSrc="https://www.polimer-s-group.ru/assets/images/resources/4/5.jpg"
-              onButtonClick1={handleButtonClick1}
-              onButtonClick2={handleButtonClick2}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} sx={{ p: 2 }}>
-            <CustomCard
-              title={
-                <a
-                  href="https://example.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Заголовок карточки 1
-                </a>
-              }
-              description="Наша компания специализируется на производстве высококачественных промышленных полов, мы используем только качественные материалы от проверенных производителей."
-              imageSrc="https://www.polimer-s-group.ru/assets/images/resources/4/5.jpg"
-              onButtonClick1={handleButtonClick1}
-              onButtonClick2={handleButtonClick2}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} sx={{ p: 2 }}>
-            <CustomCard
-              title={
-                <a
-                  href="https://example.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Заголовок карточки 1
-                </a>
-              }
-              description="Наша компания специализируется на производстве высококачественных промышленных полов, мы используем только качественные материалы от проверенных производителей."
-              imageSrc="https://www.polimer-s-group.ru/assets/images/resources/4/5.jpg"
-              onButtonClick1={handleButtonClick1}
-              onButtonClick2={handleButtonClick2}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} sx={{ p: 2 }}>
-            <CustomCard
-              title={
-                <a
-                  href="https://example.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Заголовок карточки 1
-                </a>
-              }
-              description="Наша компания специализируется на производстве высококачественных промышленных полов, мы используем только качественные материалы от проверенных производителей."
-              imageSrc="https://www.polimer-s-group.ru/assets/images/resources/4/5.jpg"
-              onButtonClick1={handleButtonClick1}
-              onButtonClick2={handleButtonClick2}
-            />
-          </Grid>
-        </ServiceGrid>
+        </Box>
       </Container>
     </Box>
   );
