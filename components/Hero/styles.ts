@@ -1,7 +1,8 @@
-import { SxProps, useTheme, createStyles } from "@mui/material/styles";
+import { SxProps, useTheme, } from "@mui/material/styles";
 function useHeroStyles() {
   const theme = useTheme();
 
+  
   const heroCSS: SxProps = {
     display: "flex",
     flexDirection: "column",
@@ -41,6 +42,8 @@ function useHeroStyles() {
       top: 600, // Расстояние от верхнего края контейнера (измените, если требуется)
       left: '1000px', // Расстояние от левого края контейнера (измените, если требуется)
     },
+
+    
   };
 
   return {

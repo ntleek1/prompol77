@@ -11,7 +11,7 @@ const Navbar = () => {
           <a href="#">Виды полов</a>
           <a href="#">Наши работы</a>
           <a href="#">Гарантии</a>
-          <a href="#">Контакты</a>
+          <a href="#">Контакт</a>
         </Box>
         <Box className={styles.buttons}>
           <button className={styles.button1}>Кнопка 1</button>
