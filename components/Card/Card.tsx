@@ -1,84 +1,49 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import CardMedia from "@mui/material/CardMedia";
+import MuiCard from "@mui/material/Card";
+import MuiCardMedia from "@mui/material/CardMedia";
+import MuiCardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
+import Link from "@mui/material/Link";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Typography from "@mui/material/Typography";
+import useCardStyles from "./styles";
 
-const Card = ({
+interface CardProps {
+  title: string;
+  description: string;
+  imageSrc: string;
+  link: string;
+}
+
+const Card: React.FC<CardProps> = ({
   title,
   description,
+  link,
   imageSrc,
-  onButtonClick1,
-  onButtonClick2,
-}) => {
+}): React.ReactElement => {
+  const { CSSCard, CSSContent, CSSButtonGroup } = useCardStyles();
+
   return (
-    <Box
-      sx={{
-        width: "100%",
-        borderRadius: 4,
+    <MuiCard sx={CSSCard}>
+      <Box position="relative">
+        <MuiCardMedia component="img" image={imageSrc} alt={title} />
+        <ButtonGroup variant="contained" sx={CSSButtonGroup}>
+          <Button LinkComponent={Link} href={link}>
+            Подробнее
+          </Button>
+        </ButtonGroup>
+      </Box>
 
-        backgroundColor: "#EEEEEE",
-        position: "relative",
-        transition: "transform 0.2s, background-color 0.2s", // добавлено свойство transition
-        "&:hover": {
-          transform: "scale(1.05)", // добавлено свойство transform
-          backgroundColor: "#FFFFFF", // изменено свойство backgroundColor
-          boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
-        },
-      }}
-    >
-      <ButtonGroup
-        variant="contained"
-        fullWidth
-        sx={{
-          position: "absolute",
-          bottom: "140px",
-          width: "50%",
-          right: 25,
-          gap: "5px",
-          boxShadow: "none",
-        }}
-      >
-        <Button
-          onClick={onButtonClick1}
-          sx={{
-            backgroundColor: "transparent",
-            borderColor: "white",
-            borderWidth: "1px",
-            borderStyle: "solid",
-            color: "white",
-          }}
-        >
-          Подробнее
-        </Button>
-        <Button
-          onClick={onButtonClick2}
-          sx={{
-            backgroundColor: "transparent",
-            borderColor: "white",
-            borderWidth: "1px",
-            borderStyle: "solid",
-            color: "white",
-          }}
-        >
-          Стоимость
-        </Button>
-      </ButtonGroup>
-
-      <CardMedia
-        component="img"
-        image={imageSrc}
-        alt="card"
-        sx={{ borderRadius: 1 }}
-      />
-      <Typography variant="h5" component="div" gutterBottom sx={{ mt: 2 }}>
-        {title}
-      </Typography>
-      <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-        {description}
-      </Typography>
-    </Box>
+      <MuiCardContent sx={CSSContent}>
+        <Typography variant="h5" component="h5" gutterBottom>
+          {title}
+        </Typography>
+        <Typography variant="body2" component="p" color="text.secondary">
+          {description}
+        </Typography>
+      </MuiCardContent>
+    </MuiCard>
   );
 };
 
