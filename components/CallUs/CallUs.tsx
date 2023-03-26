@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Container, Typography, Button } from "@mui/material";
+import EmailIcon from "@mui/icons-material/Email";
 import useCallUsStyles from "./styles";
 
 const CallUs = () => {
@@ -27,9 +28,11 @@ const CallUs = () => {
               помещения.
             </Typography>
 
-            <Button variant="contained">Оставить заявку</Button>
+            <Button variant="contained" startIcon={<EmailIcon />}>
+              Оставить заявку
+            </Button>
 
-            <Box sx={CallUsPhonesCSS}>
+            <Box sx={CallUsPhonesCSS} alignSelf="end">
               <Box>
                 <Typography variant="h4" component="p">
                   +7 (495) 664-34-68 <br /> +7 (495) 664-34-68
