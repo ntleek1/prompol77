@@ -1,45 +1,43 @@
 import React from "react";
 import { Box, Container, Typography, Button } from "@mui/material";
-import { CallUsCSS } from "./styles";
+import useCallUsStyles from "./styles";
 
 const CallUs = () => {
+  const { CallUsCSS, CallUsHeaderCSS, CallUsPhonesCSS } = useCallUsStyles();
+
   return (
-    <Box
-      component="section"
-      id="BannerBox"
-      sx={{
-        ...CallUsCSS,
-        backgroundImage: `url(/banner.png)`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <Box component="section" id="BannerBox" sx={CallUsCSS}>
       <Container>
-        <Box sx={{ position: "absolute", top: 350, right: 200 }}>
-          <img src="/phone.png" alt="Your Image" />
-          <Typography variant="h3" sx={{ mt: 0 }}>
-            +7 (495) 664-34-68 <br /> +7 (495) 664-34-68
-          </Typography>
+        <Box display="flex" flexDirection="row" gap={2}>
+          <Box flex={1}>
+            <Typography variant="h1" component="p" sx={CallUsHeaderCSS}>
+              Получите бесплатную <br /> консультацию
+            </Typography>
+          </Box>
+          <Box
+            flex={1}
+            display="flex"
+            flexDirection="column"
+            gap={4}
+            alignItems="baseline"
+          >
+            <Typography variant="h6" align="left">
+              Консультация по выбору полов - бесплатно! <br /> Обращайтесь к нам
+              за помощью в выборе <br /> наилучшего решения для вашего
+              помещения.
+            </Typography>
+
+            <Button variant="contained">Оставить заявку</Button>
+
+            <Box sx={CallUsPhonesCSS}>
+              <Box>
+                <Typography variant="h4" component="p">
+                  +7 (495) 664-34-68 <br /> +7 (495) 664-34-68
+                </Typography>
+              </Box>
+            </Box>
+          </Box>
         </Box>
-        <Typography variant="h1" sx={{ mt: 10 }}>
-          Получите бесплатную <br /> консультацию
-        </Typography>
-        <Typography variant="h2" sx={{ mt: 4 }}>
-          Консультация по выбору полов - бесплатно! <br /> Обращайтесь к нам за
-          помощью в выборе <br /> наилучшего решения для вашего помещения.
-        </Typography>
-        <Button
-          variant="contained"
-          sx={{
-            position: "absolute",
-            bottom: "515px",
-            right: "450px",
-            ml: "-50px",
-            mb: "-30px",
-          }}
-        >
-          Оставить заявку
-        </Button>
       </Container>
     </Box>
   );
