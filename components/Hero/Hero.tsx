@@ -73,43 +73,13 @@ const Hero = () => {
 
         <ButtonGroup
           variant="contained"
-          fullWidth
-          sx={{
-            position: "absolute",
-            top: 650,
-            left: 200,
-            gap: "10px",
-            boxShadow: "none",
-          }}
+          aria-label="outlined primary button group"
+          sx={{ position: "absolute", bottom: 200, left: 200 }}
         >
-          <Button
-            onClick={onButtonClick1}
-            sx={{
-              backgroundColor: "#EF4444",
-              borderColor: "white",
-              borderWidth: "1px",
-
-              color: "white",
-              width: 210,
-              height: 50,
-              borderradius: 4,
-            }}
-          >
+          <Button sx={{ backgroundColor: "#EF4444", color: "white", mr: 1 }}>
             Выбрать вид полов
           </Button>
-          <Button
-            onClick={onButtonClick2}
-            sx={{
-              backgroundColor: "#365FA1",
-              borderColor: "white",
-              borderWidth: "1px",
-
-              color: "white",
-              borderradius: 4,
-              width: 270,
-              height: 50,
-            }}
-          >
+          <Button sx={{ backgroundColor: "#365FA1", color: "white" }}>
             Смотреть готовые работы
           </Button>
         </ButtonGroup>
