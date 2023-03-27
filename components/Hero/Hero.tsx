@@ -2,15 +2,17 @@ import React from "react";
 import { Box, Container, Typography, Button } from "@mui/material";
 import useHeroStyles from "./styles";
 import ButtonGroup from "@mui/material/ButtonGroup";
-import Image from "next/image";
+import PlaylistAddCheckOutlinedIcon from "@mui/icons-material/PlaylistAddCheckOutlined";
+import ImageOutlinedIcon from "@mui/icons-material/ImageOutlined";
+import VerifiedIcon from "@mui/icons-material/Verified";
 
 const Hero = () => {
   const { heroCSS } = useHeroStyles();
 
-  const IconWithText = ({ image, text }) => {
+  const IconWithText = ({ icon, text }) => {
     return (
       <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-        <Image src={image} alt="Icon" width="24" height="24" />
+        {icon}
         <Box>{text}</Box>
       </Box>
     );
@@ -48,25 +50,26 @@ const Hero = () => {
         <Box
           sx={{
             display: "flex",
-            justifyContent: "flex-start",
             alignItems: "center",
-            p: 2,
+            p: 4,
             pt: 49, // отступ сверху
-            pl: 13, // отступ слева
+            pl: 0, // отступ слева
             color: "white",
             gap: 10,
+            marginLeft: "-120px", // отрицательный отступ слева
+            justifyContent: "flex-start", // align items to the left
           }}
         >
           <IconWithText
-            image="/icon.png"
+            icon={<VerifiedIcon sx={{ color: "green" }} />}
             text={<Typography variant="body1">Гарантия от 2 лет</Typography>}
           />
           <IconWithText
-            image="/icon.png"
+            icon={<VerifiedIcon sx={{ color: "green" }} />}
             text={<Typography variant="body1">Срок службы 20+ лет</Typography>}
           />
           <IconWithText
-            image="/icon.png"
+            icon={<VerifiedIcon sx={{ color: "green" }} />}
             text={<Typography variant="body1">Опыт работы 8+ лет</Typography>}
           />
         </Box>
@@ -76,10 +79,16 @@ const Hero = () => {
           aria-label="outlined primary button group"
           sx={{ position: "absolute", bottom: 200, left: 200 }}
         >
-          <Button sx={{ backgroundColor: "#EF4444", color: "white", mr: 1 }}>
+          <Button
+            sx={{ backgroundColor: "#EF4444", color: "white", mr: 1 }}
+            startIcon={<PlaylistAddCheckOutlinedIcon />}
+          >
             Выбрать вид полов
           </Button>
-          <Button sx={{ backgroundColor: "#365FA1", color: "white" }}>
+          <Button
+            sx={{ backgroundColor: "#365FA1", color: "white" }}
+            startIcon={<ImageOutlinedIcon />}
+          >
             Смотреть готовые работы
           </Button>
         </ButtonGroup>

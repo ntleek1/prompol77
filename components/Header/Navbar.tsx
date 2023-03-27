@@ -1,6 +1,8 @@
 import React from "react";
-import { Container, Box } from "@mui/material";
+import { Box, Container, Typography, Button } from "@mui/material";
 import styles from "../../styles/Navbar.module.scss";
+import CalendarViewMonthRoundedIcon from "@mui/icons-material/CalendarViewMonthRounded";
+import EmailIcon from "@mui/icons-material/Email";
 
 const Navbar = () => {
   return (
@@ -14,8 +16,15 @@ const Navbar = () => {
           <a href="#">Контакт</a>
         </Box>
         <Box className={styles.buttons}>
-          <button className={styles.button1}>Кнопка 1</button>
-          <button className={styles.button2}>Кнопка 2</button>
+          <Button
+            variant="contained"
+            startIcon={<CalendarViewMonthRoundedIcon />}
+          >
+            Прайс лист
+          </Button>
+          <Button variant="contained" startIcon={<EmailIcon />}>
+            Оставить заявку
+          </Button>
         </Box>
       </Container>
     </Box>
