@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Typography from "@mui/material/Typography";
-import useCardStyles from "./styles";
+import { useCardStyles } from "./styles";
 
 interface CardProps {
   title: string;
