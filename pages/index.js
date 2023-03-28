@@ -1,9 +1,12 @@
+import React from 'react';
+
 import Head from "next/head";
 import Topbar from "@/components/Header/Topbar";
 import Navbar from "@/components/Header/Navbar";
 import Hero from "@/components/Hero/Hero";
 import Service from "@/components/Service/Service";
 import CallUs from "@/components/CallUs/CallUs";
+import Portfolio from "@/components/Portfolio/Portfolio";
 
 export default function Home() {
   return (
@@ -20,7 +23,7 @@ export default function Home() {
         <Hero />
         <Service />
         <CallUs />
-
+        <Portfolio />
 
       </main>
       
