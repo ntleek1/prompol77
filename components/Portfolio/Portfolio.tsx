@@ -46,7 +46,7 @@ const Portfolio = () => {
 
       <Box sx={{ textAlign: "center", marginTop: 2 }}>
         <Typography variant="h2">Клиенты которые нам доверяют</Typography>
-        <Typography variant="body1">
+        <Typography variant="body1" component="p" mt={3}>
           Мы ценим наши отношения с клиентами и всегда стараемся оправдать их
           доверие.
         </Typography>
@@ -55,24 +55,34 @@ const Portfolio = () => {
         <Box
           sx={{
             display: "flex",
+            flexWrap: "wrap",
             justifyContent: "space-around",
             alignItems: "center",
             backgroundColor: "white",
-            height: 250,
             borderRadius: 8,
             mt: 8,
+            overflow: "hidden",
           }}
         >
-          <img src="https://picsum.photos/id/238/100/100" alt="logo2" />
-          <img src="https://picsum.photos/id/239/100/100" alt="logo3" />
-          <img src="https://picsum.photos/id/240/100/100" alt="logo4" />
-          <img src="https://picsum.photos/id/241/100/100" alt="logo5" />
-          <img src="https://picsum.photos/id/242/100/100" alt="logo6" />
+          <img src="./images/clients/danon.png" />
+          <img src="./images/clients/altair.png" />
+          <img src="./images/clients/korolev.webp" />
+          <img src="./images/clients/myaso.png" />
+          <img src="./images/clients/mgu.jpg" />
+          <img src="./images/clients/micic.png" />
+          <img src="./images/clients/mig.png" />
+          <img src="./images/clients/lebed.png" />
+          <img src="./images/clients/nike.png" />
+          <img src="./images/clients/skolkovo.png" />
+          <img src="./images/clients/rpkb.jpg" />
+          <img src="./images/clients/spar.jpg" />
+          <img src="./images/clients/voenka.jpg" />
+          <img src="./images/clients/macdac.jpg" />
         </Box>
       </Container>
       <Container>
         <Box sx={{ textAlign: "left", marginTop: 2 }}>
-          <Typography variant="body1">
+          <Typography variant="body1" component="p" mt={5}>
             Мы ценим наши отношения с клиентами и всегда стараемся оправдать их
             доверие.Мы ценим наши отношения с клиентами и всегда стараемся
             оправдать их доверие.Мы ценим наши отношения с клиентами и всегда
