@@ -44,8 +44,17 @@ const CardHover: React.FC<CardHoverProps> = ({
           },
         }}
       >
-        <Typography variant="h6" align="center">
+        <Typography variant="h5" align="center">
           {title}
+        </Typography>
+        <Typography variant="h6" component="p" color="text.secondary" mt={1}>
+          {description}
+        </Typography>
+        <Typography variant="body2" component="p" color="text.secondary" mt={2}>
+          {type}
+        </Typography>
+        <Typography variant="body2" component="p" color="text.secondary">
+          {square}
         </Typography>
       </MuiCardContent>
     </MuiCard>
