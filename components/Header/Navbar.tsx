@@ -1,41 +1,53 @@
 import React from "react";
-import { Box, Container, Button, ButtonGroup } from "@mui/material";
+import { Box, Container, Button, Link, Typography } from "@mui/material";
 import styles from "../../styles/Navbar.module.scss";
 import CalendarViewMonthRoundedIcon from "@mui/icons-material/CalendarViewMonthRounded";
 import EmailIcon from "@mui/icons-material/Email";
+import Image from "next/image";
 
 const Navbar = () => {
   return (
     <Box component="section" id="navbar" className={styles.navbar}>
       <Container className={styles.container}>
-        <Box className={styles.logo}>
-          <img src="/Logo.jpg" />
+        <Box className={styles.logo} flexShrink={0}>
+          <Link href="/">
+            <Image src="/Logo.jpg" alt="Logo" fill />
+          </Link>
         </Box>
 
         <Box className={styles.categories}>
-          <a href="#">Виды полов</a>
-          <a href="#">Наши работы</a>
-          <a href="#">Гарантии</a>
-          <a href="#">Контакт</a>
+          <Link href="#" variant="body2">
+            Виды полов
+          </Link>
+          <Link href="#" variant="body2">
+            Наши работы
+          </Link>
+          <Link href="#" variant="body2">
+            Гарантии
+          </Link>
+          <Link href="#" variant="body2">
+            Контакт
+          </Link>
         </Box>
-        <ButtonGroup
-          variant="contained"
-          aria-label="outlined primary button group"
-          sx={{}}
-        >
+
+        <Box display="flex" gap={1}>
           <Button
-            sx={{ backgroundColor: "#EF4444", color: "white", mr: 1 }}
+            variant="contained"
+            color="error"
+            size="small"
             startIcon={<CalendarViewMonthRoundedIcon />}
           >
             Выбрать вид полов
           </Button>
           <Button
-            sx={{ backgroundColor: "#365FA1", color: "white" }}
+            variant="contained"
+            color="primary"
+            size="small"
             startIcon={<EmailIcon />}
           >
             Смотреть готовые работы
           </Button>
-        </ButtonGroup>
+        </Box>
       </Container>
     </Box>
   );

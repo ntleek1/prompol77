@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Container, Link, Typography } from "@mui/material";
-import { styled } from "@mui/system";
 
 const Topbar = () => {
   return (
@@ -10,26 +9,32 @@ const Topbar = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          py: 1,
+          py: 0.75,
         }}
       >
-        <Typography variant="body2">
+        <Typography variant="small" color="gray">
           г. Москва, Пн-Пт с 09:00 до 19:00, Сб-Вс выходные
         </Typography>
-        <Box sx={{ display: "flex", alignItems: "center" }}>
-          <Link
-            href="#"
-            underline="none"
-            sx={{ mx: 2, color: "#555555", fontWeight: 500 }}
-          >
+        <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+          <Link href="#" variant="small" color="gray">
             Написать в WhatsApp
           </Link>
-          <Typography variant="body2" sx={{ mr: 2 }}>
+          <Link
+            href="tel:+749566403468"
+            variant="body1"
+            fontWeight={600}
+            color="black"
+          >
             +7 (495) 664-34-68
-          </Typography>
-          <Typography variant="body2" sx={{ mr: 2 }}>
-            +7 (495) 664-34-6
-          </Typography>
+          </Link>
+          <Link
+            href="tel:+749566403468"
+            variant="body1"
+            fontWeight={600}
+            color="black"
+          >
+            +7 (495) 664-34-68
+          </Link>
         </Box>
       </Container>
     </Box>
