@@ -29,7 +29,7 @@ const Hero = () => {
             <Box display="flex" gap={2} alignItems="center">
               <VerifiedIcon color="success" fontSize="large" />
               <Box>
-                <Typography variant="h4" component="p" fontWeight={400}>
+                <Typography variant="h5" component="p" fontWeight={400}>
                   Гарантия
                 </Typography>
                 <Typography variant="h2" component="p">
@@ -41,7 +41,7 @@ const Hero = () => {
             <Box display="flex" gap={2} alignItems="center">
               <VerifiedIcon color="success" fontSize="large" />
               <Box>
-                <Typography variant="h4" component="p" fontWeight={400}>
+                <Typography variant="h5" component="p" fontWeight={400}>
                   Срок службы
                 </Typography>
                 <Typography variant="h2" component="p">
@@ -53,7 +53,7 @@ const Hero = () => {
             <Box display="flex" gap={2} alignItems="center">
               <VerifiedIcon color="success" fontSize="large" />
               <Box>
-                <Typography variant="h4" component="p" fontWeight={400}>
+                <Typography variant="h5" component="p" fontWeight={400}>
                   Опыт работы
                 </Typography>
                 <Typography variant="h2" component="p">

@@ -1,8 +1,18 @@
+import { TypographyOptions } from "@mui/material/styles/createTypography";
+
 export const DFontSize = 16;
+export const DFontFamily = `"Inter", sans-serif`;
 
 export const typography = {
   htmlFontSize: DFontSize,
+  htmlFontFamily: DFontFamily,
+  fontFamily: DFontFamily,
   fontSize: DFontSize,
+  small: {
+    fontFamily: DFontFamily,
+    fontSize: "0.875rem",
+    lineHeight: "1.25",
+  },
   h1: {
     fontSize: DFontSize * 3,
     fontWeight: 700,
@@ -27,4 +37,10 @@ export const typography = {
     fontSize: DFontSize * 1.25,
     fontWeight: 700,
   },
-};
+} as TypographyOptions;
+
+declare module "@mui/material/Typography" {
+  interface TypographyPropsVariantOverrides {
+    small: true;
+  }
+}
