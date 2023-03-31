@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from "react";
 import Head from "next/head";
 import Topbar from "@/components/Header/Topbar";
 import Navbar from "@/components/Header/Navbar";
@@ -9,7 +8,7 @@ import CallUs from "@/components/CallUs/CallUs";
 import Portfolio from "@/components/Portfolio/Portfolio";
 import About from "@/components/About/About";
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Head>
@@ -25,10 +24,10 @@ export default function Home() {
         <Service />
         <CallUs />
         <Portfolio />
-        <About/>
-
+        <About />
       </main>
-      
     </>
   );
-}
+};
+
+export default Home;
