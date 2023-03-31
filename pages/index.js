@@ -7,6 +7,7 @@ import Hero from "@/components/Hero/Hero";
 import Service from "@/components/Service/Service";
 import CallUs from "@/components/CallUs/CallUs";
 import Portfolio from "@/components/Portfolio/Portfolio";
+import About from "@/components/About/About";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <Service />
         <CallUs />
         <Portfolio />
+        <About/>
 
       </main>
       
