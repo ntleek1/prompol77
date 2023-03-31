@@ -1,13 +1,9 @@
 import _ from "lodash";
-import {
-  createTheme,
-  CSSInterpolation,
-  SxProps,
-  Theme,
-} from "@mui/material/styles";
-import { typography, MuiButton } from "./base";
+import { createTheme } from "@mui/material/styles";
+import { typography, MuiButton, MuiLink } from "./base";
 
 const LightMuiButton = _.defaultsDeep({}, MuiButton);
+const LightMuiLink = _.defaultsDeep({}, MuiLink);
 
 export const LightTheme = createTheme({
   typography: {
@@ -15,5 +11,6 @@ export const LightTheme = createTheme({
   },
   components: {
     MuiButton: LightMuiButton,
+    MuiLink: LightMuiLink,
   },
 });
