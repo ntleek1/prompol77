@@ -1,21 +1,28 @@
 import React from "react";
-import { Box, Container, Button, Link, Typography } from "@mui/material";
-import styles from "../../styles/Navbar.module.scss";
+import { Box, Container, Button, Link } from "@mui/material";
+import useHeaderStyles from "./styles";
 import CalendarViewMonthRoundedIcon from "@mui/icons-material/CalendarViewMonthRounded";
 import EmailIcon from "@mui/icons-material/Email";
 import Image from "next/image";
 
 const Navbar = () => {
+  const {
+    CSSNavbarStyle,
+    CSSContainerStyle,
+    CSSLogoStyle,
+    CSSCategoriesStyle,
+  } = useHeaderStyles();
+
   return (
-    <Box component="section" id="navbar" className={styles.navbar}>
-      <Container className={styles.container}>
-        <Box className={styles.logo} flexShrink={0}>
+    <Box component="section" id="navbar" sx={CSSNavbarStyle}>
+      <Container sx={CSSContainerStyle}>
+        <Box sx={CSSLogoStyle} flexShrink={0}>
           <Link href="/">
             <Image src="/Logo.jpg" alt="Logo" fill />
           </Link>
         </Box>
 
-        <Box className={styles.categories}>
+        <Box sx={CSSCategoriesStyle}>
           <Link href="#" variant="body2">
             Виды полов
           </Link>
