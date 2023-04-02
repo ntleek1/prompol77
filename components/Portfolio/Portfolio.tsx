@@ -45,7 +45,7 @@ const Portfolio = () => {
       </Container>
 
       <Box sx={{ textAlign: "center", marginTop: 2 }}>
-        <Typography variant="h2">Клиенты которые нам доверяют</Typography>
+        <Typography variant="h3">Клиенты которые нам доверяют</Typography>
         <Typography variant="body1" component="p" mt={3}>
           Мы ценим наши отношения с клиентами и всегда стараемся оправдать их
           доверие.
@@ -62,22 +62,27 @@ const Portfolio = () => {
             borderRadius: 8,
             mt: 8,
             overflow: "hidden",
+            gap: 5,
+            p: 3,
           }}
         >
           <img src="./images/clients/danon.png" />
           <img src="./images/clients/altair.png" />
-          <img src="./images/clients/korolev.webp" />
-          <img src="./images/clients/myaso.png" />
+          <img src="./images/clients/spar.jpg" />
+          <img src="./images/clients/mig.png" />
           <img src="./images/clients/mgu.jpg" />
           <img src="./images/clients/micic.png" />
-          <img src="./images/clients/mig.png" />
+          <img src="./images/clients/myaso.png" />
           <img src="./images/clients/lebed.png" />
-          <img src="./images/clients/nike.png" />
+          <img src="./images/clients/voenka.jpg" />
           <img src="./images/clients/skolkovo.png" />
           <img src="./images/clients/rpkb.jpg" />
-          <img src="./images/clients/spar.jpg" />
-          <img src="./images/clients/voenka.jpg" />
+          <img src="./images/clients/korolev.webp" />
           <img src="./images/clients/macdac.jpg" />
+          <img src="./images/clients/nike.png" />
+          <img src="./images/clients/rpkb.jpg" />
+          <img src="./images/clients/rgok.png" />
+          <img src="./images/clients/radio.png" />
         </Box>
       </Container>
       <Container>
