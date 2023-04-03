@@ -8,7 +8,7 @@ const Topbar = () => {
   const {
     CSSTopbar,
     CSSTopbarContainer,
-    CSSTopbarWhatsAppLink,
+
     CSSTopbarPhoneLink,
     CSSWhatsAppIconStyle,
     CSSPhoneIconStyle,
@@ -25,9 +25,10 @@ const Topbar = () => {
           <Link
             href="https://api.whatsapp.com/send?phone=79265674901"
             target="_blank"
-            sx={CSSTopbarWhatsAppLink}
           >
-            Написать в WhatsApp
+            <Typography variant="small" color="grey">
+              Написать в WhatsApp
+            </Typography>
           </Link>
           <PhoneIcon sx={CSSPhoneIconStyle} />
           <Link href="tel:+749566403468" sx={CSSTopbarPhoneLink}>

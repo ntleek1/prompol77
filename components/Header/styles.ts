@@ -30,10 +30,7 @@ function useHeaderStyles() {
     py: 0.75,
   };
 
-  const CSSTopbarWhatsAppLink: SxProps = {
-    variant: "small",
-    color: "gray",
-  };
+ 
 
   const CSSTopbarPhoneLink: SxProps = {
     variant: "body1",
@@ -96,7 +93,7 @@ function useHeaderStyles() {
   return {
     CSSTopbar,
     CSSTopbarContainer,
-    CSSTopbarWhatsAppLink,
+    
     CSSTopbarPhoneLink,
     CSSNavbar,
     CSSNavbarStyle,
