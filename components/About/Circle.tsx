@@ -11,12 +11,13 @@ const Circle: React.FC<CircleProps> = ({ color, children, style }) => {
     width: "80px",
     height: "80px",
     borderRadius: "100%",
-    backgroundColor: color === "primary" ? "blue" : "red",
     display: "inline-flex",
     justifyContent: "center",
     alignItems: "center",
-    border: "5px solid",
-    background: "none",
+    border: "6px solid",
+    fontSize: "40px",
+    borderColor: color === "primary" ? "#F87171" : "#365FA1",
+    color: color === "primary" ? "#F87171" : "#365FA1",
     ...style,
   };
 

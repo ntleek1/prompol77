@@ -14,18 +14,118 @@ function useAboutStyles() {
     py: theme.spacing(8),
   };
 
+
+
   const CSSGridWrapper: SxProps = {
     position: "relative",
 
 
   };
 
-  
+  const CSSgridItemStyles: SxProps = {
+    height: "470px",
+    marginTop: 5,
+    backgroundColor: theme.palette.grey[200],
+  };
+
+  const CSSHourglassBottomIconStyle: SxProps = {
+    flexShrink: 0,
+    width: "100px",
+    textAlign: "start",
+    fontSize: 42,
+    mt: 2,
+    color: "#EF4444",
+  };
+
+  const CSSVerifiedIconStyle: SxProps = {
+    flexShrink: 0,
+    width: "100px",
+    textAlign: "start",
+    fontSize: 42,
+    mt: 2,
+    color: "#84CC16",
+  };
+
+  const CSSPeopleAltSharpIconStyle: SxProps = {
+    flexShrink: 0,
+    width: "100px",
+    textAlign: "start",
+    fontSize: 42,
+    mt: 2,
+    color: "#244D94",
+  };
+
+  const CSSDescriptionIconStyle: SxProps = {
+    flexShrink: 0,
+    width: "100px",
+    textAlign: "start",
+    fontSize: 42,
+    mt: 2,
+    color: "#FBBF24",
+  };
+
+  const CSSCheckCircleOutlineIconStyle: SxProps = {
+    width: "100px",
+    fontSize: 32,
+    color: "#16A34A",
+    ml: -4.5,
+  };
+
+  const CSSHelpOutlineIconStyle: SxProps = {
+    width: "100px",
+    textAlign: "center",
+    fontSize: 32,
+    color: "#999999",
+    ml: -4.5,
+    mt: 2,
+  };
+
+  const CSSsmallBoxStyle: SxProps = {
+    display: "flex",
+    alignItems: "start",
+    bgcolor: "white",
+    p: 2,
+    borderRadius: 5,
+    boxShadow: theme.shadows[10],
+    height: 120,
+  };
+
+  const CSSlargeBoxStyle: SxProps = {
+    display: "flex",
+    alignItems: "start",
+    bgcolor: "white",
+    p: 2,
+    borderRadius: 5,
+    boxShadow: theme.shadows[10],
+    height: 250,
+  };
+
+  const CSSreasonsStyle: SxProps = {
+    display: "flex",
+    alignItems: "center"
+  };
+
+  const CSStextreasonsStyle: SxProps = {
+    marginTop: 2,
+    textAlign: "justify"
+  };
+                    
 
   return {
     CSSAbout, 
     CSSAboutContainer,
     CSSGridWrapper,
+    CSSHourglassBottomIconStyle,
+    CSSVerifiedIconStyle,
+    CSSPeopleAltSharpIconStyle,
+    CSSDescriptionIconStyle,
+    CSSCheckCircleOutlineIconStyle,
+    CSSHelpOutlineIconStyle,
+    CSSsmallBoxStyle,
+    CSSlargeBoxStyle,
+    CSSgridItemStyles,
+    CSSreasonsStyle,
+    CSStextreasonsStyle,
   };
 
 

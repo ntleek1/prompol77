@@ -14,9 +14,21 @@ import { useTheme } from "@mui/material/styles";
 import useAboutStyles from "./styles";
 
 const About = () => {
-  const { CSSAbout, CSSAboutContainer } = useAboutStyles();
-
-  const theme = useTheme();
+  const {
+    CSSAbout,
+    CSSAboutContainer,
+    CSSHourglassBottomIconStyle,
+    CSSVerifiedIconStyle,
+    CSSPeopleAltSharpIconStyle,
+    CSSDescriptionIconStyle,
+    CSSCheckCircleOutlineIconStyle,
+    CSSHelpOutlineIconStyle,
+    CSSsmallBoxStyle,
+    CSSlargeBoxStyle,
+    CSSgridItemStyles,
+    CSSreasonsStyle,
+    CSStextreasonsStyle,
+  } = useAboutStyles();
 
   return (
     <Box id="about" sx={CSSAbout}>
@@ -24,7 +36,7 @@ const About = () => {
         <Typography variant="h3" textAlign={"center"}>
           О компании POL77.ru
         </Typography>
-        <Typography variant="body1" component="p" mt={3}>
+        <Typography variant="body1" mt={3}>
           Наша компания - это профессиональная команда, специализирующаяся на
           создании надежных бетонных полов в помещениях с повышенными
           требованиями к износостойкости. Мы гарантируем высокое качество работ
@@ -40,27 +52,8 @@ const About = () => {
           <Grid item xs={12} sm={6}>
             <Grid container spacing={3}>
               <Grid item xs={12}>
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "start",
-                    bgcolor: "white",
-                    p: 2,
-                    borderRadius: 5,
-                    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
-                    height: 120,
-                  }}
-                >
-                  <HourglassBottomIcon
-                    sx={{
-                      flexShrink: 0,
-                      width: "100px",
-                      textAlign: "start",
-                      fontSize: 42,
-                      mt: 2,
-                      color: "#EF4444",
-                    }}
-                  />
+                <Box className="small-box" sx={CSSsmallBoxStyle}>
+                  <HourglassBottomIcon sx={CSSHourglassBottomIconStyle} />
                   <Typography variant="body1">
                     <Box component="span" fontWeight="bold" color="black">
                       Большой опыт.
@@ -72,27 +65,8 @@ const About = () => {
                 </Box>
               </Grid>
               <Grid item xs={12}>
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "start",
-                    bgcolor: "white",
-                    p: 2,
-                    borderRadius: 5,
-                    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
-                    height: 250,
-                  }}
-                >
-                  <VerifiedIcon
-                    sx={{
-                      flexShrink: 0,
-                      width: "100px",
-                      textAlign: "start",
-                      fontSize: 42,
-                      mt: 2,
-                      color: "#84CC16",
-                    }}
-                  />
+                <Box className="large-box" sx={CSSlargeBoxStyle}>
+                  <VerifiedIcon sx={CSSVerifiedIconStyle} />
                   <Typography variant="body1">
                     <Box component="span" fontWeight="bold" color="black">
                       Высокое качество.
@@ -111,27 +85,8 @@ const About = () => {
           <Grid item xs={12} sm={6}>
             <Grid container spacing={3}>
               <Grid item xs={12}>
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "start",
-                    bgcolor: "white",
-                    p: 2,
-                    borderRadius: 5,
-                    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
-                    height: 120,
-                  }}
-                >
-                  <PeopleAltSharpIcon
-                    sx={{
-                      flexShrink: 0,
-                      width: "100px",
-                      textAlign: "start",
-                      fontSize: 42,
-                      mt: 2,
-                      color: "#244D94",
-                    }}
-                  />
+                <Box className="small-box" sx={CSSsmallBoxStyle}>
+                  <PeopleAltSharpIcon sx={CSSPeopleAltSharpIconStyle} />
                   <Typography variant="body1">
                     <Box component="span" fontWeight="bold" color="black">
                       Большой рабочий потенциал.
@@ -143,27 +98,8 @@ const About = () => {
                 </Box>
               </Grid>
               <Grid item xs={12}>
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "start",
-                    bgcolor: "white",
-                    p: 2,
-                    borderRadius: 5,
-                    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
-                    height: 250,
-                  }}
-                >
-                  <DescriptionIcon
-                    sx={{
-                      flexShrink: 0,
-                      width: "100px",
-                      textAlign: "start",
-                      fontSize: 42,
-                      mt: 2,
-                      color: "#FBBF24",
-                    }}
-                  />
+                <Box className="large-box" sx={CSSlargeBoxStyle}>
+                  <DescriptionIcon sx={CSSDescriptionIconStyle} />
                   <Typography variant="body1">
                     <Box component="span" fontWeight="bold" color="black">
                       Работаем по договору.
@@ -195,91 +131,50 @@ const About = () => {
         </Typography>
       </Container>
 
-      <Container sx={{}}>
-        <Grid container spacing={2}>
-          <Grid item xs={12} md={6}>
-            <div
-              style={{
-                height: "470px",
-                marginTop: 55,
-                backgroundColor: theme.palette.grey[200],
-              }}
-            >
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <Circle
-                  color="primary"
-                  style={{
-                    fontSize: "40px",
-                    fontWeight: "bold",
-                    border: "6px solid #F87171",
-                    color: "#F87171",
-                  }}
-                >
+      <Container>
+        <Grid container spacing={2} sx={{ flexWrap: "wrap" }}>
+          <Grid item xs={12} md={6} sx={CSSgridItemStyles}>
+            <Box>
+              <Box sx={CSSreasonsStyle}>
+                <Circle color="primary">
                   <Typography variant="h2" component="span">
                     1
                   </Typography>
                 </Circle>
+
                 <Typography
                   variant="h3"
-                  style={{
-                    textAlign: "left",
-                    marginLeft: 20,
+                  sx={{
+                    marginLeft: 3,
                   }}
                 >
                   Сложность работ
                 </Typography>
-              </div>
+              </Box>
 
-              <div
-                style={{ display: "flex", alignItems: "center", marginTop: 20 }}
-              >
-                <CheckCircleOutlineIcon
-                  sx={{
-                    width: "100px",
-                    fontSize: 32,
-                    color: "#16A34A",
-                    ml: -4.5,
-                  }}
-                />
-                <Typography variant="subtitle2" style={{ marginLeft: "-26px" }}>
+              <Box sx={{ display: "flex", alignItems: "center", marginTop: 3 }}>
+                <CheckCircleOutlineIcon sx={CSSCheckCircleOutlineIconStyle} />
+                <Typography variant="subtitle2" sx={{ marginLeft: -3 }}>
                   <span style={{ color: "#16A34A", fontWeight: "bold" }}>
                     Компания:
-                  </span>{" "}
+                  </span>
                   <span style={{ fontWeight: "bold" }}>
                     Профессиональные сотрудники с опытом работ.
                   </span>
                 </Typography>
-              </div>
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <HelpOutlineIcon
-                  sx={{
-                    width: "100px",
-                    textAlign: "center",
-                    fontSize: 32,
-                    color: "#999999",
-                    ml: -4.5,
-                    mt: 2,
-                  }}
-                />
-                <Typography
-                  variant="subtitle2"
-                  style={{ marginLeft: "-26px", marginTop: 20 }}
-                >
+              </Box>
+              <Box sx={CSSreasonsStyle}>
+                <HelpOutlineIcon sx={CSSHelpOutlineIconStyle} />
+                <Typography variant="subtitle2" sx={{ marginLeft: -3, mt: 2 }}>
                   <span style={{ color: "#7a7a7a", fontWeight: "bold" }}>
                     Бригада:
-                  </span>{" "}
+                  </span>
                   <span style={{ fontWeight: "bold" }}>
                     Неизвестный уровень качества работ.
                   </span>
                 </Typography>
-              </div>
-              <Typography
-                variant="subtitle2"
-                style={{
-                  marginTop: 20,
-                  textAlign: "justify",
-                }}
-              >
+              </Box>
+              <Typography variant="subtitle2" sx={CSStextreasonsStyle}>
                 Промышленные полы вещь сложная. И дефекты от работы рабочих без
                 контроля скажутся спустя время. Так например, некоторые
                 заказчики топпиновых полов, нанявших в итоге бригаду, не могли
@@ -288,270 +183,155 @@ const About = () => {
                 чтобы не возникали микротрещины). Если его не будет – пол начнёт
                 постепенно разрушаться. И разрушаться по всей площади. Сколько
                 будет стоить демонтаж (за Ваш счёт) этого пола и устройство
-                нового – предположите сами. В случае с полимерными полами –{" "}
-                <br />
-                ситуация ещё сложнее.
+                нового – предположите сами. В случае с полимерными полами –
+                ситуация её сложнее.
               </Typography>
-            </div>
+            </Box>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <div
-              style={{
-                height: "470px",
-                marginTop: 55,
-                backgroundColor: theme.palette.grey[200],
-              }}
-            >
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <Circle
-                  color="primary"
-                  style={{
-                    fontSize: "40px",
-                    fontWeight: "bold",
-                    border: "6px solid #365FA1",
-                    color: "#365FA1",
-                  }}
-                >
+          <Grid item xs={12} md={6} sx={CSSgridItemStyles}>
+            <Box>
+              <Box sx={CSSreasonsStyle}>
+                <Circle color="error">
                   <Typography variant="h2" component="span">
                     2
                   </Typography>
                 </Circle>
+
                 <Typography
                   variant="h3"
-                  style={{
-                    textAlign: "left",
-                    marginLeft: 20,
+                  sx={{
+                    marginLeft: 3,
                   }}
                 >
                   Гарантия
                 </Typography>
-              </div>
+              </Box>
 
-              <div
-                style={{ display: "flex", alignItems: "center", marginTop: 20 }}
-              >
-                <CheckCircleOutlineIcon
-                  sx={{
-                    width: "100px",
-                    fontSize: 32,
-                    color: "#16A34A",
-                    ml: -4.5,
-                  }}
-                />
-                <Typography variant="subtitle2" style={{ marginLeft: "-26px" }}>
+              <Box sx={{ display: "flex", alignItems: "center", marginTop: 3 }}>
+                <CheckCircleOutlineIcon sx={CSSCheckCircleOutlineIconStyle} />
+                <Typography variant="subtitle2" sx={{ marginLeft: -3 }}>
                   <span style={{ color: "#16A34A", fontWeight: "bold" }}>
                     Компания:
-                  </span>{" "}
+                  </span>
                   <span style={{ fontWeight: "bold" }}>
                     Реальная гарантия на несколько лет.
                   </span>
                 </Typography>
-              </div>
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <HelpOutlineIcon
-                  sx={{
-                    width: "100px",
-                    textAlign: "center",
-                    fontSize: 32,
-                    color: "#999999",
-                    ml: -4.5,
-                    mt: 2,
-                  }}
-                />
-                <Typography
-                  variant="subtitle2"
-                  style={{ marginLeft: "-26px", marginTop: 20 }}
-                >
+              </Box>
+              <Box sx={CSSreasonsStyle}>
+                <HelpOutlineIcon sx={CSSHelpOutlineIconStyle} />
+                <Typography variant="subtitle2" sx={{ marginLeft: -3, mt: 2 }}>
                   <span style={{ color: "#7a7a7a", fontWeight: "bold" }}>
                     Бригада:
-                  </span>{" "}
+                  </span>
                   <span style={{ fontWeight: "bold" }}>
                     Отсутствие реальной гарантии.
                   </span>
                 </Typography>
-              </div>
-              <Typography
-                variant="subtitle2"
-                style={{ marginTop: 20, textAlign: "justify" }}
-              >
+              </Box>
+              <Typography variant="subtitle2" sx={CSStextreasonsStyle}>
                 Гарантии могут быть словесные, Вам могут пообещать разного. В
                 итоге оформить договор на фирму какого-нибудь своего друга или
                 вообще однодневку. В случае предъявления Вами весьма вероятных
                 претензий – предъявить их будет некому.
               </Typography>
-            </div>
+            </Box>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <div
-              style={{
-                height: "470px",
-                marginTop: 55,
-                backgroundColor: theme.palette.grey[200],
-              }}
-            >
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <Circle
-                  color="primary"
-                  style={{
-                    fontSize: "40px",
-                    fontWeight: "bold",
-                    border: "6px solid #365FA1",
-                    color: "#365FA1",
-                  }}
-                >
+          <Grid item xs={12} md={6} sx={CSSgridItemStyles}>
+            <Box>
+              <Box sx={CSSreasonsStyle}>
+                <Circle color="error">
                   <Typography variant="h2" component="span">
                     3
                   </Typography>
                 </Circle>
+
                 <Typography
                   variant="h3"
-                  style={{
-                    textAlign: "left",
-                    marginLeft: 20,
+                  sx={{
+                    marginLeft: 3,
                   }}
                 >
                   Контроль работ
                 </Typography>
-              </div>
+              </Box>
 
-              <div
-                style={{ display: "flex", alignItems: "center", marginTop: 20 }}
-              >
-                <CheckCircleOutlineIcon
-                  sx={{
-                    width: "100px",
-                    fontSize: 32,
-                    color: "#16A34A",
-                    ml: -4.5,
-                  }}
-                />
-                <Typography variant="subtitle2" style={{ marginLeft: "-26px" }}>
+              <Box sx={{ display: "flex", alignItems: "center", marginTop: 3 }}>
+                <CheckCircleOutlineIcon sx={CSSCheckCircleOutlineIconStyle} />
+                <Typography variant="subtitle2" sx={{ marginLeft: -3 }}>
                   <span style={{ color: "#16A34A", fontWeight: "bold" }}>
                     Компания:
-                  </span>{" "}
+                  </span>
                   <span style={{ fontWeight: "bold" }}>
                     Строгий контроль на всех этапах работ.
                   </span>
                 </Typography>
-              </div>
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <HelpOutlineIcon
-                  sx={{
-                    width: "100px",
-                    textAlign: "center",
-                    fontSize: 32,
-                    color: "#999999",
-                    ml: -4.5,
-                    mt: 2,
-                  }}
-                />
-                <Typography
-                  variant="subtitle2"
-                  style={{ marginLeft: "-26px", marginTop: 20 }}
-                >
+              </Box>
+              <Box sx={CSSreasonsStyle}>
+                <HelpOutlineIcon sx={CSSHelpOutlineIconStyle} />
+                <Typography variant="subtitle2" sx={{ marginLeft: -3, mt: 2 }}>
                   <span style={{ color: "#7a7a7a", fontWeight: "bold" }}>
                     Бригада:
-                  </span>{" "}
+                  </span>
                   <span style={{ fontWeight: "bold" }}>
                     Отсутствие строгого контроля.
                   </span>
                 </Typography>
-              </div>
-              <Typography
-                variant="subtitle2"
-                style={{ marginTop: 20, textAlign: "justify" }}
-              >
+              </Box>
+              <Typography variant="subtitle2" sx={CSStextreasonsStyle}>
                 Отсутствие должного контроля. Как было написано выше – Вас могут
                 просто обмануть, как лиц слабо разбирающихся в процессе. Нужно
                 им это будет с одной целью – им так дешевле. Претензий Вам потом
                 будет предъявить некому.
               </Typography>
-            </div>
+            </Box>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <div
-              style={{
-                height: "470px",
-                marginTop: 55,
-                backgroundColor: theme.palette.grey[200],
-              }}
-            >
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <Circle
-                  color="primary"
-                  style={{
-                    fontSize: "40px",
-                    fontWeight: "bold",
-                    border: "6px solid #F87171",
-                    color: "#F87171",
-                  }}
-                >
+          <Grid item xs={12} md={6} sx={CSSgridItemStyles}>
+            <Box>
+              <Box sx={CSSreasonsStyle}>
+                <Circle color="primary">
                   <Typography variant="h2" component="span">
                     4
                   </Typography>
                 </Circle>
+
                 <Typography
                   variant="h3"
-                  style={{
-                    textAlign: "left",
-                    marginLeft: 20,
+                  sx={{
+                    marginLeft: 3,
                   }}
                 >
                   Прозрачность
                 </Typography>
-              </div>
+              </Box>
 
-              <div
-                style={{ display: "flex", alignItems: "center", marginTop: 20 }}
-              >
-                <CheckCircleOutlineIcon
-                  sx={{
-                    width: "100px",
-                    fontSize: 32,
-                    color: "#16A34A",
-                    ml: -4.5,
-                  }}
-                />
-                <Typography variant="subtitle2" style={{ marginLeft: "-26px" }}>
+              <Box sx={{ display: "flex", alignItems: "center", marginTop: 3 }}>
+                <CheckCircleOutlineIcon sx={CSSCheckCircleOutlineIconStyle} />
+                <Typography variant="subtitle2" sx={{ marginLeft: -3 }}>
                   <span style={{ color: "#16A34A", fontWeight: "bold" }}>
                     Компания:
-                  </span>{" "}
+                  </span>
                   <span style={{ fontWeight: "bold" }}>
-                    Компания: Чистая (Белая) бухгалтерия.
+                    Чистая (Белая) бухгалтерия.
                   </span>
                 </Typography>
-              </div>
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <HelpOutlineIcon
-                  sx={{
-                    width: "100px",
-                    textAlign: "center",
-                    fontSize: 32,
-                    color: "#999999",
-                    ml: -4.5,
-                    mt: 2,
-                  }}
-                />
-                <Typography
-                  variant="subtitle2"
-                  style={{ marginLeft: "-26px", marginTop: 20 }}
-                >
+              </Box>
+              <Box sx={CSSreasonsStyle}>
+                <HelpOutlineIcon sx={CSSHelpOutlineIconStyle} />
+                <Typography variant="subtitle2" sx={{ marginLeft: -3, mt: 2 }}>
                   <span style={{ color: "#7a7a7a", fontWeight: "bold" }}>
                     Бригада:
-                  </span>{" "}
+                  </span>
                   <span style={{ fontWeight: "bold" }}>
                     Неизвестная фирма или фирма-однодневка.
                   </span>
                 </Typography>
-              </div>
-              <Typography
-                variant="subtitle2"
-                style={{ marginTop: 20, textAlign: "justify" }}
-              >
+              </Box>
+              <Typography variant="subtitle2" sx={CSStextreasonsStyle}>
                 Весьма вероятно, что договор будет не от чистой фирмы и в
                 результате этого Вы получите проблемы с Налоговой Полицией.
               </Typography>
-            </div>
+            </Box>
           </Grid>
         </Grid>
       </Container>
