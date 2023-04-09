@@ -5,10 +5,12 @@ function useCallUsStyles() {
 
   const CallUsCSS: SxProps = {
     py: theme.spacing(10),
-    backgroundImage: `url(/banner.png)`,
+    backgroundImage: `url(/Banner.jpg)`,
     backgroundSize: "cover",
     backgroundPosition: "center",
+    height: 480, // Установка высоты
   };
+  
 
   const CallUsHeaderCSS = {
     fontSize: 38,
@@ -25,12 +27,13 @@ function useCallUsStyles() {
     borderRadius: 8,
     py: theme.spacing(2),
     px: theme.spacing(6),
+    mt: 5,
     "> *": {
       position: "relative",
       "&::before": {
         content: "''",
         position: "absolute",
-        left: "-200px",
+        left: "-247px",
         top: "25%",
         width: 0,
         height: 0,

@@ -28,7 +28,11 @@ const CallUs = () => {
               помещения.
             </Typography>
 
-            <Button variant="contained" startIcon={<EmailIcon />}>
+            <Button
+              variant="contained"
+              startIcon={<EmailIcon />}
+              sx={{ mt: 9 }}
+            >
               Оставить заявку
             </Button>
 
