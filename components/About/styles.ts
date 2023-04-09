@@ -5,7 +5,16 @@ function useAboutStyles() {
 
   const CSSAbout: SxProps = {
     backgroundColor: theme.palette.grey[200],
+    backgroundImage: `url(/bannerStripes.jpg)`,
+    backgroundSize: "contain", // задать покрытие 50% по ширине и 100% по высоте
+    backgroundRepeat: "no-repeat", // запретить повторение фона по вертикали
+    backgroundPosition: "center bottom",
+    
+
   };
+  
+  
+  
 
   const CSSAboutContainer: SxProps = {
     display: "flex",
@@ -25,7 +34,7 @@ function useAboutStyles() {
   const CSSgridItemStyles: SxProps = {
     height: "470px",
     marginTop: 5,
-    backgroundColor: theme.palette.grey[200],
+    backgroundColor: "transparent",
   };
 
   const CSSHourglassBottomIconStyle: SxProps = {
@@ -102,13 +111,24 @@ function useAboutStyles() {
 
   const CSSreasonsStyle: SxProps = {
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
+     zIndex: 3,
   };
 
   const CSStextreasonsStyle: SxProps = {
     marginTop: 2,
-    textAlign: "justify"
+    textAlign: "justify",
+    position: "relative", // устанавливаем позиционирование элемента
+    zIndex: 3,
   };
+  
+  
+  
+  
+  
+  
+  
+  
                     
 
   return {
@@ -126,6 +146,7 @@ function useAboutStyles() {
     CSSgridItemStyles,
     CSSreasonsStyle,
     CSStextreasonsStyle,
+  
   };
 
 

@@ -10,7 +10,6 @@ import PeopleAltSharpIcon from "@mui/icons-material/PeopleAltSharp";
 import DescriptionIcon from "@mui/icons-material/Description";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-import { useTheme } from "@mui/material/styles";
 import useAboutStyles from "./styles";
 
 const About = () => {
