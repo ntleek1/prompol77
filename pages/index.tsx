@@ -4,9 +4,11 @@ import Topbar from "@/components/Header/Topbar";
 import Navbar from "@/components/Header/Navbar";
 import Hero from "@/components/Hero/Hero";
 import Service from "@/components/Service/Service";
-import CallUs from "@/components/CallUs/CallUs";
+import CallUsBanner from "@/components/CallUsBanner/CallUsBanner";
 import Portfolio from "@/components/Portfolio/Portfolio";
 import About from "@/components/About/About";
+import WarrantyBanner from "@/components/WarrantyBanner/WarrantyBanner";
+import Contacts from "@/components/Contacts/Contacts";
 
 const Home = () => {
   return (
@@ -22,9 +24,11 @@ const Home = () => {
         <Navbar />
         <Hero />
         <Service />
-        <CallUs />
+        <CallUsBanner />
         <Portfolio />
         <About />
+        <WarrantyBanner />
+        <Contacts />
       </main>
     </>
   );
