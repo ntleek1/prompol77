@@ -31,10 +31,18 @@ const Topbar = () => {
             </Typography>
           </Link>
           <PhoneIcon sx={CSSPhoneIconStyle} />
-          <Link href="tel:+749566403468" sx={CSSTopbarPhoneLink}>
+          <Link
+            href="tel:+749566403468"
+            variant="small"
+            sx={CSSTopbarPhoneLink}
+          >
             +7 (495) 664-34-68
           </Link>
-          <Link href="tel:+749566403468" sx={CSSTopbarPhoneLink}>
+          <Link
+            href="tel:+749566403468"
+            variant="small"
+            sx={CSSTopbarPhoneLink}
+          >
             +7 (495) 664-34-68
           </Link>
         </Box>

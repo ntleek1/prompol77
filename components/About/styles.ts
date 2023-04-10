@@ -101,7 +101,7 @@ function useAboutStyles() {
     bgcolor: "white",
     p: 2,
     borderRadius: 5,
-    boxShadow: theme.shadows[10],
+    boxShadow: theme.shadows[5],
     height: 120,
   };
 
@@ -111,7 +111,7 @@ function useAboutStyles() {
     bgcolor: "white",
     p: 2,
     borderRadius: 5,
-    boxShadow: theme.shadows[10],
+    boxShadow: theme.shadows[5],
     height: 250,
   };
 

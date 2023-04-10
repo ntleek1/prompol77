@@ -50,70 +50,62 @@ const About = () => {
       <Container>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6}>
-            <Grid container spacing={3}>
-              <Grid item xs={12}>
-                <Box className="small-box" sx={CSSsmallBoxStyle}>
-                  <HourglassBottomIcon sx={CSSHourglassBottomIconStyle} />
-                  <Typography variant="body1">
-                    <Box component="span" fontWeight="bold" color="black">
-                      Большой опыт.
-                    </Box>
-                    <br />
-                    Команда профессионалов с опытом более 10 лет в устройстве
-                    промышленных полов.
-                  </Typography>
+            <Box className="small-box" sx={CSSsmallBoxStyle}>
+              <HourglassBottomIcon sx={CSSHourglassBottomIconStyle} />
+              <Typography variant="body1">
+                <Box component="span" fontWeight="bold" color="black">
+                  Большой опыт.
                 </Box>
-              </Grid>
-              <Grid item xs={12}>
-                <Box className="large-box" sx={CSSlargeBoxStyle}>
-                  <VerifiedIcon sx={CSSVerifiedIconStyle} />
-                  <Typography variant="body1">
-                    <Box component="span" fontWeight="bold" color="black">
-                      Высокое качество.
-                    </Box>
-                    <br />
-                    Используем профессиональное оборудование, передовые
-                    технологии и материалы, чтобы создавать долговечные
-                    промышленные полы. Руководитель лично контролирует работу
-                    наших сотрудников, чтобы каждый заказ был выполнен
-                    безупречно.
-                  </Typography>
+                <br />
+                Команда профессионалов с опытом более 10 лет в устройстве
+                промышленных полов.
+              </Typography>
+            </Box>
+          </Grid>
+
+          <Grid item xs={12} sm={6}>
+            <Box className="small-box" sx={CSSsmallBoxStyle}>
+              <PeopleAltSharpIcon sx={CSSPeopleAltSharpIconStyle} />
+              <Typography variant="body1">
+                <Box component="span" fontWeight="bold" color="black">
+                  Большой рабочий потенциал.
                 </Box>
-              </Grid>
-            </Grid>
+                <br />
+                Соблюдаем сроки выполнения задач благодаря нашей большой команде
+                (~20 профессионалов).
+              </Typography>
+            </Box>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <Grid container spacing={3}>
-              <Grid item xs={12}>
-                <Box className="small-box" sx={CSSsmallBoxStyle}>
-                  <PeopleAltSharpIcon sx={CSSPeopleAltSharpIconStyle} />
-                  <Typography variant="body1">
-                    <Box component="span" fontWeight="bold" color="black">
-                      Большой рабочий потенциал.
-                    </Box>
-                    <br />
-                    Соблюдаем сроки выполнения задач благодаря нашей большой
-                    команде (~20 профессионалов).
-                  </Typography>
+            <Box className="large-box" sx={CSSlargeBoxStyle}>
+              <VerifiedIcon sx={CSSVerifiedIconStyle} />
+              <Typography variant="body1">
+                <Box component="span" fontWeight="bold" color="black">
+                  Высокое качество.
                 </Box>
-              </Grid>
-              <Grid item xs={12}>
-                <Box className="large-box" sx={CSSlargeBoxStyle}>
-                  <DescriptionIcon sx={CSSDescriptionIconStyle} />
-                  <Typography variant="body1">
-                    <Box component="span" fontWeight="bold" color="black">
-                      Работаем по договору.
-                    </Box>
-                    <br />
-                    Заключаем договор с каждым клиентом и подробно прописываем
-                    условия нашей ответственности. Наша порядочность и честность
-                    подтверждены уже реализованными проектами, и мы гарантируем,
-                    что каждый заказ будет выполнен в полном соответствии с
-                    заключенным договором.
-                  </Typography>
+                <br />
+                Используем профессиональное оборудование, передовые технологии и
+                материалы, чтобы создавать долговечные промышленные полы.
+                Руководитель лично контролирует работу наших сотрудников, чтобы
+                каждый заказ был выполнен безупречно.
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Box className="large-box" sx={CSSlargeBoxStyle}>
+              <DescriptionIcon sx={CSSDescriptionIconStyle} />
+              <Typography variant="body1">
+                <Box component="span" fontWeight="bold" color="black">
+                  Работаем по договору.
                 </Box>
-              </Grid>
-            </Grid>
+                <br />
+                Заключаем договор с каждым клиентом и подробно прописываем
+                условия нашей ответственности. Наша порядочность и честность
+                подтверждены уже реализованными проектами, и мы гарантируем, что
+                каждый заказ будет выполнен в полном соответствии с заключенным
+                договором.
+              </Typography>
+            </Box>
           </Grid>
         </Grid>
       </Container>
@@ -132,7 +124,7 @@ const About = () => {
       </Container>
 
       <Container>
-        <Grid container spacing={2} sx={{ flexWrap: "wrap" }}>
+        <Grid container spacing={3} sx={{ flexWrap: "wrap" }}>
           <Grid item xs={12} md={6} sx={CSSgridItemStyles}>
             <Box>
               <Box sx={CSSreasonsStyle}>

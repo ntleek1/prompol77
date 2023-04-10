@@ -33,7 +33,6 @@ function useHeaderStyles() {
  
 
   const CSSTopbarPhoneLink: SxProps = {
-    variant: "body1",
     fontWeight: 600,
     color: "black",
   };
@@ -76,7 +75,7 @@ function useHeaderStyles() {
 
   const CSSWhatsAppIconStyle: SxProps = {
     flexShrink: 0,
-    fontSize: 24,
+    fontSize: 17,
     color: "#4D7C0F",
     mr: -1.5,
     mb: 0.5,
@@ -84,7 +83,7 @@ function useHeaderStyles() {
 
   const CSSPhoneIconStyle: SxProps = {
     flexShrink: 0,
-    fontSize: 24,
+    fontSize: 17,
     color: "#000000",
     mr: -1.5,
     mb: 0.5,

@@ -8,8 +8,8 @@ interface CircleProps {
 
 const Circle: React.FC<CircleProps> = ({ color, children, style }) => {
   const circleStyles = {
-    width: "80px",
-    height: "80px",
+    width: "56px",
+    height: "56px",
     borderRadius: "100%",
     display: "inline-flex",
     justifyContent: "center",

@@ -1,17 +1,18 @@
 import React from "react";
 import { Box, Container, Typography, Button } from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
-import useCallUsStyles from "./styles";
+import useCallUsBannerStyles from "./styles";
 
-const CallUs = () => {
-  const { CallUsCSS, CallUsHeaderCSS, CallUsPhonesCSS } = useCallUsStyles();
+const CallUsBanner = () => {
+  const { CallUsBannerCSS, CallUsBannerHeaderCSS, CallUsBannerPhonesCSS } =
+    useCallUsBannerStyles();
 
   return (
-    <Box component="section" id="BannerBox" sx={CallUsCSS}>
+    <Box component="section" id="BannerBox" sx={CallUsBannerCSS}>
       <Container>
         <Box display="flex" flexDirection="row" gap={2}>
           <Box flex={1}>
-            <Typography variant="h1" component="p" sx={CallUsHeaderCSS}>
+            <Typography variant="h1" component="p" sx={CallUsBannerHeaderCSS}>
               Получите бесплатную <br /> консультацию
             </Typography>
           </Box>
@@ -36,7 +37,7 @@ const CallUs = () => {
               Оставить заявку
             </Button>
 
-            <Box sx={CallUsPhonesCSS} alignSelf="end">
+            <Box sx={CallUsBannerPhonesCSS} alignSelf="end">
               <Box>
                 <Typography variant="h4" component="p">
                   +7 (495) 664-34-68 <br /> +7 (495) 664-34-68
@@ -50,4 +51,4 @@ const CallUs = () => {
   );
 };
 
-export default CallUs;
+export default CallUsBanner;

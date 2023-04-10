@@ -8,6 +8,20 @@ function usePortfolioStyles() {
     backgroundColor: theme.palette.grey[200],
   };
 
+  const CSSPortfolioClientBox: SxProps = {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+    alignItems: "center",
+    backgroundColor: "white",
+    boxShadow: theme.shadows[5],
+    borderRadius: 8,
+    mt: 8,
+    overflow: "hidden",
+    gap: 5,
+    p: 3,
+  };
+
   const CSSPortfolioContainer: SxProps = {
     display: "flex",
     flexDirection: "column",
@@ -25,6 +39,7 @@ function usePortfolioStyles() {
     CSSPortfolio,
     CSSPortfolioContainer,
     CSSGridWrapper,
+    CSSPortfolioClientBox
   };
   
   

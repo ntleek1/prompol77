@@ -11,8 +11,12 @@ import usePortfolioStyles from "./styles";
 
 const Portfolio = () => {
   const { title, subtitle, data } = usePortfolio();
-  const { CSSPortfolio, CSSPortfolioContainer, CSSGridWrapper } =
-    usePortfolioStyles();
+  const {
+    CSSPortfolio,
+    CSSPortfolioContainer,
+    CSSGridWrapper,
+    CSSPortfolioClientBox,
+  } = usePortfolioStyles();
 
   return (
     <Box id="portfolio" sx={CSSPortfolio}>
@@ -52,20 +56,7 @@ const Portfolio = () => {
         </Typography>
       </Box>
       <Container>
-        <Box
-          sx={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-around",
-            alignItems: "center",
-            backgroundColor: "white",
-            borderRadius: 8,
-            mt: 8,
-            overflow: "hidden",
-            gap: 5,
-            p: 3,
-          }}
-        >
+        <Box sx={CSSPortfolioClientBox}>
           <img src="./images/clients/danon.png" />
           <img src="./images/clients/altair.png" />
           <img src="./images/clients/spar.jpg" />
@@ -79,7 +70,7 @@ const Portfolio = () => {
           <img src="./images/clients/rpkb.jpg" />
           <img src="./images/clients/korolev.webp" />
           <img src="./images/clients/macdac.jpg" />
-          <img src="./images/clients/nike.png" />
+          <img src="./images/clients/nike.jpg" />
           <img src="./images/clients/rpkb.jpg" />
           <img src="./images/clients/rgok.png" />
           <img src="./images/clients/radio.png" />

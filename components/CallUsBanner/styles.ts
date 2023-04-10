@@ -1,9 +1,9 @@
 import { SxProps, useTheme } from "@mui/material/styles";
 
-function useCallUsStyles() {
+function useCallUsBannerStyles() {
   const theme = useTheme();
 
-  const CallUsCSS: SxProps = {
+  const CallUsBannerCSS: SxProps = {
     py: theme.spacing(10),
     backgroundImage: `url(/banner.jpg)`,
     backgroundSize: "cover",
@@ -12,17 +12,16 @@ function useCallUsStyles() {
   };
   
 
-  const CallUsHeaderCSS = {
+  const CallUsBannerHeaderCSS = {
     fontSize: 38,
     color: "black",
-    textTransform: "uppercase",
     right: 0,
     textAlign: "left",
     top: 226, // Расстояние от верхнего края контейнера
     left: 200,
   };
 
-  const CallUsPhonesCSS = {
+  const CallUsBannerPhonesCSS = {
     background: theme.palette.background.default,
     borderRadius: 8,
     py: theme.spacing(2),
@@ -45,10 +44,10 @@ function useCallUsStyles() {
   };
 
   return {
-    CallUsCSS,
-    CallUsHeaderCSS,
-    CallUsPhonesCSS,
+    CallUsBannerCSS,
+    CallUsBannerHeaderCSS,
+    CallUsBannerPhonesCSS,
   };
 }
 
-export default useCallUsStyles;
+export default useCallUsBannerStyles;

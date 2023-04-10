@@ -15,7 +15,6 @@ function useWarrantyBannerStyles() {
   const WarrantyBannerHeaderCSS = {
     fontSize: 38,
     color: "black",
-    textTransform: "uppercase",
     right: 0,
     textAlign: "center",
     top: 226, // Расстояние от верхнего края контейнера
