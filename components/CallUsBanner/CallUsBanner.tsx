@@ -4,15 +4,19 @@ import EmailIcon from "@mui/icons-material/Email";
 import useCallUsBannerStyles from "./styles";
 
 const CallUsBanner = () => {
-  const { CallUsBannerCSS, CallUsBannerHeaderCSS, CallUsBannerPhonesCSS } =
-    useCallUsBannerStyles();
+  const {
+    CallUsBannerCSS,
+    CallUsWrapperCSS,
+    CallUsBannerPhonesCSS,
+    CallUsBannerButtonCSS,
+  } = useCallUsBannerStyles();
 
   return (
     <Box component="section" id="BannerBox" sx={CallUsBannerCSS}>
       <Container>
-        <Box display="flex" flexDirection="row" gap={2}>
+        <Box sx={CallUsWrapperCSS}>
           <Box flex={1}>
-            <Typography variant="h1" component="p" sx={CallUsBannerHeaderCSS}>
+            <Typography variant="h1" component="p">
               Получите бесплатную <br /> консультацию
             </Typography>
           </Box>
@@ -30,9 +34,9 @@ const CallUsBanner = () => {
             </Typography>
 
             <Button
+              sx={CallUsBannerButtonCSS}
               variant="contained"
               startIcon={<EmailIcon />}
-              sx={{ mt: 9 }}
             >
               Оставить заявку
             </Button>

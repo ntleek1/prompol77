@@ -16,6 +16,9 @@ function useHeaderStyles() {
     backgroundColor: theme.palette.grey[800],
     bgcolor: "#DDDDDD",
     color: "#555555",
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
   };
 
   const CSSTopbarContainer: SxProps = {
@@ -59,10 +62,21 @@ function useHeaderStyles() {
     height: "40px",
   };
 
-  const CSSCategoriesStyle: SxProps = {
+  const CSSMenuStyle: SxProps = {
     display: "flex",
     gap: "40px",
     whiteSpace: "nowrap",
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
+  };
+
+  const CSSButtonsStyle: SxProps = {
+    display: "flex",
+    gap: 1,
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
   };
 
   const CSSWhatsAppIconStyle: SxProps = {
@@ -88,7 +102,8 @@ function useHeaderStyles() {
     CSSNavbarStyle,
     CSSContainerStyle,
     CSSLogoStyle,
-    CSSCategoriesStyle,
+    CSSMenuStyle,
+    CSSButtonsStyle,
     CSSWhatsAppIconStyle,
     CSSPhoneIconStyle,
   };

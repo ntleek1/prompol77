@@ -6,7 +6,8 @@ function useHeroStyles() {
     display: "flex",
     flexDirection: "column",
     gap: theme.spacing(1),
-    height: "calc(100vh - 80px - 36px)",
+    minHeight: "calc(100vh - 80px - 36px)",
+    py: 6,
     color: theme.palette.common.white,
     backgroundImage: `url(/pictures.png)`,
     backgroundSize: "cover",
@@ -20,9 +21,29 @@ function useHeroStyles() {
     },
   };
 
+  const heroBenefitsCSS = {
+    display: "flex",
+    alignItems: "center",
+    gap: 4,
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column",
+    },
+  };
+
+  const heroButtonsGroupCSS = {
+    display: "flex",
+    alignItems: "center",
+    gap: 2,
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column",
+    },
+  };
+
   return {
     heroCSS,
     heroContainerCSS,
+    heroBenefitsCSS,
+    heroButtonsGroupCSS,
   };
 }
 
