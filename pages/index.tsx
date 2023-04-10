@@ -9,6 +9,7 @@ import Portfolio from "@/components/Portfolio/Portfolio";
 import About from "@/components/About/About";
 import WarrantyBanner from "@/components/WarrantyBanner/WarrantyBanner";
 import Contacts from "@/components/Contacts/Contacts";
+import Footer from "@/components/Footer/Footer";
 
 const Home = () => {
   return (
@@ -30,6 +31,7 @@ const Home = () => {
         <WarrantyBanner />
         <Contacts />
       </main>
+      <Footer />
     </>
   );
 };
