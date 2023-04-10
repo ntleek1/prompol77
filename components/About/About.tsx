@@ -34,7 +34,7 @@ const About = () => {
     <Box id="about" sx={CSSAbout}>
       <Container sx={CSSAboutContainer}>
         <Typography variant="h2" textAlign={"center"}>
-          О компании POL77.ru
+          О компании
         </Typography>
         <Typography variant="body1" mt={3}>
           Наша компания - это профессиональная команда, специализирующаяся на

@@ -8,6 +8,13 @@ function useContactsStyles() {
     backgroundColor: theme.palette.grey[200],
   };
 
+  const ContactsHeaderCSS: SxProps = {
+    mt: 3,
+    [theme.breakpoints.down("md")]: {
+      textAlign: "center",
+    },
+  };
+
   const ContactsBoxCSS: SxProps = {
     width: 205,
     display: "flex",
@@ -45,6 +52,9 @@ function useContactsStyles() {
     width: "100%",
     border: 0,
     borderBottom: "1px dashed #aaa",
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
   };
 
   const ContactsDataCSS: SxProps = {
@@ -55,8 +65,30 @@ function useContactsStyles() {
     marginRight: 40,
   };
 
+  const ContactsFlexBoxCSS: SxProps = {
+    display: "flex",
+    gap: 3,
+    py: 1,
+    "> *": {
+      width: 300,
+      display: "flex",
+      gap: 2,
+    },
+    hr: ContactsLineCSS,
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column",
+      gap: 2,
+      justifyContent: "center",
+      alignItems: "center",
+      "> *": {
+        width: "auto",
+      },
+    },
+  };
+
   return {
     ContactsCSS,
+    ContactsHeaderCSS,
     ContactsBoxCSS,
     ContactsIconCSS,
     ContactsAccountTreeIconCSS,
@@ -64,6 +96,7 @@ function useContactsStyles() {
     ContactsLineBoxCSS,
     ContactsLineCSS,
     ContactsDataCSS,
+    ContactsFlexBoxCSS,
   };
 }
 

@@ -23,7 +23,7 @@ export const typography = {
     fontWeight: 400,
   },
   h1: {
-    fontSize: DFontSize * 3,
+    fontSize: DFontSize * 2.8,
     fontWeight: 700,
   },
   h2: {

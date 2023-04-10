@@ -6,12 +6,14 @@ function useHeroStyles() {
     display: "flex",
     flexDirection: "column",
     gap: theme.spacing(1),
-    minHeight: "calc(100vh - 80px - 36px)",
+    minHeight: "calc(100vh - 80px - 32px)",
+    justifyContent: "center",
     py: 6,
     color: theme.palette.common.white,
     backgroundImage: `url(/pictures.png)`,
     backgroundSize: "cover",
     backgroundPosition: "center",
+    boxSizing: "border-box",
   };
 
   const heroContainerCSS = {
