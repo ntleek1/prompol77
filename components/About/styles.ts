@@ -9,37 +9,26 @@ function useAboutStyles() {
     backgroundSize: "contain", // задать покрытие 50% по ширине и 100% по высоте
     backgroundRepeat: "no-repeat", // запретить повторение фона по вертикали
     backgroundPosition: "center bottom",
-    
-
+    py: theme.spacing(8),
   };
-  
-  
-  
 
   const CSSAboutContainer: SxProps = {
     display: "flex",
     flexDirection: "column",
     gap: theme.spacing(4),
-    py: theme.spacing(8),
+    pb: theme.spacing(4),
   };
-
-
 
   const CSSGridWrapper: SxProps = {
     position: "relative",
-
-
   };
 
   const CSSgridItemStyles: SxProps = {
-    height: "470px",
     marginTop: 5,
     backgroundColor: "transparent",
   };
 
   const CSSgridItemStyles2: SxProps = {
-    height: "400px",
-    marginTop: 5,
     backgroundColor: "transparent",
   };
 
@@ -102,7 +91,6 @@ function useAboutStyles() {
     p: 2,
     borderRadius: 5,
     boxShadow: theme.shadows[5],
-    height: 120,
   };
 
   const CSSlargeBoxStyle: SxProps = {
@@ -112,13 +100,13 @@ function useAboutStyles() {
     p: 2,
     borderRadius: 5,
     boxShadow: theme.shadows[5],
-    height: 250,
+    minHeight: 156,
   };
 
   const CSSreasonsStyle: SxProps = {
     display: "flex",
     alignItems: "center",
-     zIndex: 3,
+    zIndex: 3,
   };
 
   const CSStextreasonsStyle: SxProps = {
@@ -127,18 +115,9 @@ function useAboutStyles() {
     position: "relative", // устанавливаем позиционирование элемента
     zIndex: 3,
   };
-  
-  
-  
-  
-  
-  
-  
-  
-                    
 
   return {
-    CSSAbout, 
+    CSSAbout,
     CSSAboutContainer,
     CSSGridWrapper,
     CSSHourglassBottomIconStyle,
@@ -152,11 +131,8 @@ function useAboutStyles() {
     CSSgridItemStyles,
     CSSreasonsStyle,
     CSStextreasonsStyle,
-    CSSgridItemStyles2
-  
+    CSSgridItemStyles2,
   };
-
-
 }
 
 export default useAboutStyles;

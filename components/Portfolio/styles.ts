@@ -1,6 +1,5 @@
 import { SxProps, useTheme } from "@mui/material/styles";
 
-
 function usePortfolioStyles() {
   const theme = useTheme();
 
@@ -16,7 +15,7 @@ function usePortfolioStyles() {
     backgroundColor: "white",
     boxShadow: theme.shadows[5],
     borderRadius: 8,
-    mt: 8,
+    mt: 4,
     overflow: "hidden",
     gap: 5,
     p: 3,
@@ -31,21 +30,14 @@ function usePortfolioStyles() {
 
   const CSSGridWrapper: SxProps = {
     position: "relative",
-
-
   };
 
   return {
     CSSPortfolio,
     CSSPortfolioContainer,
     CSSGridWrapper,
-    CSSPortfolioClientBox
+    CSSPortfolioClientBox,
   };
-  
-  
-  
-  
-
 }
 
 export default usePortfolioStyles;

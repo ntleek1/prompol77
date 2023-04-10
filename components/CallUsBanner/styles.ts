@@ -10,15 +10,12 @@ function useCallUsBannerStyles() {
     backgroundPosition: "center",
     height: 480, // Установка высоты
   };
-  
 
   const CallUsBannerHeaderCSS = {
     fontSize: 38,
     color: "black",
     right: 0,
     textAlign: "left",
-    top: 226, // Расстояние от верхнего края контейнера
-    left: 200,
   };
 
   const CallUsBannerPhonesCSS = {

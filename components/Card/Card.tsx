@@ -22,21 +22,27 @@ const Card: React.FC<CardProps> = ({
   link,
   imageSrc,
 }): React.ReactElement => {
-  const { CSSCard, CSSContent, CSSButtonGroup } = useCardStyles();
+  const { CSSCard, CSSContent, CSSButtonGroup, CSSTitle } = useCardStyles();
 
   return (
     <MuiCard sx={CSSCard}>
       <Box position="relative">
         <MuiCardMedia component="img" image={imageSrc} alt={title} />
         <ButtonGroup variant="contained" sx={CSSButtonGroup}>
-          <Button LinkComponent={Link} href={link}>
+          <Button
+            LinkComponent={Link}
+            href={link}
+            size="small"
+            color="inherit"
+            variant="outlined"
+          >
             Подробнее
           </Button>
         </ButtonGroup>
       </Box>
 
       <MuiCardContent sx={CSSContent}>
-        <Typography variant="h5" component="h5" gutterBottom>
+        <Typography variant="h6" component="h6" gutterBottom sx={CSSTitle}>
           {title}
         </Typography>
         <Typography variant="body2" component="p" color="text.secondary">

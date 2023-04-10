@@ -23,7 +23,7 @@ const CallUsBanner = () => {
             gap={4}
             alignItems="baseline"
           >
-            <Typography variant="h6" align="left">
+            <Typography variant="subtitle1" align="left">
               Консультация по выбору полов - бесплатно! <br /> Обращайтесь к нам
               за помощью в выборе <br /> наилучшего решения для вашего
               помещения.

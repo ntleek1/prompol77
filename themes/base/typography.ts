@@ -13,6 +13,15 @@ export const typography = {
     fontSize: "0.875rem",
     lineHeight: "1.25",
   },
+  body1: {
+    fontSize: DFontSize,
+    fontWeight: 300,
+    opacity: 0.8,
+  },
+  body2: {
+    fontSize: DFontSize * 0.88,
+    fontWeight: 400,
+  },
   h1: {
     fontSize: DFontSize * 3,
     fontWeight: 700,
@@ -34,7 +43,7 @@ export const typography = {
     fontWeight: 700,
   },
   h6: {
-    fontSize: DFontSize * 1.25,
+    fontSize: DFontSize * 1.15,
     fontWeight: 700,
   },
 } as TypographyOptions;

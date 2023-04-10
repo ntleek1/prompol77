@@ -32,8 +32,12 @@ const CardHover: React.FC<CardHoverProps> = ({
       </Box>
       <MuiCardContent
         sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          gap: 1,
           position: "absolute",
-          padding: 5,
+          padding: 4,
           top: 0,
           left: 0,
           right: 0,
@@ -45,23 +49,18 @@ const CardHover: React.FC<CardHoverProps> = ({
           },
         }}
       >
-        <Typography variant="h5" align="left" fontWeight={600}>
-          {title}
-        </Typography>
+        <Typography variant="h6">{title}</Typography>
         <Typography
-          variant="body1"
+          variant="body2"
           component="p"
           color="black"
           fontWeight="light"
-          mt={1}
-          sx={{ lineHeight: 1.2 }}
         >
           {description}
         </Typography>
-        <Typography variant="body2" component="p" color="text.secondary" mt={2}>
-          {type}
-        </Typography>
         <Typography variant="small" component="p" color="text.secondary">
+          {type}
+          <br />
           {square}
         </Typography>
       </MuiCardContent>

@@ -5,15 +5,20 @@ function useCardStyles() {
 
   const CSSCard: SxProps = {
     position: "relative",
-    transition: "transform 0.2s, background-color 0.2s",
+    transition: "all 0.2s",
+    boxShadow: "none",
     "&:hover": {
-      transform: "scale(1.05)",
+      transform: "scale(1.01)",
       backgroundColor: theme.palette.background.default,
-      boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
+      boxShadow: theme.shadows[5],
     },
   };
 
   const CSSContent: SxProps = {};
+
+  const CSSTitle: SxProps = {
+    fontWeight: 400,
+  };
 
   const CSSButtonGroup: SxProps = {
     position: "absolute",
@@ -21,12 +26,13 @@ function useCardStyles() {
     right: theme.spacing(3),
     gap: 1,
     boxShadow: "none",
+    color: "white",
   };
 
   return {
     CSSCard,
-
     CSSContent,
+    CSSTitle,
     CSSButtonGroup,
   };
 }
@@ -42,6 +48,7 @@ function useCardHoverStyles({ title, description }: CardHoverProps) {
   const CSSCardHover: SxProps = {
     position: "relative",
     transition: "transform 0.2s, background-color 0.2s",
+    boxShadow: theme.shadows[5],
   };
 
   return {

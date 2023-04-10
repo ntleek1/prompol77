@@ -3,17 +3,12 @@ import { SxProps, useTheme } from "@mui/material/styles";
 function useHeaderStyles() {
   const theme = useTheme();
 
-  
-  
-
   const CSSFixPosition = {
     position: "relative",
     left: 0,
     right: 0,
     top: 0,
   };
-
-  
 
   const CSSTopbar: SxProps = {
     ...CSSFixPosition,
@@ -30,8 +25,6 @@ function useHeaderStyles() {
     py: 0.75,
   };
 
- 
-
   const CSSTopbarPhoneLink: SxProps = {
     fontWeight: 600,
     color: "black",
@@ -40,7 +33,6 @@ function useHeaderStyles() {
   const CSSNavbar: SxProps = {
     ...CSSFixPosition,
     top: theme.spacing(4),
-    
     height: theme.spacing(8),
     backgroundColor: theme.palette.grey[600],
   };
@@ -72,27 +64,24 @@ function useHeaderStyles() {
     whiteSpace: "nowrap",
   };
 
-
   const CSSWhatsAppIconStyle: SxProps = {
     flexShrink: 0,
-    fontSize: 17,
+    fontSize: 16,
     color: "#4D7C0F",
     mr: -1.5,
-    mb: 0.5,
   };
 
   const CSSPhoneIconStyle: SxProps = {
     flexShrink: 0,
-    fontSize: 17,
+    fontSize: 16,
     color: "#000000",
     mr: -1.5,
-    mb: 0.5,
   };
 
   return {
     CSSTopbar,
     CSSTopbarContainer,
-    
+
     CSSTopbarPhoneLink,
     CSSNavbar,
     CSSNavbarStyle,
@@ -100,7 +89,7 @@ function useHeaderStyles() {
     CSSLogoStyle,
     CSSCategoriesStyle,
     CSSWhatsAppIconStyle,
-    CSSPhoneIconStyle
+    CSSPhoneIconStyle,
   };
 }
 

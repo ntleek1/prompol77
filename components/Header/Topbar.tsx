@@ -8,7 +8,6 @@ const Topbar = () => {
   const {
     CSSTopbar,
     CSSTopbarContainer,
-
     CSSTopbarPhoneLink,
     CSSWhatsAppIconStyle,
     CSSPhoneIconStyle,
@@ -20,7 +19,7 @@ const Topbar = () => {
         <Typography variant="small" color="gray">
           г. Москва, Пн-Пт с 09:00 до 19:00, Сб-Вс выходные
         </Typography>
-        <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+        <Box display="flex" alignItems="center" justifyContent="center" gap={2}>
           <WhatsAppIcon sx={CSSWhatsAppIconStyle} />
           <Link
             href="https://api.whatsapp.com/send?phone=79265674901"

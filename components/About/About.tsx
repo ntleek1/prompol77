@@ -33,7 +33,7 @@ const About = () => {
   return (
     <Box id="about" sx={CSSAbout}>
       <Container sx={CSSAboutContainer}>
-        <Typography variant="h3" textAlign={"center"}>
+        <Typography variant="h2" textAlign={"center"}>
           О компании POL77.ru
         </Typography>
         <Typography variant="body1" mt={3}>
@@ -50,68 +50,91 @@ const About = () => {
       <Container>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6}>
-            <Box className="small-box" sx={CSSsmallBoxStyle}>
+            <Box sx={CSSsmallBoxStyle}>
               <HourglassBottomIcon sx={CSSHourglassBottomIconStyle} />
-              <Typography variant="body1">
-                <Box component="span" fontWeight="bold" color="black">
+              <Box>
+                <Typography
+                  component="p"
+                  fontWeight="bold"
+                  color="black"
+                  mb={1}
+                >
                   Большой опыт.
-                </Box>
-                <br />
-                Команда профессионалов с опытом более 10 лет в устройстве
-                промышленных полов.
-              </Typography>
+                </Typography>
+                <Typography component="p" variant="body2">
+                  Команда профессионалов с опытом более 10 лет в устройстве
+                  промышленных полов.
+                </Typography>
+              </Box>
             </Box>
           </Grid>
-
           <Grid item xs={12} sm={6}>
             <Box className="small-box" sx={CSSsmallBoxStyle}>
               <PeopleAltSharpIcon sx={CSSPeopleAltSharpIconStyle} />
-              <Typography variant="body1">
-                <Box component="span" fontWeight="bold" color="black">
+              <Box>
+                <Typography
+                  component="p"
+                  fontWeight="bold"
+                  color="black"
+                  mb={1}
+                >
                   Большой рабочий потенциал.
-                </Box>
-                <br />
-                Соблюдаем сроки выполнения задач благодаря нашей большой команде
-                (~20 профессионалов).
-              </Typography>
+                </Typography>
+                <Typography component="p" variant="body2">
+                  Соблюдаем сроки выполнения задач благодаря нашей большой
+                  команде (~20 профессионалов).
+                </Typography>
+              </Box>
             </Box>
           </Grid>
           <Grid item xs={12} sm={6}>
             <Box className="large-box" sx={CSSlargeBoxStyle}>
               <VerifiedIcon sx={CSSVerifiedIconStyle} />
-              <Typography variant="body1">
-                <Box component="span" fontWeight="bold" color="black">
+              <Box>
+                <Typography
+                  component="p"
+                  fontWeight="bold"
+                  color="black"
+                  mb={1}
+                >
                   Высокое качество.
-                </Box>
-                <br />
-                Используем профессиональное оборудование, передовые технологии и
-                материалы, чтобы создавать долговечные промышленные полы.
-                Руководитель лично контролирует работу наших сотрудников, чтобы
-                каждый заказ был выполнен безупречно.
-              </Typography>
+                </Typography>
+                <Typography component="p" variant="body2">
+                  Используем профессиональное оборудование, передовые технологии
+                  и материалы, чтобы создавать долговечные промышленные полы.
+                  Руководитель лично контролирует работу наших сотрудников,
+                  чтобы каждый заказ был выполнен безупречно.
+                </Typography>
+              </Box>
             </Box>
           </Grid>
           <Grid item xs={12} sm={6}>
             <Box className="large-box" sx={CSSlargeBoxStyle}>
               <DescriptionIcon sx={CSSDescriptionIconStyle} />
-              <Typography variant="body1">
-                <Box component="span" fontWeight="bold" color="black">
+              <Box>
+                <Typography
+                  component="p"
+                  fontWeight="bold"
+                  color="black"
+                  mb={1}
+                >
                   Работаем по договору.
-                </Box>
-                <br />
-                Заключаем договор с каждым клиентом и подробно прописываем
-                условия нашей ответственности. Наша порядочность и честность
-                подтверждены уже реализованными проектами, и мы гарантируем, что
-                каждый заказ будет выполнен в полном соответствии с заключенным
-                договором.
-              </Typography>
+                </Typography>
+                <Typography component="p" variant="body2">
+                  Заключаем договор с каждым клиентом и подробно прописываем
+                  условия нашей ответственности. Наша порядочность и честность
+                  подтверждены уже реализованными проектами, и мы гарантируем,
+                  что каждый заказ будет выполнен в полном соответствии с
+                  заключенным договором.
+                </Typography>
+              </Box>
             </Box>
           </Grid>
         </Grid>
       </Container>
 
       <Container>
-        <Typography variant="h3" mt={5} textAlign={"center"}>
+        <Typography variant="h3" mt={8} textAlign={"center"}>
           Почему лучше нанимать фирму, а не бригаду?
         </Typography>
         <Typography variant="body1" component="p" mt={3}>
@@ -124,8 +147,8 @@ const About = () => {
       </Container>
 
       <Container>
-        <Grid container spacing={3} sx={{ flexWrap: "wrap" }}>
-          <Grid item xs={12} md={6} sx={CSSgridItemStyles}>
+        <Grid container spacing={6} py={4}>
+          <Grid item xs={12} md={6}>
             <Box>
               <Box sx={CSSreasonsStyle}>
                 <Circle color="primary">
@@ -134,12 +157,7 @@ const About = () => {
                   </Typography>
                 </Circle>
 
-                <Typography
-                  variant="h3"
-                  sx={{
-                    marginLeft: 3,
-                  }}
-                >
+                <Typography variant="h3" ml={3}>
                   Сложность работ
                 </Typography>
               </Box>
@@ -149,7 +167,7 @@ const About = () => {
                 <Typography variant="subtitle2" sx={{ marginLeft: -3 }}>
                   <span style={{ color: "#16A34A", fontWeight: "bold" }}>
                     Компания:
-                  </span>
+                  </span>{" "}
                   <span style={{ fontWeight: "bold" }}>
                     Профессиональные сотрудники с опытом работ.
                   </span>
@@ -160,13 +178,13 @@ const About = () => {
                 <Typography variant="subtitle2" sx={{ marginLeft: -3, mt: 2 }}>
                   <span style={{ color: "#7a7a7a", fontWeight: "bold" }}>
                     Бригада:
-                  </span>
+                  </span>{" "}
                   <span style={{ fontWeight: "bold" }}>
                     Неизвестный уровень качества работ.
                   </span>
                 </Typography>
               </Box>
-              <Typography variant="subtitle2" sx={CSStextreasonsStyle}>
+              <Typography variant="body2" sx={CSStextreasonsStyle}>
                 Промышленные полы вещь сложная. И дефекты от работы рабочих без
                 контроля скажутся спустя время. Так например, некоторые
                 заказчики топпиновых полов, нанявших в итоге бригаду, не могли
@@ -180,7 +198,7 @@ const About = () => {
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={12} md={6} sx={CSSgridItemStyles}>
+          <Grid item xs={12} md={6}>
             <Box>
               <Box sx={CSSreasonsStyle}>
                 <Circle color="error">
@@ -189,12 +207,7 @@ const About = () => {
                   </Typography>
                 </Circle>
 
-                <Typography
-                  variant="h3"
-                  sx={{
-                    marginLeft: 3,
-                  }}
-                >
+                <Typography variant="h3" ml={3}>
                   Гарантия
                 </Typography>
               </Box>
@@ -204,7 +217,7 @@ const About = () => {
                 <Typography variant="subtitle2" sx={{ marginLeft: -3 }}>
                   <span style={{ color: "#16A34A", fontWeight: "bold" }}>
                     Компания:
-                  </span>
+                  </span>{" "}
                   <span style={{ fontWeight: "bold" }}>
                     Реальная гарантия на несколько лет.
                   </span>
@@ -215,13 +228,13 @@ const About = () => {
                 <Typography variant="subtitle2" sx={{ marginLeft: -3, mt: 2 }}>
                   <span style={{ color: "#7a7a7a", fontWeight: "bold" }}>
                     Бригада:
-                  </span>
+                  </span>{" "}
                   <span style={{ fontWeight: "bold" }}>
                     Отсутствие реальной гарантии.
                   </span>
                 </Typography>
               </Box>
-              <Typography variant="subtitle2" sx={CSStextreasonsStyle}>
+              <Typography variant="body2" sx={CSStextreasonsStyle}>
                 Гарантии могут быть словесные, Вам могут пообещать разного. В
                 итоге оформить договор на фирму какого-нибудь своего друга или
                 вообще однодневку. В случае предъявления Вами весьма вероятных
@@ -229,7 +242,7 @@ const About = () => {
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={12} md={6} sx={CSSgridItemStyles2}>
+          <Grid item xs={12} md={6}>
             <Box>
               <Box sx={CSSreasonsStyle}>
                 <Circle color="error">
@@ -238,12 +251,7 @@ const About = () => {
                   </Typography>
                 </Circle>
 
-                <Typography
-                  variant="h3"
-                  sx={{
-                    marginLeft: 3,
-                  }}
-                >
+                <Typography variant="h3" ml={3}>
                   Контроль работ
                 </Typography>
               </Box>
@@ -253,7 +261,7 @@ const About = () => {
                 <Typography variant="subtitle2" sx={{ marginLeft: -3 }}>
                   <span style={{ color: "#16A34A", fontWeight: "bold" }}>
                     Компания:
-                  </span>
+                  </span>{" "}
                   <span style={{ fontWeight: "bold" }}>
                     Строгий контроль на всех этапах работ.
                   </span>
@@ -264,13 +272,13 @@ const About = () => {
                 <Typography variant="subtitle2" sx={{ marginLeft: -3, mt: 2 }}>
                   <span style={{ color: "#7a7a7a", fontWeight: "bold" }}>
                     Бригада:
-                  </span>
+                  </span>{" "}
                   <span style={{ fontWeight: "bold" }}>
                     Отсутствие строгого контроля.
                   </span>
                 </Typography>
               </Box>
-              <Typography variant="subtitle2" sx={CSStextreasonsStyle}>
+              <Typography variant="body2" sx={CSStextreasonsStyle}>
                 Отсутствие должного контроля. Как было написано выше – Вас могут
                 просто обмануть, как лиц слабо разбирающихся в процессе. Нужно
                 им это будет с одной целью – им так дешевле. Претензий Вам потом
@@ -278,7 +286,7 @@ const About = () => {
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={12} md={6} sx={CSSgridItemStyles2}>
+          <Grid item xs={12} md={6}>
             <Box>
               <Box sx={CSSreasonsStyle}>
                 <Circle color="primary">
@@ -287,12 +295,7 @@ const About = () => {
                   </Typography>
                 </Circle>
 
-                <Typography
-                  variant="h3"
-                  sx={{
-                    marginLeft: 3,
-                  }}
-                >
+                <Typography variant="h3" ml={3}>
                   Прозрачность
                 </Typography>
               </Box>
@@ -302,7 +305,7 @@ const About = () => {
                 <Typography variant="subtitle2" sx={{ marginLeft: -3 }}>
                   <span style={{ color: "#16A34A", fontWeight: "bold" }}>
                     Компания:
-                  </span>
+                  </span>{" "}
                   <span style={{ fontWeight: "bold" }}>
                     Чистая (Белая) бухгалтерия.
                   </span>
@@ -313,13 +316,13 @@ const About = () => {
                 <Typography variant="subtitle2" sx={{ marginLeft: -3, mt: 2 }}>
                   <span style={{ color: "#7a7a7a", fontWeight: "bold" }}>
                     Бригада:
-                  </span>
+                  </span>{" "}
                   <span style={{ fontWeight: "bold" }}>
                     Неизвестная фирма или фирма-однодневка.
                   </span>
                 </Typography>
               </Box>
-              <Typography variant="subtitle2" sx={CSStextreasonsStyle}>
+              <Typography variant="body2" sx={CSStextreasonsStyle}>
                 Весьма вероятно, что договор будет не от чистой фирмы и в
                 результате этого Вы получите проблемы с Налоговой Полицией.
               </Typography>
