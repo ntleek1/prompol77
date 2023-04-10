@@ -4,42 +4,31 @@ function useContactsStyles() {
   const theme = useTheme();
 
   const ContactsCSS: SxProps = {
-  py: theme.spacing(10),
-  backgroundColor: theme.palette.grey[200],
-
-  };
-
-
-  const ContactsHeaderCSS: SxProps = {
-    fontSize: 38,
-    color: "black",
-    textTransform: "uppercase",
-    textAlign: "left",
-    top: 226, 
-    marginBottom: 5
+    py: theme.spacing(10),
+    backgroundColor: theme.palette.grey[200],
   };
 
   const ContactsBoxCSS: SxProps = {
-    width: 205, 
-    display: "flex", 
-    flexDirection: "column"
+    width: 205,
+    display: "flex",
+    flexDirection: "column",
   };
 
   const ContactsIconCSS: SxProps = {
     marginRight: 1,
-    fontSize: 23 
+    fontSize: 23,
   };
 
   const ContactsWatsAppCSS: SxProps = {
-    marginRight: 1, 
-    fontSize: 23, 
-    color: "green" 
+    marginRight: 1,
+    fontSize: 23,
+    color: "green",
   };
 
   const ContactsAccountTreeIconCSS: SxProps = {
-    marginRight: 2, 
-    fontSize: 27, 
-    color: "#244D94"
+    marginRight: 2,
+    fontSize: 27,
+    color: "#244D94",
   };
 
   const ContactsLineBoxCSS: SxProps = {
@@ -54,29 +43,27 @@ function useContactsStyles() {
 
   const ContactsLineCSS: SxProps = {
     width: "100%",
-    borderTop: "1px dashed #000",
-    borderBottom: 0,
-    marginBottom: 2.2,
+    border: 0,
+    borderBottom: "1px dashed #aaa",
   };
-  
+
   const ContactsDataCSS: SxProps = {
     width: 180,
     display: "flex",
     flexDirection: "column",
     marginTop: 0.8,
-    marginRight: 40
+    marginRight: 40,
   };
 
   return {
     ContactsCSS,
     ContactsBoxCSS,
-    ContactsHeaderCSS,
     ContactsIconCSS,
     ContactsAccountTreeIconCSS,
     ContactsWatsAppCSS,
     ContactsLineBoxCSS,
     ContactsLineCSS,
-    ContactsDataCSS
+    ContactsDataCSS,
   };
 }
 
