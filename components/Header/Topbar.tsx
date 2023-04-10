@@ -22,7 +22,7 @@ const Topbar = () => {
         <Box display="flex" alignItems="center" justifyContent="center" gap={2}>
           <WhatsAppIcon sx={CSSWhatsAppIconStyle} />
           <Link
-            href="https://api.whatsapp.com/send?phone=79265674901"
+            href="https://api.whatsapp.com/send?phone=79857271414"
             target="_blank"
           >
             <Typography variant="small" color="grey">
@@ -31,19 +31,19 @@ const Topbar = () => {
           </Link>
           <PhoneIcon sx={CSSPhoneIconStyle} />
           <Link
-            href="tel:+749566403468"
+            href="tel:+7 (985) 727-14-14"
             variant="small"
             sx={CSSTopbarPhoneLink}
           >
-            +7 (495) 664-34-68
+            +7 (985) 727-14-14
           </Link>
-          <Link
-            href="tel:+749566403468"
+          {/* <Link
+            href="tel:+7 (985) 727-14-14"
             variant="small"
             sx={CSSTopbarPhoneLink}
           >
-            +7 (495) 664-34-68
-          </Link>
+            +7 (985) 727-14-14
+          </Link> */}
         </Box>
       </Container>
     </Box>

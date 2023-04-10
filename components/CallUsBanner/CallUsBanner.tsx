@@ -44,7 +44,8 @@ const CallUsBanner = () => {
             <Box sx={CallUsBannerPhonesCSS} alignSelf="end">
               <Box>
                 <Typography variant="h4" component="p">
-                  +7 (495) 664-34-68 <br /> +7 (495) 664-34-68
+                  {/* +7 (985) 727-14-14 <br /> +7 (985) 727-14-14 */}
+                  +7 (985) 727-14-14
                 </Typography>
               </Box>
             </Box>

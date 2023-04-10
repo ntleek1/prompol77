@@ -30,8 +30,8 @@ function useCallUsBannerStyles() {
       "&::before": {
         content: "''",
         position: "absolute",
-        left: "-247px",
-        top: "25%",
+        left: "-237px",
+        top: "2%",
         width: 0,
         height: 0,
         borderStyle: "solid",

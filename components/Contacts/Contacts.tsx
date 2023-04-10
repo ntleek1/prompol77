@@ -1,29 +1,13 @@
 import React from "react";
-import {
-  Box,
-  Container,
-  Typography,
-  Button,
-  Card,
-  CardMedia,
-} from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import PhoneIcon from "@mui/icons-material/Phone";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import EmailIcon from "@mui/icons-material/Email";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import PlaceIcon from "@mui/icons-material/Place";
 import useContactsStyles from "./styles";
 
 const Contacts = () => {
-  const {
-    ContactsCSS,
-    ContactsBoxCSS,
-    ContactsIconCSS,
-    ContactsAccountTreeIconCSS,
-    ContactsLineCSS,
-    ContactsDataCSS,
-    ContactsLineBoxCSS,
-  } = useContactsStyles();
+  const { ContactsCSS, ContactsLineCSS } = useContactsStyles();
 
   return (
     <Box id="about" sx={ContactsCSS}>
@@ -39,18 +23,18 @@ const Contacts = () => {
               </Typography>
               <Box component="hr" sx={ContactsLineCSS} />
               <Typography width={300} fontWeight={600}>
-                +7 (495) 664-34-68
+                +7 (985) 727-14-14
               </Typography>
             </Box>
-            <Box display="flex" gap={3}>
+            {/* <Box display="flex" gap={3}>
               <Typography width={300} display="flex" gap={2}>
                 &nbsp;
               </Typography>
               <Box component="hr" sx={ContactsLineCSS} />
               <Typography width={300} fontWeight={600}>
-                +7 (495) 664-34-68
+                +7 (985) 727-14-14
               </Typography>
-            </Box>
+            </Box> */}
             <Box display="flex" gap={3} color="green">
               <Typography width={300} display="flex" gap={2}>
                 <WhatsAppIcon fontSize="small" />
@@ -58,7 +42,7 @@ const Contacts = () => {
               </Typography>
               <Box component="hr" sx={ContactsLineCSS} />
               <Typography width={300} fontWeight={600}>
-                +7 (495) 664-34-68
+                +7 (985) 727-14-14
               </Typography>
             </Box>
           </Box>
@@ -74,7 +58,7 @@ const Contacts = () => {
                 href="mailto:info@pol77.ru"
                 style={{ textDecoration: "none", color: "#365FA1" }}
               >
-                info@pol77.ru
+                9857271414@mail.ru
               </a>
             </Typography>
           </Box>
@@ -107,43 +91,6 @@ const Contacts = () => {
           </Box>
 
           <Typography variant="h3" mt={3}>
-            Адрес и схема проезда
-          </Typography>
-
-          <Box display="flex" alignItems="center">
-            <Typography sx={{ marginRight: 5 }}>
-              100100, г. Москва, ул. 1-я улица Текстильщиков, д. 12/9, офис 2
-            </Typography>
-            <Button
-              variant="contained"
-              color="error"
-              startIcon={<PlaceIcon />}
-              size="small"
-            >
-              Смотреть на Яндекс Картах
-            </Button>
-          </Box>
-
-          <Box>
-            <Card
-              sx={{
-                borderRadius: "10px",
-                boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.25)",
-              }}
-            >
-              <CardMedia
-                component="img"
-                image="/map.jpg"
-                alt="Карта"
-                sx={{
-                  width: "100%",
-                  height: "auto",
-                }}
-              />
-            </Card>
-          </Box>
-
-          <Typography variant="h3" mt={3}>
             Реквизиты компании
           </Typography>
 
@@ -154,7 +101,7 @@ const Contacts = () => {
               </Typography>
               <Box component="hr" sx={ContactsLineCSS} />
               <Typography width={300} fontWeight={600}>
-                ООО &quot;ПОЛ77&quot;
+                ООО “ПОЛ77”
               </Typography>
             </Box>
             <Box display="flex" gap={3}>
