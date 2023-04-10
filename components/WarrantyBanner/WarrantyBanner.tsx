@@ -6,31 +6,26 @@ import useWarrantyBannerStyles from "./styles";
 const WarrantyBanner = () => {
   const {
     WarrantyBannerCSS,
+    WarrantyBannerContainerCSS,
     WarrantyBannerHeaderCSS,
     WarrantyBannerBottomCSS,
   } = useWarrantyBannerStyles();
 
   return (
     <Box component="section" id="BannerBox" sx={WarrantyBannerCSS}>
-      <Container>
-        <Box display="flex" flexDirection="column" alignItems="center">
+      <Container sx={{ height: "100%" }}>
+        <Box sx={WarrantyBannerContainerCSS}>
           <Box>
             <Typography variant="h2" component="p" sx={WarrantyBannerHeaderCSS}>
               2 года гарантии качества
               <br /> и результата
             </Typography>
           </Box>
-          <Box
-            display="flex"
-            flexDirection="row"
-            gap={4}
-            alignItems="center"
-            marginTop={45}
-          >
+          <Box sx={WarrantyBannerBottomCSS}>
             <Button variant="contained" startIcon={<EmailIcon />}>
               Оставить заявку
             </Button>
-            <Button variant="outlined" sx={WarrantyBannerBottomCSS}>
+            <Button variant="outlined" color="inherit">
               Подробнее
             </Button>
           </Box>

@@ -6,7 +6,8 @@ import VerifiedIcon from "@mui/icons-material/Verified";
 import useHeroStyles from "./styles";
 
 const Hero = () => {
-  const { heroCSS, heroContainerCSS } = useHeroStyles();
+  const { heroCSS, heroContainerCSS, heroBenefitsCSS, heroButtonsGroupCSS } =
+    useHeroStyles();
 
   return (
     <Box component="section" id="heroScreen" sx={heroCSS}>
@@ -25,7 +26,7 @@ const Hero = () => {
             организации, которые ценят свое время и деньги.
           </Typography>
 
-          <Box display="flex" alignItems="center" gap={4}>
+          <Box sx={heroBenefitsCSS}>
             <Box display="flex" gap={2} alignItems="center">
               <VerifiedIcon color="success" fontSize="large" />
               <Box>
@@ -63,7 +64,7 @@ const Hero = () => {
             </Box>
           </Box>
 
-          <Box display="flex" alignItems="center" gap={2}>
+          <Box sx={heroButtonsGroupCSS}>
             <Button
               variant="contained"
               color="error"

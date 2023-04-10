@@ -10,32 +10,34 @@ function useWarrantyBannerStyles() {
     backgroundPosition: "center",
     height: 480, // Установка высоты
   };
-  
+
+  const WarrantyBannerContainerCSS = {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    height: "100%",
+  };
 
   const WarrantyBannerHeaderCSS = {
-    fontSize: 38,
-    color: "black",
-    right: 0,
     textAlign: "center",
-    top: 226, // Расстояние от верхнего края контейнера
-    left: 200,
   };
 
   const WarrantyBannerBottomCSS = {
+    display: "flex",
+    gap: 2,
+    alignSelf: "bottom",
+    mt: "auto",
     color: "white",
-    right: 0,
-    textAlign: "center",
-    borderColor: "white",
-    width: 217,
-    
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column",
+    },
   };
-
-  
 
   return {
     WarrantyBannerCSS,
+    WarrantyBannerContainerCSS,
     WarrantyBannerHeaderCSS,
-    WarrantyBannerBottomCSS
+    WarrantyBannerBottomCSS,
   };
 }
 

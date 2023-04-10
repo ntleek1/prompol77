@@ -10,7 +10,8 @@ const Navbar = () => {
     CSSNavbarStyle,
     CSSContainerStyle,
     CSSLogoStyle,
-    CSSCategoriesStyle,
+    CSSMenuStyle,
+    CSSButtonsStyle,
   } = useHeaderStyles();
 
   return (
@@ -22,7 +23,7 @@ const Navbar = () => {
           </Link>
         </Box>
 
-        <Box sx={CSSCategoriesStyle}>
+        <Box sx={CSSMenuStyle}>
           <Link href="#" variant="body2">
             Виды полов
           </Link>
@@ -37,7 +38,7 @@ const Navbar = () => {
           </Link>
         </Box>
 
-        <Box display="flex" gap={1}>
+        <Box sx={CSSButtonsStyle}>
           <Button
             variant="contained"
             color="error"

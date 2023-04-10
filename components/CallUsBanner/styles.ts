@@ -8,14 +8,15 @@ function useCallUsBannerStyles() {
     backgroundImage: `url(/banner.jpg)`,
     backgroundSize: "cover",
     backgroundPosition: "center",
-    height: 480, // Установка высоты
+    minHeight: 480, // Установка высоты
   };
 
-  const CallUsBannerHeaderCSS = {
-    fontSize: 38,
-    color: "black",
-    right: 0,
-    textAlign: "left",
+  const CallUsWrapperCSS = {
+    display: "flex",
+    gap: 2,
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column",
+    },
   };
 
   const CallUsBannerPhonesCSS = {
@@ -38,12 +39,23 @@ function useCallUsBannerStyles() {
         borderColor: "transparent #ffffff transparent transparent",
       },
     },
+    [theme.breakpoints.down("md")]: {
+      mt: 0,
+    },
+  };
+
+  const CallUsBannerButtonCSS = {
+    mt: 8,
+    [theme.breakpoints.down("md")]: {
+      mt: 0,
+    },
   };
 
   return {
     CallUsBannerCSS,
-    CallUsBannerHeaderCSS,
+    CallUsWrapperCSS,
     CallUsBannerPhonesCSS,
+    CallUsBannerButtonCSS,
   };
 }
 
