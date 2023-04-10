@@ -28,6 +28,7 @@ function useHeaderStyles() {
   const CSSTopbarPhoneLink: SxProps = {
     fontWeight: 600,
     color: "black",
+    marginRight: 14,
   };
 
   const CSSNavbar: SxProps = {
