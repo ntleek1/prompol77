@@ -5,7 +5,7 @@ function useCallUsStyles() {
 
   const CallUsCSS: SxProps = {
     py: theme.spacing(10),
-    backgroundImage: `url(/Banner.jpg)`,
+    backgroundImage: `url(/banner.jpg)`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: 480, // Установка высоты

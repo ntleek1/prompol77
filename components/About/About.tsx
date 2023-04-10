@@ -25,6 +25,7 @@ const About = () => {
     CSSsmallBoxStyle,
     CSSlargeBoxStyle,
     CSSgridItemStyles,
+    CSSgridItemStyles2,
     CSSreasonsStyle,
     CSStextreasonsStyle,
   } = useAboutStyles();
@@ -236,7 +237,7 @@ const About = () => {
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={12} md={6} sx={CSSgridItemStyles}>
+          <Grid item xs={12} md={6} sx={CSSgridItemStyles2}>
             <Box>
               <Box sx={CSSreasonsStyle}>
                 <Circle color="error">
@@ -285,7 +286,7 @@ const About = () => {
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={12} md={6} sx={CSSgridItemStyles}>
+          <Grid item xs={12} md={6} sx={CSSgridItemStyles2}>
             <Box>
               <Box sx={CSSreasonsStyle}>
                 <Circle color="primary">

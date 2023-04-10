@@ -37,6 +37,12 @@ function useAboutStyles() {
     backgroundColor: "transparent",
   };
 
+  const CSSgridItemStyles2: SxProps = {
+    height: "400px",
+    marginTop: 5,
+    backgroundColor: "transparent",
+  };
+
   const CSSHourglassBottomIconStyle: SxProps = {
     flexShrink: 0,
     width: "100px",
@@ -146,6 +152,7 @@ function useAboutStyles() {
     CSSgridItemStyles,
     CSSreasonsStyle,
     CSStextreasonsStyle,
+    CSSgridItemStyles2
   
   };
 
