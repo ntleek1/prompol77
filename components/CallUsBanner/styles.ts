@@ -21,8 +21,8 @@ function useCallUsBannerStyles() {
   const CallUsBannerPhonesCSS = {
     background: theme.palette.background.default,
     borderRadius: 8,
-    py: theme.spacing(2),
-    px: theme.spacing(6),
+    py: theme.spacing(4),
+    px: theme.spacing(8),
     mt: 5,
     "> *": {
       position: "relative",
