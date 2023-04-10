@@ -1,5 +1,12 @@
 import React from "react";
-import { Box, Container, Typography, Button } from "@mui/material";
+import {
+  Box,
+  Container,
+  Typography,
+  Button,
+  Card,
+  CardMedia,
+} from "@mui/material";
 import PhoneIcon from "@mui/icons-material/Phone";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import EmailIcon from "@mui/icons-material/Email";
@@ -9,7 +16,17 @@ import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import useContactsStyles from "./styles";
 
 const Contacts = () => {
-  const { ContactsCSS, ContactsHeaderCSS } = useContactsStyles();
+  const {
+    ContactsCSS,
+    ContactsHeaderCSS,
+    ContactsBoxCSS,
+    ContactsIconCSS,
+    ContactsAccountTreeIconCSS,
+    ContactsWatsAppCSS,
+    ContactsLineBoxCSS,
+    ContactsLineCSS,
+    ContactsDataCSS,
+  } = useContactsStyles();
 
   return (
     <Box id="about" sx={ContactsCSS}>
@@ -20,66 +37,25 @@ const Contacts = () => {
 
         <Container>
           <Box display="flex">
-            <Box sx={{ width: 205, display: "flex", flexDirection: "column" }}>
+            <Box sx={{ ContactsBoxCSS }}>
               <Typography>
-                <PhoneIcon sx={{ marginRight: 1, fontSize: 23 }} />
+                <PhoneIcon sx={ContactsIconCSS} />
                 Телефон в Москве
               </Typography>
               <Typography>
                 <br />
               </Typography>
               <Typography align="right">
-                <WhatsAppIcon
-                  sx={{ marginRight: 1, fontSize: 23, color: "green" }}
-                />
+                <WhatsAppIcon sx={ContactsWatsAppCSS} />
                 WhatsApp
               </Typography>
             </Box>
-            <Box
-              sx={{
-                flexGrow: 1,
-                display: "flex",
-                flexDirection: "column",
-                marginLeft: 2,
-                marginRight: 2,
-                marginTop: 2,
-              }}
-            >
-              <Box
-                component="hr"
-                sx={{
-                  width: "100%",
-                  borderTop: "1px dashed #000",
-                  borderBottom: 0,
-                  marginBottom: 2.2,
-                }}
-              />
-              <Box
-                component="hr"
-                sx={{
-                  width: "100%",
-                  borderTop: "1px dashed #000",
-                  borderBottom: 0,
-                  marginBottom: 2.2,
-                }}
-              />
-              <Box
-                component="hr"
-                sx={{
-                  width: "100%",
-                  borderTop: "1px dashed #000",
-                  borderBottom: 0,
-                }}
-              />
+            <Box sx={ContactsLineBoxCSS}>
+              <Box component="hr" sx={ContactsLineCSS} />
+              <Box component="hr" sx={ContactsLineCSS} />
+              <Box component="hr" sx={ContactsLineCSS} />
             </Box>
-            <Box
-              sx={{
-                width: 180,
-                display: "flex",
-                flexDirection: "column",
-                marginTop: 0.8,
-              }}
-            >
+            <Box sx={ContactsDataCSS}>
               <Typography>+7 (495) 664-34-68</Typography>
               <Typography>+7 (495) 664-34-68</Typography>
               <Typography>+7 (495) 664-34-68</Typography>
@@ -91,31 +67,18 @@ const Contacts = () => {
           <Box display="flex" sx={{ marginTop: 5 }}>
             <Box sx={{ width: 205 }}>
               <Typography>
-                <EmailIcon sx={{ marginRight: 1, fontSize: 23 }} />
+                <EmailIcon sx={ContactsIconCSS} />
                 Электронная почта
               </Typography>
             </Box>
-            <Box
-              sx={{
-                flexGrow: 1,
-                marginLeft: 2,
-                marginRight: 2,
-                marginTop: 2,
-              }}
-            >
-              <Box
-                component="hr"
-                sx={{
-                  width: "100%",
-                  borderTop: "1px dashed #000",
-                  borderBottom: 0,
-                }}
-              />
+            <Box sx={ContactsLineBoxCSS}>
+              <Box component="hr" sx={ContactsLineCSS} />
             </Box>
             <Box
               sx={{
                 width: 180,
                 marginTop: 0.8,
+                marginRight: 40,
               }}
             >
               <Typography>
@@ -136,51 +99,19 @@ const Contacts = () => {
 
         <Container>
           <Box display="flex" sx={{ marginTop: 5 }}>
-            <Box sx={{ width: 205, display: "flex", flexDirection: "column" }}>
+            <Box sx={ContactsBoxCSS}>
               <Typography>
-                <CalendarMonthIcon sx={{ marginRight: 1, fontSize: 23 }} />
+                <CalendarMonthIcon sx={ContactsIconCSS} />
                 Телефон в Москве
               </Typography>
 
               <Typography marginLeft={4}>СБ и ВС</Typography>
             </Box>
-            <Box
-              sx={{
-                flexGrow: 1,
-                display: "flex",
-                flexDirection: "column",
-                marginLeft: 2,
-                marginRight: 2,
-                marginTop: 2,
-              }}
-            >
-              <Box
-                component="hr"
-                sx={{
-                  width: "100%",
-                  borderTop: "1px dashed #000",
-                  borderBottom: 0,
-                  marginBottom: 2.2,
-                }}
-              />
-              <Box
-                component="hr"
-                sx={{
-                  width: "100%",
-                  borderTop: "1px dashed #000",
-                  borderBottom: 0,
-                  marginBottom: 2.2,
-                }}
-              />
+            <Box sx={ContactsLineBoxCSS}>
+              <Box component="hr" sx={ContactsLineCSS} />
+              <Box component="hr" sx={ContactsLineCSS} />
             </Box>
-            <Box
-              sx={{
-                width: 180,
-                display: "flex",
-                flexDirection: "column",
-                marginTop: 0.8,
-              }}
-            >
+            <Box sx={ContactsDataCSS}>
               <Typography>С 09:00 до 19:00</Typography>
               <Typography>Выходные дни</Typography>
             </Box>
@@ -206,17 +137,24 @@ const Contacts = () => {
         </Box>
 
         <Container>
-          <img
-            src="/map.jpg"
-            style={{
-              width: "100%",
-              height: "auto",
-              borderRadius: "10px",
-              boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.25)",
-              marginTop: 30,
-            }}
-            alt="Карта"
-          />
+          <Box sx={{ mt: 4 }}>
+            <Card
+              sx={{
+                borderRadius: "10px",
+                boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.25)",
+              }}
+            >
+              <CardMedia
+                component="img"
+                image="/map.jpg"
+                alt="Карта"
+                sx={{
+                  width: "100%",
+                  height: "auto",
+                }}
+              />
+            </Card>
+          </Box>
         </Container>
 
         <Typography variant="h2" marginTop={6}>
@@ -225,56 +163,17 @@ const Contacts = () => {
 
         <Container>
           <Box display="flex" sx={{ marginTop: 5 }}>
-            <Box sx={{ width: 205, display: "flex", flexDirection: "column" }}>
+            <Box sx={{ ContactsBoxCSS }}>
               <Typography>Компания</Typography>
               <Typography>ИНН</Typography>
               <Typography>ОГРН</Typography>
             </Box>
-            <Box
-              sx={{
-                flexGrow: 1,
-                display: "flex",
-                flexDirection: "column",
-                marginLeft: 2,
-                marginRight: 2,
-                marginTop: 2,
-              }}
-            >
-              <Box
-                component="hr"
-                sx={{
-                  width: "100%",
-                  borderTop: "1px dashed #000",
-                  borderBottom: 0,
-                  marginBottom: 2.2,
-                }}
-              />
-              <Box
-                component="hr"
-                sx={{
-                  width: "100%",
-                  borderTop: "1px dashed #000",
-                  borderBottom: 0,
-                  marginBottom: 2.2,
-                }}
-              />
-              <Box
-                component="hr"
-                sx={{
-                  width: "100%",
-                  borderTop: "1px dashed #000",
-                  borderBottom: 0,
-                }}
-              />
+            <Box sx={ContactsLineBoxCSS}>
+              <Box component="hr" sx={ContactsLineCSS} />
+              <Box component="hr" sx={ContactsLineCSS} />
+              <Box component="hr" sx={ContactsLineCSS} />
             </Box>
-            <Box
-              sx={{
-                width: 180,
-                display: "flex",
-                flexDirection: "column",
-                marginTop: 0.8,
-              }}
-            >
+            <Box sx={ContactsDataCSS}>
               <Typography>ООО “ПОЛ77”</Typography>
               <Typography>1234567890</Typography>
               <Typography>0000000000000</Typography>
@@ -295,9 +194,7 @@ const Contacts = () => {
               ml="auto"
               sx={{ textDecoration: "underline", color: "#244D94" }}
             >
-              <AccountTreeIcon
-                sx={{ marginRight: 2, fontSize: 27, color: "#244D94" }}
-              />
+              <AccountTreeIcon sx={ContactsAccountTreeIconCSS} />
               Карта сайта
             </Typography>
           </Box>
