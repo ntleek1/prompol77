@@ -30,7 +30,7 @@ const Card: React.FC<CardProps> = ({
 
   return (
     <MuiCard sx={{ ...CSSCard, ...sx }}>
-      <Box sx={{ CSSMedia }}>
+      <Box sx={CSSMedia}>
         <MuiCardMedia component="img" image={imageSrc} alt={title} />
         <ButtonGroup variant="contained" sx={CSSButtonGroup}>
           <Button
