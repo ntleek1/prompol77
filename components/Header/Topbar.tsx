@@ -37,13 +37,6 @@ const Topbar = () => {
           >
             +7 (985) 727-14-14
           </Link>
-          {/* <Link
-            href="tel:+7 (985) 727-14-14"
-            variant="small"
-            sx={CSSTopbarPhoneLink}
-          >
-            +7 (985) 727-14-14
-          </Link> */}
         </Box>
       </Container>
     </Box>

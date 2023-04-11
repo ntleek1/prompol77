@@ -18,8 +18,16 @@ const Navbar = () => {
     <Box component="section" id="navbar" sx={CSSNavbarStyle}>
       <Container sx={CSSContainerStyle}>
         <Box sx={CSSLogoStyle} flexShrink={0}>
-          <Link href="/">
-            <Image src="/Logo.jpg" alt="Logo" fill />
+          <Link
+            href="/"
+            variant="h4"
+            display="flex"
+            alignItems="center"
+            gap={2}
+            color="black"
+          >
+            <Image src="/images/logo.png" alt="Logo" width={68} height={48} />
+            ПолПромРФ
           </Link>
         </Box>
 

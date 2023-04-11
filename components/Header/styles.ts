@@ -16,8 +16,10 @@ function useHeaderStyles() {
     backgroundColor: theme.palette.grey[800],
     bgcolor: "#DDDDDD",
     color: "#555555",
-    [theme.breakpoints.down("md")]: {
-      display: "none",
+    [theme.breakpoints.down("lg")]: {
+      "> *": {
+        display: "none !important;",
+      },
     },
   };
 
@@ -31,7 +33,6 @@ function useHeaderStyles() {
   const CSSTopbarPhoneLink: SxProps = {
     fontWeight: 600,
     color: "black",
-    marginRight: 14,
   };
 
   const CSSNavbar: SxProps = {
@@ -58,15 +59,13 @@ function useHeaderStyles() {
 
   const CSSLogoStyle: SxProps = {
     position: "relative",
-    width: "140px",
-    height: "40px",
   };
 
   const CSSMenuStyle: SxProps = {
     display: "flex",
     gap: "40px",
     whiteSpace: "nowrap",
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.down("lg")]: {
       display: "none",
     },
   };
@@ -74,7 +73,7 @@ function useHeaderStyles() {
   const CSSButtonsStyle: SxProps = {
     display: "flex",
     gap: 1,
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.down("lg")]: {
       display: "none",
     },
   };
