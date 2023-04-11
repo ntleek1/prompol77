@@ -23,42 +23,25 @@ const CardHover: React.FC<CardHoverProps> = ({
   type,
   square,
 }): React.ReactElement => {
-  const { CSSCardHover } = useCardHoverStyles({ title, description });
+  const { CSSCardHover, CSSCardHoverContent } = useCardHoverStyles();
 
   return (
     <MuiCard sx={CSSCardHover}>
       <Box position="relative">
         <MuiCardMedia component="img" image={imageSrc} />
       </Box>
-      <MuiCardContent
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          gap: 1,
-          position: "absolute",
-          padding: 4,
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: "white",
-          opacity: 0,
-          "&:hover": {
-            opacity: 1,
-          },
-        }}
-      >
+      <MuiCardContent sx={CSSCardHoverContent}>
         <Typography variant="h6">{title}</Typography>
-        <Typography
-          variant="body2"
-          component="p"
-          color="black"
-          fontWeight="light"
-        >
+        <Typography variant="body2" component="p" color="black">
           {description}
         </Typography>
-        <Typography variant="small" component="p" color="text.secondary">
+        <Typography
+          variant="small"
+          component="p"
+          color="text.secondary"
+          fontWeight="light"
+          pt={3}
+        >
           {type}
           <br />
           {square}

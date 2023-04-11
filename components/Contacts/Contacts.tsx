@@ -80,10 +80,7 @@ const Contacts = () => {
               <Typography fontWeight={600}>С 09:00 до 19:00</Typography>
             </Box>
             <Box sx={ContactsFlexBoxCSS}>
-              <Typography>
-                <CalendarMonthIcon fontSize="small" sx={{ opacity: 0 }} />
-                СБ и ВС
-              </Typography>
+              <Typography>СБ и ВС</Typography>
               <Box component="hr" sx={ContactsLineCSS} />
               <Typography fontWeight={600}>Выходные дни</Typography>
             </Box>

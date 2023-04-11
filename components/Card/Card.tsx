@@ -1,4 +1,5 @@
 import React from "react";
+import { SxProps } from "@mui/material";
 import Box from "@mui/material/Box";
 import MuiCard from "@mui/material/Card";
 import MuiCardMedia from "@mui/material/CardMedia";
@@ -14,6 +15,7 @@ interface CardProps {
   description: string;
   imageSrc: string;
   link: string;
+  sx?: SxProps;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -21,12 +23,14 @@ const Card: React.FC<CardProps> = ({
   description,
   link,
   imageSrc,
+  sx,
 }): React.ReactElement => {
-  const { CSSCard, CSSContent, CSSButtonGroup, CSSTitle } = useCardStyles();
+  const { CSSCard, CSSMedia, CSSContent, CSSButtonGroup, CSSTitle } =
+    useCardStyles();
 
   return (
-    <MuiCard sx={CSSCard}>
-      <Box position="relative">
+    <MuiCard sx={{ ...CSSCard, ...sx }}>
+      <Box sx={{ CSSMedia }}>
         <MuiCardMedia component="img" image={imageSrc} alt={title} />
         <ButtonGroup variant="contained" sx={CSSButtonGroup}>
           <Button

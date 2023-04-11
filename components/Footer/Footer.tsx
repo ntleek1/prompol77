@@ -12,10 +12,10 @@ const Footer = () => {
           py: 8,
         }}
       >
-        <Typography>&copy; ПОЛ77, 2023</Typography>
+        <Typography variant="subtitle2">&copy; ПОЛ77, 2023</Typography>
         <Box ml="auto">
           <a href="#" style={{ textDecoration: "none", color: "#365FA1" }}>
-            <Typography display="flex" gap={1}>
+            <Typography display="flex" gap={1} variant="subtitle2">
               <AccountTreeIcon fontSize="small" />
               Карта сайта
             </Typography>

@@ -3,11 +3,13 @@ import { Box, Container, Typography, Button } from "@mui/material";
 import PlaylistAddCheckOutlinedIcon from "@mui/icons-material/PlaylistAddCheckOutlined";
 import ImageOutlinedIcon from "@mui/icons-material/ImageOutlined";
 import VerifiedIcon from "@mui/icons-material/Verified";
+import useIsMobile from "@/hooks/useIsMobile";
 import useHeroStyles from "./styles";
 
 const Hero = () => {
   const { heroCSS, heroContainerCSS, heroBenefitsCSS, heroButtonsGroupCSS } =
     useHeroStyles();
+  const isMobile = useIsMobile();
 
   return (
     <Box component="section" id="heroScreen" sx={heroCSS}>
@@ -20,14 +22,14 @@ const Hero = () => {
         >
           <Typography variant="h1">Производство промышленных полов</Typography>
 
-          <Typography variant="subtitle1">
+          <Typography variant="subtitle1" component="p">
             Мы обладаем значительным опытом работы в данной сфере и точно знаем,
             чего ждет заказчик. Наши клиенты – это предприятия и общественные
             организации, которые ценят свое время и деньги.
           </Typography>
 
           <Box sx={heroBenefitsCSS}>
-            <Box display="flex" gap={2} alignItems="center">
+            <Box>
               <VerifiedIcon color="success" fontSize="large" />
               <Box>
                 <Typography variant="h5" component="p" fontWeight={400}>
@@ -38,8 +40,7 @@ const Hero = () => {
                 </Typography>
               </Box>
             </Box>
-
-            <Box display="flex" gap={2} alignItems="center">
+            <Box>
               <VerifiedIcon color="success" fontSize="large" />
               <Box>
                 <Typography variant="h5" component="p" fontWeight={400}>
@@ -50,8 +51,7 @@ const Hero = () => {
                 </Typography>
               </Box>
             </Box>
-
-            <Box display="flex" gap={2} alignItems="center">
+            <Box>
               <VerifiedIcon color="success" fontSize="large" />
               <Box>
                 <Typography variant="h5" component="p" fontWeight={400}>
@@ -68,7 +68,7 @@ const Hero = () => {
             <Button
               variant="contained"
               color="error"
-              size="large"
+              size={isMobile ? "medium" : "large"}
               startIcon={<PlaylistAddCheckOutlinedIcon />}
             >
               Выбрать вид полов
@@ -76,7 +76,7 @@ const Hero = () => {
             <Button
               variant="contained"
               color="primary"
-              size="large"
+              size={isMobile ? "medium" : "large"}
               startIcon={<ImageOutlinedIcon />}
             >
               Смотреть готовые работы

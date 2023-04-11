@@ -4,10 +4,11 @@ function useWarrantyBannerStyles() {
   const theme = useTheme();
 
   const WarrantyBannerCSS: SxProps = {
-    py: theme.spacing(10),
-    backgroundImage: `url(/warrantyBanner.jpg)`,
+    py: theme.spacing(6),
+    backgroundImage: `url(/images/warrantyBanner.jpg)`,
     backgroundSize: "cover",
     backgroundPosition: "center",
+    boxSizing: "border-box",
     height: 480, // Установка высоты
   };
 
@@ -28,7 +29,7 @@ function useWarrantyBannerStyles() {
     alignSelf: "bottom",
     mt: "auto",
     color: "white",
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.down("lg")]: {
       flexDirection: "column",
     },
   };

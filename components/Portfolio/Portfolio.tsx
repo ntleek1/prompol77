@@ -48,7 +48,7 @@ const Portfolio = () => {
         </Box>
       </Container>
 
-      <Box sx={{ textAlign: "center", marginTop: 2 }}>
+      <Box sx={{ textAlign: "center", mt: 2, px: 4 }}>
         <Typography variant="h3">Клиенты которые нам доверяют</Typography>
         <Typography variant="body1" component="p" mt={2}>
           Мы ценим наши отношения с клиентами и всегда стараемся оправдать их

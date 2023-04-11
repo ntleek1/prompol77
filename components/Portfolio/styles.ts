@@ -13,7 +13,7 @@ function usePortfolioStyles() {
     justifyContent: "space-around",
     alignItems: "center",
     backgroundColor: "white",
-    boxShadow: theme.shadows[5],
+    boxShadow: theme.shadows[2],
     borderRadius: 8,
     mt: 4,
     overflow: "hidden",
@@ -25,7 +25,7 @@ function usePortfolioStyles() {
     display: "flex",
     flexDirection: "column",
     gap: theme.spacing(4),
-    py: theme.spacing(8),
+    py: theme.spacing(6),
   };
 
   const CSSGridWrapper: SxProps = {

@@ -11,7 +11,7 @@ function useServiceStyles() {
     display: "flex",
     flexDirection: "column",
     gap: theme.spacing(4),
-    py: theme.spacing(8),
+    py: theme.spacing(6),
   };
 
   const CSSGridWrapper: SxProps = {

@@ -5,17 +5,17 @@ function useAboutStyles() {
 
   const CSSAbout: SxProps = {
     backgroundColor: theme.palette.grey[200],
-    backgroundImage: `url(/bannerStripes.jpg)`,
+    backgroundImage: `url(/images/bannerStripes.jpg)`,
     backgroundSize: "contain", // задать покрытие 50% по ширине и 100% по высоте
     backgroundRepeat: "no-repeat", // запретить повторение фона по вертикали
     backgroundPosition: "center bottom",
-    py: theme.spacing(8),
+    py: theme.spacing(6),
   };
 
   const CSSAboutContainer: SxProps = {
     display: "flex",
     flexDirection: "column",
-    gap: theme.spacing(4),
+    gap: theme.spacing(2),
     pb: theme.spacing(4),
   };
 
@@ -90,7 +90,7 @@ function useAboutStyles() {
     bgcolor: "white",
     p: 2,
     borderRadius: 5,
-    boxShadow: theme.shadows[5],
+    boxShadow: theme.shadows[2],
   };
 
   const CSSlargeBoxStyle: SxProps = {
@@ -99,7 +99,7 @@ function useAboutStyles() {
     bgcolor: "white",
     p: 2,
     borderRadius: 5,
-    boxShadow: theme.shadows[5],
+    boxShadow: theme.shadows[2],
     minHeight: 156,
   };
 

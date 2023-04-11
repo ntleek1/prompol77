@@ -10,7 +10,7 @@ function useContactsStyles() {
 
   const ContactsHeaderCSS: SxProps = {
     mt: 3,
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.down("lg")]: {
       textAlign: "center",
     },
   };
@@ -52,7 +52,7 @@ function useContactsStyles() {
     width: "100%",
     border: 0,
     borderBottom: "1px dashed #aaa",
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.down("lg")]: {
       display: "none",
     },
   };
@@ -72,10 +72,10 @@ function useContactsStyles() {
     "> *": {
       width: 300,
       display: "flex",
-      gap: 2,
+      gap: 1,
     },
     hr: ContactsLineCSS,
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.down("lg")]: {
       flexDirection: "column",
       gap: 2,
       justifyContent: "center",

@@ -10,7 +10,7 @@ function useHeroStyles() {
     justifyContent: "center",
     py: 6,
     color: theme.palette.common.white,
-    backgroundImage: `url(/pictures.png)`,
+    backgroundImage: `url(/images/pictures.png)`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     boxSizing: "border-box",
@@ -27,8 +27,14 @@ function useHeroStyles() {
     display: "flex",
     alignItems: "center",
     gap: 4,
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.down("lg")]: {
       flexDirection: "column",
+    },
+    "> *": {
+      display: "flex",
+      gap: 2,
+      alignItems: "center",
+      minWidth: 200,
     },
   };
 
@@ -36,7 +42,7 @@ function useHeroStyles() {
     display: "flex",
     alignItems: "center",
     gap: 2,
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.down("lg")]: {
       flexDirection: "column",
     },
   };

@@ -18,14 +18,15 @@ const Service = () => {
         <Typography variant="h2">{title}</Typography>
         <Typography variant="body1">{subtitle}</Typography>
         <Box sx={CSSGridWrapper}>
-          <Grid container spacing={3}>
+          <Grid container spacing={{ xs: 2, lg: 3 }}>
             {data.map(({ title, description, link, imageSrc }, index) => (
-              <Grid xs={12} sm={6} key={index}>
+              <Grid xs={6} key={index}>
                 <Card
                   title={title}
                   description={description}
                   link={link}
                   imageSrc={imageSrc}
+                  sx={{ height: "100%" }}
                 />
               </Grid>
             ))}

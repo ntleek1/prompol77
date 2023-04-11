@@ -157,7 +157,7 @@ const About = () => {
                   </Typography>
                 </Circle>
 
-                <Typography variant="h3" ml={3}>
+                <Typography variant="h3" ml={2}>
                   Сложность работ
                 </Typography>
               </Box>
@@ -207,7 +207,7 @@ const About = () => {
                   </Typography>
                 </Circle>
 
-                <Typography variant="h3" ml={3}>
+                <Typography variant="h3" ml={2}>
                   Гарантия
                 </Typography>
               </Box>
@@ -251,7 +251,7 @@ const About = () => {
                   </Typography>
                 </Circle>
 
-                <Typography variant="h3" ml={3}>
+                <Typography variant="h3" ml={2}>
                   Контроль работ
                 </Typography>
               </Box>
@@ -295,7 +295,7 @@ const About = () => {
                   </Typography>
                 </Circle>
 
-                <Typography variant="h3" ml={3}>
+                <Typography variant="h3" ml={2}>
                   Прозрачность
                 </Typography>
               </Box>

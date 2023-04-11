@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Container, Typography, Button } from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
+import useIsMobile from "@/hooks/useIsMobile";
 import useCallUsBannerStyles from "./styles";
 
 const CallUsBanner = () => {
@@ -11,12 +12,18 @@ const CallUsBanner = () => {
     CallUsBannerButtonCSS,
   } = useCallUsBannerStyles();
 
+  const isMobile = useIsMobile();
+
   return (
     <Box component="section" id="BannerBox" sx={CallUsBannerCSS}>
       <Container>
         <Box sx={CallUsWrapperCSS}>
           <Box flex={1}>
-            <Typography variant="h1" component="p">
+            <Typography
+              variant="h2"
+              component="p"
+              align={isMobile ? "left" : "right"}
+            >
               Получите бесплатную <br /> консультацию
             </Typography>
           </Box>
@@ -27,10 +34,15 @@ const CallUsBanner = () => {
             gap={4}
             alignItems="baseline"
           >
-            <Typography variant="subtitle1" align="left">
-              Консультация по выбору полов - бесплатно! <br /> Обращайтесь к нам
-              за помощью в выборе <br /> наилучшего решения для вашего
-              помещения.
+            <Typography
+              variant="subtitle2"
+              align="left"
+              maxWidth="480px"
+              component="p"
+              pt={1}
+            >
+              Консультация по выбору полов - бесплатно! Обращайтесь к нам за
+              помощью в выборе наилучшего решения для вашего помещения.
             </Typography>
 
             <Button
@@ -41,7 +53,7 @@ const CallUsBanner = () => {
               Оставить заявку
             </Button>
 
-            <Box sx={CallUsBannerPhonesCSS} alignSelf="end">
+            <Box sx={CallUsBannerPhonesCSS}>
               <Box>
                 <Typography variant="h4" component="p">
                   {/* +7 (985) 727-14-14 <br /> +7 (985) 727-14-14 */}
