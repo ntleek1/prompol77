@@ -1,4 +1,5 @@
 import portfolioData from "../data/portfolio.json";
+import clientsData from "../data/clients.json";
 
 function usePortfolio() {
   const title = "Выполненные работы";
@@ -9,6 +10,7 @@ function usePortfolio() {
     title,
     subtitle,
     data: portfolioData,
+    clientsData,
   };
 }
 

@@ -65,6 +65,7 @@ function useCardHoverStyles() {
     position: "relative",
     transition: "transform 0.2s, background-color 0.2s",
     boxShadow: theme.shadows[2],
+    wordWrap: "break-word",
   };
 
   const CSSCardHoverContent: SxProps = {
@@ -73,7 +74,7 @@ function useCardHoverStyles() {
     justifyContent: "space-between",
     gap: 1,
     position: "absolute",
-    padding: theme.spacing(4) + " !important",
+    padding: theme.spacing(3) + " !important",
     top: 0,
     left: 0,
     right: 0,

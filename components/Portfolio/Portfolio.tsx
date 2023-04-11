@@ -8,9 +8,10 @@ import usePortfolio from "@/hooks/usePortfolio";
 import { Button } from "@mui/material";
 import ImageOutlinedIcon from "@mui/icons-material/ImageOutlined";
 import usePortfolioStyles from "./styles";
+import Image from "next/image";
 
 const Portfolio = () => {
-  const { title, subtitle, data } = usePortfolio();
+  const { title, subtitle, data, clientsData } = usePortfolio();
   const {
     CSSPortfolio,
     CSSPortfolioContainer,
@@ -27,7 +28,7 @@ const Portfolio = () => {
           <Grid container spacing={2}>
             {data.map(
               ({ title, description, link, imageSrc, type, square }, index) => (
-                <Grid xs={12} sm={4} gap={1} key={index}>
+                <Grid xs={6} sm={4} gap={1} key={index}>
                   <CardHover
                     title={title}
                     description={description}
@@ -57,23 +58,25 @@ const Portfolio = () => {
       </Box>
       <Container>
         <Box sx={CSSPortfolioClientBox}>
-          <img src="./images/clients/danon.png" />
-          <img src="./images/clients/altair.png" />
-          <img src="./images/clients/spar.jpg" />
-          <img src="./images/clients/mig.png" />
-          <img src="./images/clients/mgu.jpg" />
-          <img src="./images/clients/micic.png" />
-          <img src="./images/clients/myaso.png" />
-          <img src="./images/clients/lebed.png" />
-          <img src="./images/clients/voenka.jpg" />
-          <img src="./images/clients/skolkovo.png" />
-          <img src="./images/clients/rpkb.jpg" />
-          <img src="./images/clients/korolev.webp" />
-          <img src="./images/clients/macdac.jpg" />
-          <img src="./images/clients/nike.jpg" />
-          <img src="./images/clients/rpkb.jpg" />
-          <img src="./images/clients/rgok.png" />
-          <img src="./images/clients/radio.png" />
+          <Grid
+            container
+            spacing={2}
+            alignContent="center"
+            justifyContent="center"
+          >
+            {clientsData.map(({ src, alt }, index) => (
+              <Grid xs={4} sm={2} gap={1} key={index}>
+                <Box width="100%" height="120px" position="relative">
+                  <Image
+                    src={src}
+                    alt={alt}
+                    fill
+                    style={{ objectFit: "contain" }}
+                  />
+                </Box>
+              </Grid>
+            ))}
+          </Grid>
         </Box>
       </Container>
       <Container>
