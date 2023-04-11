@@ -1,5 +1,6 @@
 // Theme
 export * from "./typography";
+export * from "./shadows";
 
 // Components
 export * from "./MuiLink";
