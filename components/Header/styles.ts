@@ -16,11 +16,7 @@ function useHeaderStyles() {
     backgroundColor: theme.palette.grey[800],
     bgcolor: "#DDDDDD",
     color: "#555555",
-    [theme.breakpoints.down("lg")]: {
-      "> *": {
-        display: "none !important;",
-      },
-    },
+    whiteSpace: "nowrap",
   };
 
   const CSSTopbarContainer: SxProps = {
@@ -30,9 +26,48 @@ function useHeaderStyles() {
     py: 0.75,
   };
 
+  const CSSTopbarSchedule: SxProps = {
+    color: "grey",
+    [theme.breakpoints.down("lg")]: {
+      display: "none",
+    },
+  };
+
   const CSSTopbarPhoneLink: SxProps = {
     fontWeight: 600,
     color: "black",
+  };
+
+  const CSSTopbarMailLink: SxProps = {
+    fontWeight: 400,
+    color: "grey",
+    [theme.breakpoints.down("lg")]: {
+      display: "none",
+    },
+  };
+
+  const CSSTopbarWhatsAppIconStyle: SxProps = {
+    flexShrink: 0,
+    fontSize: 16,
+    color: "#4D7C0F",
+    mr: -1.5,
+  };
+
+  const CSSTopbarPhoneIconStyle: SxProps = {
+    flexShrink: 0,
+    fontSize: 16,
+    color: "#000000",
+    mr: -1.5,
+  };
+
+  const CSSTopbarMailIconStyle: SxProps = {
+    flexShrink: 0,
+    fontSize: 16,
+    color: "grey",
+    mr: -1.5,
+    [theme.breakpoints.down("lg")]: {
+      display: "none",
+    },
   };
 
   const CSSNavbar: SxProps = {
@@ -78,33 +113,21 @@ function useHeaderStyles() {
     },
   };
 
-  const CSSWhatsAppIconStyle: SxProps = {
-    flexShrink: 0,
-    fontSize: 16,
-    color: "#4D7C0F",
-    mr: -1.5,
-  };
-
-  const CSSPhoneIconStyle: SxProps = {
-    flexShrink: 0,
-    fontSize: 16,
-    color: "#000000",
-    mr: -1.5,
-  };
-
   return {
     CSSTopbar,
     CSSTopbarContainer,
-
+    CSSTopbarSchedule,
     CSSTopbarPhoneLink,
+    CSSTopbarMailLink,
+    CSSTopbarWhatsAppIconStyle,
+    CSSTopbarPhoneIconStyle,
+    CSSTopbarMailIconStyle,
     CSSNavbar,
     CSSNavbarStyle,
     CSSContainerStyle,
     CSSLogoStyle,
     CSSMenuStyle,
     CSSButtonsStyle,
-    CSSWhatsAppIconStyle,
-    CSSPhoneIconStyle,
   };
 }
 
