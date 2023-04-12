@@ -15,7 +15,7 @@ function useCallUsBannerStyles() {
   const CallUsWrapperCSS = {
     display: "flex",
     gap: 3,
-    [theme.breakpoints.down("lg")]: {
+    [theme.breakpoints.down("md")]: {
       flexDirection: "column",
     },
   };
@@ -27,7 +27,7 @@ function useCallUsBannerStyles() {
     px: theme.spacing(5),
     mt: 4,
     alignSelf: "center",
-    [theme.breakpoints.down("lg")]: {
+    [theme.breakpoints.down("md")]: {
       alignSelf: "flex-start",
       mt: 0,
     },
@@ -43,7 +43,7 @@ function useCallUsBannerStyles() {
         borderStyle: "solid",
         borderWidth: "16px 200px 16px 0",
         borderColor: "transparent #ffffff transparent transparent",
-        [theme.breakpoints.down("lg")]: {
+        [theme.breakpoints.down("md")]: {
           display: "none",
           content: "none",
         },
@@ -53,7 +53,7 @@ function useCallUsBannerStyles() {
 
   const CallUsBannerButtonCSS = {
     mt: 2,
-    [theme.breakpoints.down("lg")]: {
+    [theme.breakpoints.down("md")]: {
       mt: 0,
     },
   };

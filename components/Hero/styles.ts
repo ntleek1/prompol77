@@ -29,7 +29,7 @@ function useHeroStyles() {
     justifyContent: "start",
     flexWrap: "wrap",
     gap: 4,
-    [theme.breakpoints.down("lg")]: {
+    [theme.breakpoints.down("md")]: {
       justifyContent: "center",
       gap: 2,
     },
@@ -38,7 +38,7 @@ function useHeroStyles() {
       gap: 2,
       alignItems: "center",
       minWidth: 200,
-      [theme.breakpoints.down("lg")]: {
+      [theme.breakpoints.down("md")]: {
         gap: 1,
         minWidth: 0,
         "& p": {
@@ -62,7 +62,7 @@ function useHeroStyles() {
     display: "flex",
     alignItems: "center",
     gap: 2,
-    [theme.breakpoints.down("lg")]: {
+    [theme.breakpoints.down("md")]: {
       flexDirection: "column",
     },
   };

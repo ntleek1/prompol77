@@ -4,7 +4,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 function useIsMobile() {
   const theme = useTheme();
 
-  const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return isMobile;
 }

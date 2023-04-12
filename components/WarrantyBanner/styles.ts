@@ -29,7 +29,7 @@ function useWarrantyBannerStyles() {
     alignSelf: "bottom",
     mt: "auto",
     color: "white",
-    [theme.breakpoints.down("lg")]: {
+    [theme.breakpoints.down("md")]: {
       flexDirection: "column",
     },
   };

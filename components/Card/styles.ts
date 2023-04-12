@@ -16,23 +16,21 @@ function useCardStyles() {
 
   const CSSMedia: SxProps = {
     position: "relative",
-    [theme.breakpoints.down("lg")]: {
+    [theme.breakpoints.down("md")]: {
       position: "static",
     },
   };
 
   const CSSContent: SxProps = {
-    [theme.breakpoints.down("lg")]: {
+    [theme.breakpoints.down("md")]: {
       pb: theme.spacing(10) + " !important;",
     },
   };
 
- 
-
   const CSSTitle: SxProps = {
     fontWeight: 400,
     wordBreak: "break-word",
-    [theme.breakpoints.down("lg")]: {
+    [theme.breakpoints.down("md")]: {
       fontWeight: 600,
     },
   };
@@ -44,7 +42,7 @@ function useCardStyles() {
     gap: 1,
     boxShadow: "none",
     color: "white",
-    [theme.breakpoints.down("lg")]: {
+    [theme.breakpoints.down("md")]: {
       color: "black",
       right: "auto",
       left: theme.spacing(2),
@@ -57,7 +55,6 @@ function useCardStyles() {
     CSSContent,
     CSSTitle,
     CSSButtonGroup,
-    
   };
 }
 
@@ -87,7 +84,7 @@ function useCardHoverStyles() {
     "&:hover": {
       opacity: 1,
     },
-    [theme.breakpoints.down("lg")]: {
+    [theme.breakpoints.down("md")]: {
       position: "static",
       opacity: 1,
     },
