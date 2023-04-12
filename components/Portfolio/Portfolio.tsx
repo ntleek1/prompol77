@@ -9,8 +9,10 @@ import { Button } from "@mui/material";
 import ImageOutlinedIcon from "@mui/icons-material/ImageOutlined";
 import usePortfolioStyles from "./styles";
 import Image from "next/image";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const Portfolio = () => {
+  const isMobile = useIsMobile();
   const { title, subtitle, data, clientsData } = usePortfolio();
   const {
     CSSPortfolio,
@@ -65,8 +67,12 @@ const Portfolio = () => {
             justifyContent="center"
           >
             {clientsData.map(({ src, alt }, index) => (
-              <Grid xs={4} sm={2} gap={1} key={index}>
-                <Box width="100%" height="72px" position="relative">
+              <Grid xs={4} lg={2} gap={1} key={index}>
+                <Box
+                  width="100%"
+                  height={isMobile ? 72 : 120}
+                  position="relative"
+                >
                   <Image
                     src={src}
                     alt={alt}

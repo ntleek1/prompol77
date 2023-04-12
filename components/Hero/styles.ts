@@ -26,16 +26,35 @@ function useHeroStyles() {
   const heroBenefitsCSS = {
     display: "flex",
     alignItems: "center",
+    justifyContent: "start",
+    flexWrap: "wrap",
     gap: 4,
     [theme.breakpoints.down("lg")]: {
-      flexDirection: "column",
+      justifyContent: "center",
+      gap: 2,
     },
     "> *": {
       display: "flex",
       gap: 2,
       alignItems: "center",
       minWidth: 200,
-      
+      [theme.breakpoints.down("lg")]: {
+        gap: 1,
+        minWidth: 0,
+        "& p": {
+          fontSize: theme.typography.h5,
+          "&:first-child": {
+            fontWeight: theme.typography.fontWeightRegular,
+          },
+        },
+        "& svg": {
+          width: theme.spacing(4),
+          height: theme.spacing(4),
+        },
+      },
+      [theme.breakpoints.down(367)]: {
+        minWidth: "65%",
+      },
     },
   };
 
