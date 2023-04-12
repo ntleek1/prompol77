@@ -22,7 +22,7 @@ const Hero = () => {
         >
           <Typography variant="h1">Производство промышленных полов</Typography>
 
-          <Typography variant="subtitle1" component="p">
+          <Typography variant="subtitle1" component="p" align="justify">
             Мы обладаем значительным опытом работы в данной сфере и точно знаем,
             чего ждет заказчик. Наши клиенты – это предприятия и общественные
             организации, которые ценят свое время и деньги.

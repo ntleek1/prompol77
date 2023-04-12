@@ -66,7 +66,7 @@ const Portfolio = () => {
           >
             {clientsData.map(({ src, alt }, index) => (
               <Grid xs={4} sm={2} gap={1} key={index}>
-                <Box width="100%" height="120px" position="relative">
+                <Box width="100%" height="72px" position="relative">
                   <Image
                     src={src}
                     alt={alt}
@@ -81,20 +81,20 @@ const Portfolio = () => {
       </Container>
       <Container>
         <Box display="flex" flexDirection="column" gap={2} pt={8}>
-          <Typography variant="body1" component="p">
+          <Typography variant="body1" component="p" align="justify">
             Промышленные полы в современном мире являются одними из самых важных
             элементов любого производственного и коммерческого помещения. Они
             обеспечивают не только эстетическую функцию, но и являются основой
             для безопасной работы и эффективного использования пространства
           </Typography>
-          <Typography variant="body1" component="p">
+          <Typography variant="body1" component="p" align="justify">
             В настоящее время устройство промышленных полов достигло невероятных
             высот благодаря инновационным технологиям и материалам, которые
             обеспечивают высокую прочность, износостойкость, устойчивость к
             химическим веществам и температурным перепадам, а также
             антистатические и антибактериальные свойства.
           </Typography>
-          <Typography variant="body1" component="p">
+          <Typography variant="body1" component="p" align="justify">
             Мы внимательно следим за всеми новинками и тенденциями в отрасли,
             постоянно совершенствуем свои знания и умения, чтобы предложить
             нашим клиентам самые передовые решения для устройства промышленных

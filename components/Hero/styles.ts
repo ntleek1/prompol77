@@ -35,6 +35,7 @@ function useHeroStyles() {
       gap: 2,
       alignItems: "center",
       minWidth: 200,
+      
     },
   };
 

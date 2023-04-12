@@ -76,7 +76,7 @@ function useContactsStyles() {
     },
     hr: ContactsLineCSS,
     [theme.breakpoints.down("lg")]: {
-      flexDirection: "column",
+      
       gap: 2,
       justifyContent: "center",
       alignItems: "center",

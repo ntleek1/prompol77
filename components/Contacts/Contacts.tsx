@@ -86,7 +86,7 @@ const Contacts = () => {
             </Box>
           </Box>
 
-          <Typography variant="h3" sx={ContactsHeaderCSS}>
+          {/* <Typography variant="h3" sx={ContactsHeaderCSS}>
             Реквизиты компании
           </Typography>
 
@@ -106,7 +106,7 @@ const Contacts = () => {
               <Box component="hr" sx={ContactsLineCSS} />
               <Typography fontWeight={600}>0000000000000</Typography>
             </Box>
-          </Box>
+          </Box> */}
         </Box>
       </Container>
     </Box>

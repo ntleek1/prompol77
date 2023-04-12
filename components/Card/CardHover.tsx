@@ -40,7 +40,7 @@ const CardHover: React.FC<CardHoverProps> = ({
           component="p"
           color="text.secondary"
           fontWeight="light"
-          pt={3}
+          pt={1}
         >
           {type}
           <br />

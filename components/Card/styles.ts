@@ -27,6 +27,8 @@ function useCardStyles() {
     },
   };
 
+ 
+
   const CSSTitle: SxProps = {
     fontWeight: 400,
     wordBreak: "break-word",
@@ -55,6 +57,7 @@ function useCardStyles() {
     CSSContent,
     CSSTitle,
     CSSButtonGroup,
+    
   };
 }
 

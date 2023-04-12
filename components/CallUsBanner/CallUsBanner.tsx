@@ -1,7 +1,9 @@
 import React from "react";
-import { Box, Container, Typography, Button } from "@mui/material";
+import { Box, Container, Typography, Button, Link } from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
 import useIsMobile from "@/hooks/useIsMobile";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import useCallUsBannerStyles from "./styles";
 
 const CallUsBanner = () => {
@@ -36,10 +38,10 @@ const CallUsBanner = () => {
           >
             <Typography
               variant="subtitle2"
-              align="left"
+              align="justify"
               maxWidth="480px"
               component="p"
-              pt={1}
+              pt={0}
             >
               Консультация по выбору полов - бесплатно! Обращайтесь к нам за
               помощью в выборе наилучшего решения для вашего помещения.
@@ -55,10 +57,29 @@ const CallUsBanner = () => {
 
             <Box sx={CallUsBannerPhonesCSS}>
               <Box>
-                <Typography variant="h4" component="p">
-                  {/* +7 (985) 727-14-14 <br /> +7 (985) 727-14-14 */}
-                  +7 (985) 727-14-14
-                </Typography>
+                <Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                  <LocalPhoneIcon fontSize="medium" color="primary" />
+                  <Link href="tel:+79857271414" color="inherit">
+                    <Typography variant="h5" component="p">
+                      +7 (985) 727-14-14
+                    </Typography>
+                  </Link>
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    mt: 1,
+                  }}
+                >
+                  <MailOutlineIcon fontSize="medium" color="primary" />
+                  <Link href="mailto:9857271414@mail.ru" color="inherit">
+                    <Typography variant="h5" component="p">
+                      9857271414@mail.ru
+                    </Typography>
+                  </Link>
+                </Box>
               </Box>
             </Box>
           </Box>
