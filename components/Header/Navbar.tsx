@@ -1,23 +1,17 @@
 import React from "react";
+import Image from "next/image";
 import { Box, Container, Button, Link } from "@mui/material";
 import useHeaderStyles from "./styles";
-import CalendarViewMonthRoundedIcon from "@mui/icons-material/CalendarViewMonthRounded";
-import EmailIcon from "@mui/icons-material/Email";
-import Image from "next/image";
+import PlaylistAddCheckOutlinedIcon from "@mui/icons-material/PlaylistAddCheckOutlined";
+import ImageOutlinedIcon from "@mui/icons-material/ImageOutlined";
 
 const Navbar = () => {
-  const {
-    CSSNavbarStyle,
-    CSSContainerStyle,
-    CSSLogoStyle,
-    CSSMenuStyle,
-    CSSButtonsStyle,
-  } = useHeaderStyles();
+  const { sxNavbar } = useHeaderStyles();
 
   return (
-    <Box component="section" id="navbar" sx={CSSNavbarStyle}>
-      <Container sx={CSSContainerStyle}>
-        <Box sx={CSSLogoStyle} flexShrink={0}>
+    <Box component="section" id="navbar" sx={sxNavbar}>
+      <Container className="navbar__container">
+        <Box className="navbar__logo">
           <Link
             href="/"
             variant="h4"
@@ -31,27 +25,27 @@ const Navbar = () => {
           </Link>
         </Box>
 
-        <Box sx={CSSMenuStyle}>
-          <Link href="#" variant="body2">
+        <Box className="navbar__menu">
+          <Link href="#" variant="body1">
             Виды полов
           </Link>
-          <Link href="#" variant="body2">
+          <Link href="#" variant="body1">
             Наши работы
           </Link>
-          <Link href="#" variant="body2">
+          <Link href="#" variant="body1">
             Гарантии
           </Link>
-          <Link href="#" variant="body2">
-            Контакт
+          <Link href="#" variant="body1">
+            Контакты
           </Link>
         </Box>
 
-        <Box sx={CSSButtonsStyle}>
+        <Box className="navbar__buttonGroup">
           <Button
             variant="contained"
             color="error"
             size="small"
-            startIcon={<CalendarViewMonthRoundedIcon />}
+            startIcon={<PlaylistAddCheckOutlinedIcon />}
           >
             Выбрать вид полов
           </Button>
@@ -59,9 +53,9 @@ const Navbar = () => {
             variant="contained"
             color="primary"
             size="small"
-            startIcon={<EmailIcon />}
+            startIcon={<ImageOutlinedIcon />}
           >
-            Смотреть готовые работы
+            Портфолио
           </Button>
         </Box>
       </Container>
