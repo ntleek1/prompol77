@@ -1,4 +1,5 @@
 import React from "react";
+import { Routes, generateHref } from "@/routes";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Unstable_Grid2";
@@ -19,12 +20,12 @@ const Service = () => {
         <Typography variant="body1">{subtitle}</Typography>
         <Box sx={CSSGridWrapper}>
           <Grid container spacing={{ xs: 2, lg: 3 }}>
-            {data.map(({ title, description, link, imageSrc }, index) => (
+            {data.map(({ title, description, url, imageSrc }, index) => (
               <Grid xs={6} key={index}>
                 <Card
                   title={title}
                   description={description}
-                  link={link}
+                  link={generateHref(url, Routes.Services)}
                   imageSrc={imageSrc}
                   sx={{ height: "100%" }}
                 />

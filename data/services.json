@@ -2,87 +2,85 @@
   {
     "title": "Бетонные полы с топпингом",
     "description": "Покрытие из специальной смеси, которое наносится на бетонный пол для усиления его свойств.",
-    "link": "#",
+    "url": "betonnye-poly-s-toppingom",
     "imageSrc": "./images/Rectangle 5.jpg"
   },
   {
     "title": "Парковки",
     "description": "Эти полы обеспечивают высокую прочность и износостойкость для автомобильного движения и стоянки.",
-    "link": "#",
+    "url": "parkovki",
     "imageSrc": "./images/Rectangle 4.jpg"
   },
   {
     "title": "Эпоксидные полы",
     "description": "Покрытия из эпоксидной смолы для гладких и прочных поверхностей в различных помещениях.",
-    "link": "#",
+    "url": "ehpoksidnye-poly",
     "imageSrc": "./images/Rectangle 1.jpg"
   },
   {
     "title": "Складские помещения",
     "description": "Эти полы обеспечивают прочность и устойчивость к нагрузкам при хранении и перемещении грузов.",
-    "link": "#",
+    "url": "skladskie-pomeshcheniya",
     "imageSrc": "./images/Rectangle 2.jpg"
   },
   {
     "title": "Полиуретановые полы",
     "description": "Прочные и эластичные покрытия с высокой стойкостью к истиранию и химическим веществам.",
-    "link": "#",
+    "url": "poliuretanovye-poly",
     "imageSrc": "./images/Rectangle 3.jpg"
   },
-  
-  
   {
     "title": "Производственные помещения",
     "description": "Эти полы обеспечивают химическую устойчивость для различных видов производственной деятельности.",
-    "link": "#",
+    "url": "proizvodstvennye-pomeshcheniya",
     "imageSrc": "./images/Rectangle 6.jpg"
   },
   {
     "title": "Полиуретанцемент",
     "description": "Покрытие из специальной смеси, которое наносится на бетонный пол для усиления его свойств.",
-    "link": "#",
+    "url": "poliuretancement",
     "imageSrc": "./images/Rectangle 7.jpg"
   },
   {
     "title": "Автосервисы и офисы",
     "description": "Эти полы выдерживают высокие и частые нагрузки, а также механические воздействия.",
-    "link": "#",
+    "url": "avtoservisy-i-ofisy",
     "imageSrc": "./images/Rectangle 8.jpg"
   },
   {
     "title": "Полированный бетон",
     "description": "Полированный бетонный пол - прочный, износостойкий и блестящий.",
-    "link": "#",
+    "url": "polirovannyj-beton",
     "imageSrc": "./images/Rectangle 9.jpg"
   },
   {
     "title": "Пищевая промышленность",
     "description": "Эти полы игиеничные, устойчивые к химическим воздействиям, антистатические, противоскользящие и долговечные.",
-    "link": "#",
+    "url": "polirovannyj-beton",
     "imageSrc": "./images/Rectangle 10.jpg"
   },
   {
     "title": "Полы полимерцементные",
     "description": "Состоят из цемента и полимерных добавок, имеют высокую прочность и устойчивость к химическим воздействиям.",
-    "link": "#",
+    "url": "poly-polimercementnye",
     "imageSrc": "./images/Rectangle 11.jpg"
   },
   {
     "title": "Тяжёлые условия эксплуатации",
     "description": "Эти полы изготовлены из прочных и устойчивых материалов, имеют высокую степень износостойкости.",
-    "link": "#",
+    "url": "tyazhyolye-usloviya-ehkspluatacii",
     "imageSrc": "./images/Rectangle 12.jpg"
   },
   {
     "title": "Полы метилметакрилатные",
     "description": "Инновационные покрытия, обладают высокой устойчивостью к ударам, хим веществам, износу и температурным перепадам.",
-    "link": "#",
+    "url": "poly-metilmetakrilatnye",
     "imageSrc": "./images/Rectangle 13.jpg"
   },
   {
     "title": "Другие полы",
     "description": "Другие полы могут быть изготовлены из различных материалов, таких как ламинат, линолеум, ковровые покрытия и т.д",
-    "link": "#",
+    "url": "drugie-poly",
     "imageSrc": "./images/Rectangle 14.jpg"
   }
 ]

@@ -1,11 +1,10 @@
 import React from "react";
-import { SxProps } from "@mui/material";
-import Box from "@mui/material/Box";
+import { CardActionArea, SxProps } from "@mui/material";
+import Link from "next/link";
 import MuiCard from "@mui/material/Card";
 import MuiCardMedia from "@mui/material/CardMedia";
 import MuiCardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
-import Link from "@mui/material/Link";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Typography from "@mui/material/Typography";
 import { useCardStyles } from "./styles";
@@ -30,8 +29,12 @@ const Card: React.FC<CardProps> = ({
 
   return (
     <MuiCard sx={{ ...CSSCard, ...sx }}>
-      <Box sx={CSSMedia}>
+      <CardActionArea sx={CSSMedia}>
         <MuiCardMedia component="img" image={imageSrc} alt={title} />
+        <Link
+          href={link}
+          style={{ position: "absolute", top: 0, bottom: 0, left: 0, right: 0 }}
+        />
         <ButtonGroup variant="contained" sx={CSSButtonGroup}>
           <Button
             LinkComponent={Link}
@@ -43,7 +46,7 @@ const Card: React.FC<CardProps> = ({
             Подробнее
           </Button>
         </ButtonGroup>
-      </Box>
+      </CardActionArea>
 
       <MuiCardContent sx={CSSContent}>
         <Typography variant="h6" component="h6" gutterBottom sx={CSSTitle}>
