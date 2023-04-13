@@ -14,7 +14,7 @@ const Service = () => {
     useServiceStyles();
 
   return (
-    <Box id="service" sx={CSSService}>
+    <Box id="services" sx={CSSService}>
       <Container maxWidth="lg" sx={CSSServiceContainer}>
         <Typography variant="h2">{title}</Typography>
         <Typography variant="body1">{subtitle}</Typography>

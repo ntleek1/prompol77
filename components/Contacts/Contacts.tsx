@@ -15,7 +15,7 @@ const Contacts = () => {
   } = useContactsStyles();
 
   return (
-    <Box id="about" sx={ContactsCSS}>
+    <Box id="contacts" sx={ContactsCSS}>
       <Container>
         <Box display="flex" flexDirection="column" gap={4}>
           <Typography variant="h2" sx={{ ...ContactsHeaderCSS, mt: 0 }}>
