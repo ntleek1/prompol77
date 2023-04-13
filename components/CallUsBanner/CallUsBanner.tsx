@@ -7,19 +7,13 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import useCallUsBannerStyles from "./styles";
 
 const CallUsBanner = () => {
-  const {
-    CallUsBannerCSS,
-    CallUsWrapperCSS,
-    CallUsBannerPhonesCSS,
-    CallUsBannerButtonCSS,
-  } = useCallUsBannerStyles();
-
+  const { sxCallUsBanner } = useCallUsBannerStyles();
   const isMobile = useIsMobile();
 
   return (
-    <Box component="section" id="BannerBox" sx={CallUsBannerCSS}>
+    <Box component="section" id="BannerBox" sx={sxCallUsBanner}>
       <Container>
-        <Box sx={CallUsWrapperCSS}>
+        <Box className="callusbanner__container">
           <Box flex={1}>
             <Typography
               variant="h2"
@@ -48,14 +42,14 @@ const CallUsBanner = () => {
             </Typography>
 
             <Button
-              sx={CallUsBannerButtonCSS}
+              className="CallUsBanner-Button"
               variant="contained"
               startIcon={<EmailIcon />}
             >
               Оставить заявку
             </Button>
 
-            <Box sx={CallUsBannerPhonesCSS}>
+            <Box className="CallUsBanner-Phones">
               <Box>
                 <Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}>
                   <LocalPhoneIcon fontSize="medium" color="primary" />
