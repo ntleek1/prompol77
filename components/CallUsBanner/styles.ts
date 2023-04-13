@@ -37,8 +37,8 @@ const callUsBannerStyles = (theme: Theme) =>
          "&::before": {
           content: "''",
           position: "absolute",
-          left: "-200px",
-          top: "25%",
+          left: "-73px",
+          mt:16,
           width: 0,
           height: 0,
           borderStyle: "solid",
