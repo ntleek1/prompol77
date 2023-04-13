@@ -5,6 +5,7 @@
     "jest": true
   },
   "extends": [
+    "eslint:recommended",
     "next/core-web-vitals",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended"
@@ -22,7 +23,6 @@
     "react/jsx-no-undef": "error",
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
-    "no-restricted-syntax": "error",
     "react/function-component-definition": [
       "warn",
       {
@@ -30,8 +30,10 @@
         "unnamedComponents": "arrow-function"
       }
     ],
+    "no-restricted-syntax": "error",
+    "prefer-template": "error",
     "@typescript-eslint/no-explicit-any": "error",
-    "no-unused-vars": [
+    "@typescript-eslint/no-unused-vars": [
       "warn",
       {
         "varsIgnorePattern": "^_",
