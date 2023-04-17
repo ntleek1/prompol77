@@ -1,5 +1,4 @@
-import {  useTheme, Theme,createStyles } from "@mui/material/styles";
-
+import { useTheme, Theme, createStyles } from "@mui/material/styles";
 
 const callUsBannerStyles = (theme: Theme) =>
   createStyles({
@@ -10,25 +9,26 @@ const callUsBannerStyles = (theme: Theme) =>
      backgroundPosition: "center",
      boxSizing: "border-box",
      minHeight: 480, // Установка высоты
-     "& .callUsBanner__container": {
+     "& .callusbanner__container": {
       display: "flex",
       gap: 3,
       [theme.breakpoints.down("md")]: {
       flexDirection: "column",}
      },
-      "& .callUsBanner-Phones":{
+      "& .CallUsBanner-Phones":{
         background: theme.palette.background.default,
-       borderRadius: 8,
-       py: theme.spacing(2),
-       px: theme.spacing(5),
-       mt: 4,
-       alignSelf: "center",
-       [theme.breakpoints.down("md")]: {
-        alignSelf: "flex-start",
-        mt: 0,}
+        borderRadius: 8,
+        py: theme.spacing(2),
+        px: theme.spacing(5),
+        mt: 4,
+        alignSelf: "center",
+        [theme.breakpoints.down("md")]: {
+          alignSelf: "flex-start",
+          mt: 0,
+        },
       },
 
-      "& .callUsBanner-Button":{
+      "& .CallUsBanner-Button":{
        mt: 2,
        [theme.breakpoints.down("md")]: {
        mt: 0,},
@@ -50,10 +50,17 @@ const callUsBannerStyles = (theme: Theme) =>
             },
           },
         },
-      }
-    }      
+      },
+    },
   });
        
+      
+ 
+
+  
+    
+   
+
    
 
   function useCallUsBannerStyles() {
@@ -61,10 +68,11 @@ const callUsBannerStyles = (theme: Theme) =>
     const styles = callUsBannerStyles(theme);
 
 
+    
+
     return styles;
   
   
 }
-
 
 export default useCallUsBannerStyles;
