@@ -7,28 +7,23 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import useContactsStyles from "./styles";
 
 const Contacts = () => {
-  const {
-    ContactsCSS,
-    ContactsHeaderCSS,
-    ContactsLineCSS,
-    ContactsFlexBoxCSS,
-  } = useContactsStyles();
+  const { sxContacts } = useContactsStyles();
 
   return (
-    <Box id="contacts" sx={ContactsCSS}>
+    <Box id="contacts" sx={sxContacts}>
       <Container>
         <Box display="flex" flexDirection="column" gap={4}>
-          <Typography variant="h2" sx={{ ...ContactsHeaderCSS, mt: 0 }}>
+          <Typography variant="h2" className="contacts-Header">
             Контактная информация
           </Typography>
 
           <Box display="flex" flexDirection="column" gap={0}>
-            <Box sx={ContactsFlexBoxCSS}>
+            <Box className="contacts-FlexBox">
               <Typography>
                 <PhoneIcon fontSize="small" />
                 Телефон в Москве
               </Typography>
-              <Box component="hr" />
+              <Box component="hr" className="contacts-Line" />
               <Typography fontWeight={600}>+7 (985) 727-14-14</Typography>
             </Box>
             {/* <Box sx={ContactsFlexBoxCSS}>
@@ -40,48 +35,47 @@ const Contacts = () => {
                 +7 (985) 727-14-14
               </Typography>
             </Box> */}
-            <Box sx={ContactsFlexBoxCSS} color="green">
+            <Box className="contacts-FlexBox" color="green">
               <Typography>
                 <WhatsAppIcon fontSize="small" />
                 WhatsApp
               </Typography>
-              <Box component="hr" sx={ContactsLineCSS} />
+              <Box component="hr" className="contacts-Line" />
               <Typography fontWeight={600}>+7 (985) 727-14-14</Typography>
             </Box>
           </Box>
 
-          <Box sx={ContactsFlexBoxCSS}>
+          <Box className="contacts-FlexBox">
             <Typography>
               <EmailIcon fontSize="small" />
               Электронная почта
             </Typography>
-            <Box component="hr" sx={ContactsLineCSS} />
+            <Box component="hr" className="contacts-Line" />
             <Typography fontWeight={600}>
               <a
                 href="mailto:info@pol77.ru"
-                style={{ textDecoration: "none", color: "#365FA1" }}
-              >
+                style={{ textDecoration: "none", color: "#365FA1" }}>
                 9857271414@mail.ru
               </a>
             </Typography>
           </Box>
 
-          <Typography variant="h3" sx={ContactsHeaderCSS}>
+          <Typography variant="h3" className="contacts-Header">
             График работы
           </Typography>
 
           <Box display="flex" flexDirection="column" gap={0}>
-            <Box sx={ContactsFlexBoxCSS}>
+            <Box className="contacts-FlexBox">
               <Typography>
                 <CalendarMonthIcon fontSize="small" />
                 Будние дни
               </Typography>
-              <Box component="hr" sx={ContactsLineCSS} />
+              <Box component="hr" className="contacts-Line" />
               <Typography fontWeight={600}>С 09:00 до 19:00</Typography>
             </Box>
-            <Box sx={ContactsFlexBoxCSS}>
+            <Box className="contacts-FlexBox">
               <Typography>СБ и ВС</Typography>
-              <Box component="hr" sx={ContactsLineCSS} />
+              <Box component="hr" className="contacts-Line" />
               <Typography fontWeight={600}>Выходные дни</Typography>
             </Box>
           </Box>

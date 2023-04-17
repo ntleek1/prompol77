@@ -10,13 +10,13 @@ const callUsBannerStyles = (theme: Theme) =>
      backgroundPosition: "center",
      boxSizing: "border-box",
      minHeight: 480, // Установка высоты
-     "& .callusbanner__container": {
+     "& .callUsBanner__container": {
       display: "flex",
       gap: 3,
       [theme.breakpoints.down("md")]: {
       flexDirection: "column",}
      },
-      "& .CallUsBanner-Phones":{
+      "& .callUsBanner-Phones":{
         background: theme.palette.background.default,
        borderRadius: 8,
        py: theme.spacing(2),
@@ -28,7 +28,7 @@ const callUsBannerStyles = (theme: Theme) =>
         mt: 0,}
       },
 
-      "& .CallUsBanner-Button":{
+      "& .callUsBanner-Button":{
        mt: 2,
        [theme.breakpoints.down("md")]: {
        mt: 0,},
@@ -54,21 +54,12 @@ const callUsBannerStyles = (theme: Theme) =>
     }      
   });
        
-      
- 
-
-  
-    
-   
-
    
 
   function useCallUsBannerStyles() {
     const theme = useTheme();
     const styles = callUsBannerStyles(theme);
 
-
-    
 
     return styles;
   

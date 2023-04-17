@@ -13,7 +13,7 @@ const CallUsBanner = () => {
   return (
     <Box component="section" id="BannerBox" sx={sxCallUsBanner}>
       <Container>
-        <Box className="callusbanner__container">
+        <Box className="callUsBanner__container">
           <Box flex={1}>
             <Typography
               variant="h2"
@@ -42,14 +42,14 @@ const CallUsBanner = () => {
             </Typography>
 
             <Button
-              className="CallUsBanner-Button"
+              className="callUsBanner-Button"
               variant="contained"
               startIcon={<EmailIcon />}
             >
               Оставить заявку
             </Button>
 
-            <Box className="CallUsBanner-Phones">
+            <Box className="callUsBanner-Phones">
               <Box>
                 <Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}>
                   <LocalPhoneIcon fontSize="medium" color="primary" />
