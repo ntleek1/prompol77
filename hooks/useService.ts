@@ -12,4 +12,6 @@ function useService() {
   };
 }
 
+export { servicesData };
+
 export default useService;
