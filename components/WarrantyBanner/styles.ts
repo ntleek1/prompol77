@@ -1,45 +1,44 @@
-import { SxProps, useTheme } from "@mui/material/styles";
+import { useTheme, createStyles, Theme } from "@mui/material/styles";
+
+const WarrantyBannerStyles = (theme: Theme) =>
+  createStyles({
+    sxWarrantyBanner: {
+      py: theme.spacing(6),
+      backgroundImage: `url(/images/warrantyBanner.jpg)`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      boxSizing: "border-box",
+      height: 480,
+
+      "& .warrantyBanner-Container": {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        height: "100%",
+      },
+
+      "& .warrantyBanner-Header": {
+        textAlign: "center",
+      },
+
+      "& .warrantyBanner-Bottom": {
+        display: "flex",
+        gap: 2,
+        alignSelf: "bottom",
+        mt: "auto",
+        color: "white",
+        [theme.breakpoints.down("md")]: {
+          flexDirection: "column",
+        },
+      },
+    },
+  });
 
 function useWarrantyBannerStyles() {
   const theme = useTheme();
+  const styles = WarrantyBannerStyles(theme);
 
-  const WarrantyBannerCSS: SxProps = {
-    py: theme.spacing(6),
-    backgroundImage: `url(/images/warrantyBanner.jpg)`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    boxSizing: "border-box",
-    height: 480, // Установка высоты
-  };
-
-  const WarrantyBannerContainerCSS = {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    height: "100%",
-  };
-
-  const WarrantyBannerHeaderCSS = {
-    textAlign: "center",
-  };
-
-  const WarrantyBannerBottomCSS = {
-    display: "flex",
-    gap: 2,
-    alignSelf: "bottom",
-    mt: "auto",
-    color: "white",
-    [theme.breakpoints.down("md")]: {
-      flexDirection: "column",
-    },
-  };
-
-  return {
-    WarrantyBannerCSS,
-    WarrantyBannerContainerCSS,
-    WarrantyBannerHeaderCSS,
-    WarrantyBannerBottomCSS,
-  };
+  return styles;
 }
 
 export default useWarrantyBannerStyles;

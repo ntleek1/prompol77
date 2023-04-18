@@ -10,15 +10,14 @@ import useServiceStyles from "./styles";
 
 const Service = () => {
   const { title, subtitle, data } = useService();
-  const { CSSService, CSSServiceContainer, CSSGridWrapper } =
-    useServiceStyles();
+  const { sxService } = useServiceStyles();
 
   return (
-    <Box id="services" sx={CSSService}>
-      <Container maxWidth="lg" sx={CSSServiceContainer}>
+    <Box id="services" sx={sxService}>
+      <Container maxWidth="lg" className="service-Container">
         <Typography variant="h2">{title}</Typography>
         <Typography variant="body1">{subtitle}</Typography>
-        <Box sx={CSSGridWrapper}>
+        <Box className="service-GridWrapper">
           <Grid container spacing={{ xs: 2, lg: 3 }}>
             {data.map(({ title, description, url, imageSrc }, index) => (
               <Grid xs={6} key={index}>

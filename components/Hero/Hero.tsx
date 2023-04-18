@@ -7,19 +7,17 @@ import useIsMobile from "@/hooks/useIsMobile";
 import useHeroStyles from "./styles";
 
 const Hero = () => {
-  const { heroCSS, heroContainerCSS, heroBenefitsCSS, heroButtonsGroupCSS } =
-    useHeroStyles();
+  const { sxHero } = useHeroStyles();
   const isMobile = useIsMobile();
 
   return (
-    <Box component="section" id="heroScreen" sx={heroCSS}>
-      <Container maxWidth="md" sx={heroContainerCSS}>
+    <Box component="section" id="heroScreen" sx={sxHero}>
+      <Container maxWidth="md" className="hero-Container">
         <Box
           display="flex"
           flexDirection="column"
           justifyContent="center"
-          gap={4}
-        >
+          gap={4}>
           <Typography variant="h1">Производство промышленных полов</Typography>
 
           <Typography variant="subtitle1" component="p" align="justify">
@@ -28,7 +26,7 @@ const Hero = () => {
             организации, которые ценят свое время и деньги.
           </Typography>
 
-          <Box sx={heroBenefitsCSS}>
+          <Box className="hero-Benefits">
             <Box>
               <VerifiedIcon color="success" fontSize="large" />
               <Box>
@@ -64,21 +62,19 @@ const Hero = () => {
             </Box>
           </Box>
 
-          <Box sx={heroButtonsGroupCSS}>
+          <Box className="hero-ButtonsGroup">
             <Button
               variant="contained"
               color="error"
               size={isMobile ? "medium" : "large"}
-              startIcon={<PlaylistAddCheckOutlinedIcon />}
-            >
+              startIcon={<PlaylistAddCheckOutlinedIcon />}>
               Выбрать вид полов
             </Button>
             <Button
               variant="contained"
               color="primary"
               size={isMobile ? "medium" : "large"}
-              startIcon={<ImageOutlinedIcon />}
-            >
+              startIcon={<ImageOutlinedIcon />}>
               Смотреть готовые работы
             </Button>
           </Box>

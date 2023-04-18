@@ -14,19 +14,14 @@ import useIsMobile from "@/hooks/useIsMobile";
 const Portfolio = () => {
   const isMobile = useIsMobile();
   const { title, subtitle, data, clientsData } = usePortfolio();
-  const {
-    CSSPortfolio,
-    CSSPortfolioContainer,
-    CSSGridWrapper,
-    CSSPortfolioClientBox,
-  } = usePortfolioStyles();
+  const { sxPortfolio } = usePortfolioStyles();
 
   return (
-    <Box id="portfolio" sx={CSSPortfolio}>
-      <Container maxWidth="lg" sx={CSSPortfolioContainer}>
+    <Box id="portfolio" sx={sxPortfolio}>
+      <Container maxWidth="lg" className="portfolio-Container">
         <Typography variant="h2">{title}</Typography>
         <Typography variant="body1">{subtitle}</Typography>
-        <Box sx={CSSGridWrapper}>
+        <Box className="portfolio-Wrapper">
           <Grid container spacing={2}>
             {data.map(
               ({ title, description, link, imageSrc, type, square }, index) => (
@@ -58,21 +53,19 @@ const Portfolio = () => {
           доверие.
         </Typography>
       </Box>
-      <Container>
-        <Box sx={CSSPortfolioClientBox}>
+      <Container className="portfolio-Container">
+        <Box className="portfolio-ClientBox">
           <Grid
             container
             spacing={2}
             alignContent="center"
-            justifyContent="center"
-          >
+            justifyContent="center">
             {clientsData.map(({ src, alt }, index) => (
               <Grid xs={4} lg={2} gap={1} key={index}>
                 <Box
                   width="100%"
                   height={isMobile ? 72 : 120}
-                  position="relative"
-                >
+                  position="relative">
                   <Image
                     src={src}
                     alt={alt}

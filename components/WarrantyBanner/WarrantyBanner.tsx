@@ -4,24 +4,22 @@ import EmailIcon from "@mui/icons-material/Email";
 import useWarrantyBannerStyles from "./styles";
 
 const WarrantyBanner = () => {
-  const {
-    WarrantyBannerCSS,
-    WarrantyBannerContainerCSS,
-    WarrantyBannerHeaderCSS,
-    WarrantyBannerBottomCSS,
-  } = useWarrantyBannerStyles();
+  const { sxWarrantyBanner } = useWarrantyBannerStyles();
 
   return (
-    <Box component="section" id="BannerBox" sx={WarrantyBannerCSS}>
+    <Box component="section" id="BannerBox" sx={sxWarrantyBanner}>
       <Container sx={{ height: "100%" }}>
-        <Box sx={WarrantyBannerContainerCSS}>
+        <Box className="warrantyBanner-Container">
           <Box>
-            <Typography variant="h2" component="p" sx={WarrantyBannerHeaderCSS}>
+            <Typography
+              variant="h2"
+              component="p"
+              className="warrantyBanner-Header">
               2 года гарантии качества
               <br /> и результата
             </Typography>
           </Box>
-          <Box sx={WarrantyBannerBottomCSS}>
+          <Box className="warrantyBanner-Bottom">
             <Button variant="contained" startIcon={<EmailIcon />}>
               Оставить заявку
             </Button>
