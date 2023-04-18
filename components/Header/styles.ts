@@ -100,8 +100,6 @@ function useHeaderStyles() {
   const theme = useTheme();
   const styles = headerStyles(theme);
 
-  console.log(styles);
-
   return styles;
 }
 

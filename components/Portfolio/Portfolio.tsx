@@ -24,12 +24,12 @@ const Portfolio = () => {
         <Box className="portfolio-Wrapper">
           <Grid container spacing={2}>
             {data.map(
-              ({ title, description, link, imageSrc, type, square }, index) => (
+              ({ title, description, imageSrc, type, square }, index) => (
                 <Grid xs={6} sm={4} gap={1} key={index}>
                   <CardHover
                     title={title}
                     description={description}
-                    link={link}
+                    // link={link}
                     imageSrc={imageSrc}
                     type={type}
                     square={square}
@@ -59,13 +59,15 @@ const Portfolio = () => {
             container
             spacing={2}
             alignContent="center"
-            justifyContent="center">
+            justifyContent="center"
+          >
             {clientsData.map(({ src, alt }, index) => (
               <Grid xs={4} lg={2} gap={1} key={index}>
                 <Box
                   width="100%"
                   height={isMobile ? 72 : 120}
-                  position="relative">
+                  position="relative"
+                >
                   <Image
                     src={src}
                     alt={alt}
