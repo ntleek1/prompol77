@@ -13,26 +13,11 @@ import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import useAboutStyles from "./styles";
 
 const About = () => {
-  const {
-    CSSAbout,
-    CSSAboutContainer,
-    CSSHourglassBottomIconStyle,
-    CSSVerifiedIconStyle,
-    CSSPeopleAltSharpIconStyle,
-    CSSDescriptionIconStyle,
-    CSSCheckCircleOutlineIconStyle,
-    CSSHelpOutlineIconStyle,
-    CSSsmallBoxStyle,
-    CSSlargeBoxStyle,
-    CSSgridItemStyles,
-    CSSgridItemStyles2,
-    CSSreasonsStyle,
-    CSStextreasonsStyle,
-  } = useAboutStyles();
+  const { sxAbout } = useAboutStyles();
 
   return (
-    <Box id="about" sx={CSSAbout}>
-      <Container sx={CSSAboutContainer}>
+    <Box id="about" sx={sxAbout}>
+      <Container className="about-Container">
         <Typography variant="h2" textAlign={"center"}>
           О компании
         </Typography>
@@ -50,15 +35,14 @@ const About = () => {
       <Container>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6}>
-            <Box sx={CSSsmallBoxStyle}>
-              <HourglassBottomIcon sx={CSSHourglassBottomIconStyle} />
+            <Box className="about-SmallBoxStyle">
+              <HourglassBottomIcon className="about-HourglassBottomIconStyle" />
               <Box>
                 <Typography
                   component="p"
                   fontWeight="bold"
                   color="black"
-                  mb={1}
-                >
+                  mb={1}>
                   Большой опыт.
                 </Typography>
                 <Typography component="p" variant="body2">
@@ -69,15 +53,14 @@ const About = () => {
             </Box>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <Box className="small-box" sx={CSSsmallBoxStyle}>
-              <PeopleAltSharpIcon sx={CSSPeopleAltSharpIconStyle} />
+            <Box className="about-SmallBoxStyle">
+              <PeopleAltSharpIcon className="about-PeopleAltSharpIconStyle" />
               <Box>
                 <Typography
                   component="p"
                   fontWeight="bold"
                   color="black"
-                  mb={1}
-                >
+                  mb={1}>
                   Большой рабочий потенциал.
                 </Typography>
                 <Typography component="p" variant="body2">
@@ -88,15 +71,14 @@ const About = () => {
             </Box>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <Box className="large-box" sx={CSSlargeBoxStyle}>
-              <VerifiedIcon sx={CSSVerifiedIconStyle} />
+            <Box className="about-LargeBoxStyle">
+              <VerifiedIcon className="about-VerifiedIconStyle" />
               <Box>
                 <Typography
                   component="p"
                   fontWeight="bold"
                   color="black"
-                  mb={1}
-                >
+                  mb={1}>
                   Высокое качество.
                 </Typography>
                 <Typography component="p" variant="body2">
@@ -109,15 +91,14 @@ const About = () => {
             </Box>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <Box className="large-box" sx={CSSlargeBoxStyle}>
-              <DescriptionIcon sx={CSSDescriptionIconStyle} />
+            <Box className="about-LargeBoxStyle">
+              <DescriptionIcon className="about-DescriptionIconStyle" />
               <Box>
                 <Typography
                   component="p"
                   fontWeight="bold"
                   color="black"
-                  mb={1}
-                >
+                  mb={1}>
                   Работаем по договору.
                 </Typography>
                 <Typography component="p" variant="body2">
@@ -150,7 +131,7 @@ const About = () => {
         <Grid container spacing={6} py={4}>
           <Grid item xs={12} md={6}>
             <Box>
-              <Box sx={CSSreasonsStyle}>
+              <Box className="about-ReasonsStyle">
                 <Circle color="primary">
                   <Typography variant="h2" component="span">
                     1
@@ -163,7 +144,7 @@ const About = () => {
               </Box>
 
               <Box sx={{ display: "flex", alignItems: "center", marginTop: 3 }}>
-                <CheckCircleOutlineIcon sx={CSSCheckCircleOutlineIconStyle} />
+                <CheckCircleOutlineIcon className="about-CheckCircleOutlineIconStyle" />
                 <Typography variant="subtitle2" sx={{ marginLeft: -3 }}>
                   <span style={{ color: "#16A34A", fontWeight: "bold" }}>
                     Компания:
@@ -173,8 +154,8 @@ const About = () => {
                   </span>
                 </Typography>
               </Box>
-              <Box sx={CSSreasonsStyle}>
-                <HelpOutlineIcon sx={CSSHelpOutlineIconStyle} />
+              <Box className="about-ReasonsStyle">
+                <HelpOutlineIcon className="about-HelpOutlineIconStyle" />
                 <Typography variant="subtitle2" sx={{ marginLeft: -3, mt: 2 }}>
                   <span style={{ color: "#7a7a7a", fontWeight: "bold" }}>
                     Бригада:
@@ -184,7 +165,7 @@ const About = () => {
                   </span>
                 </Typography>
               </Box>
-              <Typography variant="body2" sx={CSStextreasonsStyle}>
+              <Typography variant="body2" className="about-TextreasonsStyle">
                 Промышленные полы вещь сложная. И дефекты от работы рабочих без
                 контроля скажутся спустя время. Так например, некоторые
                 заказчики топпиновых полов, нанявших в итоге бригаду, не могли
@@ -200,7 +181,7 @@ const About = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <Box>
-              <Box sx={CSSreasonsStyle}>
+              <Box className="about-ReasonsStyle">
                 <Circle color="error">
                   <Typography variant="h2" component="span">
                     2
@@ -213,7 +194,7 @@ const About = () => {
               </Box>
 
               <Box sx={{ display: "flex", alignItems: "center", marginTop: 3 }}>
-                <CheckCircleOutlineIcon sx={CSSCheckCircleOutlineIconStyle} />
+                <CheckCircleOutlineIcon className="about-CheckCircleOutlineIconStyle" />
                 <Typography variant="subtitle2" sx={{ marginLeft: -3 }}>
                   <span style={{ color: "#16A34A", fontWeight: "bold" }}>
                     Компания:
@@ -223,8 +204,8 @@ const About = () => {
                   </span>
                 </Typography>
               </Box>
-              <Box sx={CSSreasonsStyle}>
-                <HelpOutlineIcon sx={CSSHelpOutlineIconStyle} />
+              <Box className="about-ReasonsStyle">
+                <HelpOutlineIcon className="about-HelpOutlineIconStyle" />
                 <Typography variant="subtitle2" sx={{ marginLeft: -3, mt: 2 }}>
                   <span style={{ color: "#7a7a7a", fontWeight: "bold" }}>
                     Бригада:
@@ -234,7 +215,7 @@ const About = () => {
                   </span>
                 </Typography>
               </Box>
-              <Typography variant="body2" sx={CSStextreasonsStyle}>
+              <Typography variant="body2" className="about-TextreasonsStyle">
                 Гарантии могут быть словесные, Вам могут пообещать разного. В
                 итоге оформить договор на фирму какого-нибудь своего друга или
                 вообще однодневку. В случае предъявления Вами весьма вероятных
@@ -244,7 +225,7 @@ const About = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <Box>
-              <Box sx={CSSreasonsStyle}>
+              <Box className="about-ReasonsStyle">
                 <Circle color="error">
                   <Typography variant="h2" component="span">
                     3
@@ -257,7 +238,7 @@ const About = () => {
               </Box>
 
               <Box sx={{ display: "flex", alignItems: "center", marginTop: 3 }}>
-                <CheckCircleOutlineIcon sx={CSSCheckCircleOutlineIconStyle} />
+                <CheckCircleOutlineIcon className="about-CheckCircleOutlineIconStyle" />
                 <Typography variant="subtitle2" sx={{ marginLeft: -3 }}>
                   <span style={{ color: "#16A34A", fontWeight: "bold" }}>
                     Компания:
@@ -267,8 +248,8 @@ const About = () => {
                   </span>
                 </Typography>
               </Box>
-              <Box sx={CSSreasonsStyle}>
-                <HelpOutlineIcon sx={CSSHelpOutlineIconStyle} />
+              <Box className="about-ReasonsStyle">
+                <HelpOutlineIcon className="about-HelpOutlineIconStyle" />
                 <Typography variant="subtitle2" sx={{ marginLeft: -3, mt: 2 }}>
                   <span style={{ color: "#7a7a7a", fontWeight: "bold" }}>
                     Бригада:
@@ -278,7 +259,7 @@ const About = () => {
                   </span>
                 </Typography>
               </Box>
-              <Typography variant="body2" sx={CSStextreasonsStyle}>
+              <Typography variant="body2" className="about-TextreasonsStyle">
                 Отсутствие должного контроля. Как было написано выше – Вас могут
                 просто обмануть, как лиц слабо разбирающихся в процессе. Нужно
                 им это будет с одной целью – им так дешевле. Претензий Вам потом
@@ -288,7 +269,7 @@ const About = () => {
           </Grid>
           <Grid item xs={12} md={6}>
             <Box>
-              <Box sx={CSSreasonsStyle}>
+              <Box className="about-ReasonsStyle">
                 <Circle color="primary">
                   <Typography variant="h2" component="span">
                     4
@@ -301,7 +282,7 @@ const About = () => {
               </Box>
 
               <Box sx={{ display: "flex", alignItems: "center", marginTop: 3 }}>
-                <CheckCircleOutlineIcon sx={CSSCheckCircleOutlineIconStyle} />
+                <CheckCircleOutlineIcon className="about-CheckCircleOutlineIconStyle" />
                 <Typography variant="subtitle2" sx={{ marginLeft: -3 }}>
                   <span style={{ color: "#16A34A", fontWeight: "bold" }}>
                     Компания:
@@ -311,8 +292,8 @@ const About = () => {
                   </span>
                 </Typography>
               </Box>
-              <Box sx={CSSreasonsStyle}>
-                <HelpOutlineIcon sx={CSSHelpOutlineIconStyle} />
+              <Box className="about-ReasonsStyle">
+                <HelpOutlineIcon className="about-HelpOutlineIconStyle" />
                 <Typography variant="subtitle2" sx={{ marginLeft: -3, mt: 2 }}>
                   <span style={{ color: "#7a7a7a", fontWeight: "bold" }}>
                     Бригада:
@@ -322,7 +303,7 @@ const About = () => {
                   </span>
                 </Typography>
               </Box>
-              <Typography variant="body2" sx={CSStextreasonsStyle}>
+              <Typography variant="body2" className="about-TextreasonsStyle">
                 Весьма вероятно, что договор будет не от чистой фирмы и в
                 результате этого Вы получите проблемы с Налоговой Полицией.
               </Typography>

@@ -1,4 +1,4 @@
-import { SxProps, useTheme, alpha } from "@mui/material/styles";
+import { SxProps, useTheme } from "@mui/material/styles";
 
 function useCardStyles() {
   const theme = useTheme();
@@ -23,7 +23,7 @@ function useCardStyles() {
 
   const CSSContent: SxProps = {
     [theme.breakpoints.down("md")]: {
-      pb: theme.spacing(10) + " !important;",
+      pb: `${theme.spacing(10)} !important;`,
     },
   };
 
@@ -74,7 +74,7 @@ function useCardHoverStyles() {
     justifyContent: "space-between",
     gap: 1,
     position: "absolute",
-    padding: theme.spacing(3) + " !important",
+    padding: `${theme.spacing(3)} !important`,
     top: 0,
     left: 0,
     right: 0,

@@ -8,7 +8,7 @@ import { Typography } from "@mui/material";
 
 interface CardHoverProps {
   imageSrc: string;
-  link: string;
+  // link: string;
   title: string;
   description: string;
   type: string;
@@ -16,7 +16,7 @@ interface CardHoverProps {
 }
 
 const CardHover: React.FC<CardHoverProps> = ({
-  link,
+  // link,
   imageSrc,
   title,
   description,
@@ -40,8 +40,7 @@ const CardHover: React.FC<CardHoverProps> = ({
           component="p"
           color="text.secondary"
           fontWeight="light"
-          pt={1}
-        >
+          pt={1}>
           {type}
           <br />
           {square}
