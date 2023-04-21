@@ -21,7 +21,7 @@ const About = () => {
         <Typography variant="h2" textAlign={"center"}>
           О компании
         </Typography>
-        <Typography variant="body1" mt={3}>
+        <Typography variant="body2" mt={3}>
           Наша компания - это профессиональная команда, специализирующаяся на
           создании надежных бетонных полов в помещениях с повышенными
           требованиями к износостойкости. Мы гарантируем высокое качество работ
@@ -42,10 +42,11 @@ const About = () => {
                   component="p"
                   fontWeight="bold"
                   color="black"
-                  mb={1}>
+                  mb={1}
+                >
                   Большой опыт.
                 </Typography>
-                <Typography component="p" variant="body2">
+                <Typography component="p" variant="body1">
                   Команда профессионалов с опытом более 10 лет в устройстве
                   промышленных полов.
                 </Typography>
@@ -60,10 +61,11 @@ const About = () => {
                   component="p"
                   fontWeight="bold"
                   color="black"
-                  mb={1}>
+                  mb={1}
+                >
                   Большой рабочий потенциал.
                 </Typography>
-                <Typography component="p" variant="body2">
+                <Typography component="p" variant="body1">
                   Соблюдаем сроки выполнения задач благодаря нашей большой
                   команде (~20 профессионалов).
                 </Typography>
@@ -78,10 +80,11 @@ const About = () => {
                   component="p"
                   fontWeight="bold"
                   color="black"
-                  mb={1}>
+                  mb={1}
+                >
                   Высокое качество.
                 </Typography>
-                <Typography component="p" variant="body2">
+                <Typography component="p" variant="body1">
                   Используем профессиональное оборудование, передовые технологии
                   и материалы, чтобы создавать долговечные промышленные полы.
                   Руководитель лично контролирует работу наших сотрудников,
@@ -98,10 +101,11 @@ const About = () => {
                   component="p"
                   fontWeight="bold"
                   color="black"
-                  mb={1}>
+                  mb={1}
+                >
                   Работаем по договору.
                 </Typography>
-                <Typography component="p" variant="body2">
+                <Typography component="p" variant="body1">
                   Заключаем договор с каждым клиентом и подробно прописываем
                   условия нашей ответственности. Наша порядочность и честность
                   подтверждены уже реализованными проектами, и мы гарантируем,
@@ -118,7 +122,7 @@ const About = () => {
         <Typography variant="h3" mt={8} textAlign={"center"}>
           Почему лучше нанимать фирму, а не бригаду?
         </Typography>
-        <Typography variant="body1" component="p" mt={3}>
+        <Typography variant="body2" component="p" mt={3}>
           В наше время, когда средства связи и коммуникаций очень
           распространены, заказчики имеют возможность напрямую обращаться к
           рабочим. И те будут рады по причине того, что заказчик разбирается в
@@ -165,7 +169,7 @@ const About = () => {
                   </span>
                 </Typography>
               </Box>
-              <Typography variant="body2" className="about-TextreasonsStyle">
+              <Typography variant="body1" className="about-TextreasonsStyle">
                 Промышленные полы вещь сложная. И дефекты от работы рабочих без
                 контроля скажутся спустя время. Так например, некоторые
                 заказчики топпиновых полов, нанявших в итоге бригаду, не могли
@@ -215,7 +219,7 @@ const About = () => {
                   </span>
                 </Typography>
               </Box>
-              <Typography variant="body2" className="about-TextreasonsStyle">
+              <Typography variant="body1" className="about-TextreasonsStyle">
                 Гарантии могут быть словесные, Вам могут пообещать разного. В
                 итоге оформить договор на фирму какого-нибудь своего друга или
                 вообще однодневку. В случае предъявления Вами весьма вероятных
@@ -259,7 +263,7 @@ const About = () => {
                   </span>
                 </Typography>
               </Box>
-              <Typography variant="body2" className="about-TextreasonsStyle">
+              <Typography variant="body1" className="about-TextreasonsStyle">
                 Отсутствие должного контроля. Как было написано выше – Вас могут
                 просто обмануть, как лиц слабо разбирающихся в процессе. Нужно
                 им это будет с одной целью – им так дешевле. Претензий Вам потом
@@ -303,7 +307,7 @@ const About = () => {
                   </span>
                 </Typography>
               </Box>
-              <Typography variant="body2" className="about-TextreasonsStyle">
+              <Typography variant="body1" className="about-TextreasonsStyle">
                 Весьма вероятно, что договор будет не от чистой фирмы и в
                 результате этого Вы получите проблемы с Налоговой Полицией.
               </Typography>

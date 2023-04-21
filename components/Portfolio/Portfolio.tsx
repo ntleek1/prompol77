@@ -20,7 +20,7 @@ const Portfolio = () => {
     <Box id="portfolio" sx={sxPortfolio}>
       <Container maxWidth="lg" className="portfolio-Container">
         <Typography variant="h2">{title}</Typography>
-        <Typography variant="body1">{subtitle}</Typography>
+        <Typography variant="body2">{subtitle}</Typography>
         <Box className="portfolio-Wrapper">
           <Grid container spacing={2}>
             {data.map(
@@ -48,7 +48,7 @@ const Portfolio = () => {
 
       <Box sx={{ textAlign: "center", mt: 2, px: 4 }}>
         <Typography variant="h3">Клиенты которые нам доверяют</Typography>
-        <Typography variant="body1" component="p" mt={2}>
+        <Typography variant="body2" component="p" mt={2}>
           Мы ценим наши отношения с клиентами и всегда стараемся оправдать их
           доверие.
         </Typography>
@@ -82,20 +82,20 @@ const Portfolio = () => {
       </Container>
       <Container>
         <Box display="flex" flexDirection="column" gap={2} pt={8}>
-          <Typography variant="body1" component="p" align="justify">
+          <Typography variant="body2" component="p" align="justify">
             Промышленные полы в современном мире являются одними из самых важных
             элементов любого производственного и коммерческого помещения. Они
             обеспечивают не только эстетическую функцию, но и являются основой
             для безопасной работы и эффективного использования пространства
           </Typography>
-          <Typography variant="body1" component="p" align="justify">
+          <Typography variant="body2" component="p" align="justify">
             В настоящее время устройство промышленных полов достигло невероятных
             высот благодаря инновационным технологиям и материалам, которые
             обеспечивают высокую прочность, износостойкость, устойчивость к
             химическим веществам и температурным перепадам, а также
             антистатические и антибактериальные свойства.
           </Typography>
-          <Typography variant="body1" component="p" align="justify">
+          <Typography variant="body2" component="p" align="justify">
             Мы внимательно следим за всеми новинками и тенденциями в отрасли,
             постоянно совершенствуем свои знания и умения, чтобы предложить
             нашим клиентам самые передовые решения для устройства промышленных

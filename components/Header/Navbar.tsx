@@ -26,16 +26,16 @@ const Navbar = () => {
         </Box>
 
         <Box className="navbar__menu">
-          <Link href="#services" variant="body1">
+          <Link href="#services" variant="body2">
             Виды полов
           </Link>
-          <Link href="#portfolio" variant="body1">
+          <Link href="#portfolio" variant="body2">
             Наши работы
           </Link>
-          <Link href="#about" variant="body1">
+          <Link href="#about" variant="body2">
             Гарантии
           </Link>
-          <Link href="#contacts" variant="body1">
+          <Link href="#contacts" variant="body2">
             Контакты
           </Link>
         </Box>

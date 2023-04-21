@@ -1,6 +1,6 @@
 import _ from "lodash";
 import { createTheme } from "@mui/material/styles";
-import { typography, MuiButton, MuiLink, shadows } from "./base";
+import { globalStyles, typography, MuiButton, MuiLink, shadows } from "./base";
 
 const LightMuiButton = _.defaultsDeep({}, MuiButton);
 const LightMuiLink = _.defaultsDeep({}, MuiLink);
@@ -13,5 +13,20 @@ export const LightTheme = createTheme({
   components: {
     MuiButton: LightMuiButton,
     MuiLink: LightMuiLink,
+    MuiCssBaseline: {
+      styleOverrides: (theme) => ({
+        ...globalStyles,
+        body: {
+          backgroundColor: "#eee",
+        },
+      }),
+    },
+    MuiTypography: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          "blockquote& p": theme.typography.body2,
+        }),
+      },
+    },
   },
 });

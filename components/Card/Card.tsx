@@ -52,7 +52,7 @@ const Card: React.FC<CardProps> = ({
         <Typography variant="h6" component="h6" gutterBottom sx={CSSTitle}>
           {title}
         </Typography>
-        <Typography variant="body2" component="p" color="text.secondary">
+        <Typography variant="body1" component="p" color="text.secondary">
           {description}
         </Typography>
       </MuiCardContent>

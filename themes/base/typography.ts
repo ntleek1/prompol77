@@ -14,16 +14,15 @@ export const typography = {
     fontSize: DFontSize * 0.85,
   },
   body1: {
-    fontSize: DFontSize,
-    fontWeight: 300,
-    opacity: 0.8,
-    [DefaultTheme.breakpoints.down("md")]: {
-      fontSize: DFontSize * 0.88,
-    },
+    fontSize: DFontSize * 0.875,
+    fontWeight: 400,
   },
   body2: {
-    fontSize: DFontSize * 0.88,
-    fontWeight: 400,
+    fontSize: DFontSize,
+    fontWeight: 300,
+    [DefaultTheme.breakpoints.down("md")]: {
+      fontSize: DFontSize * 0.875,
+    },
   },
   h1: {
     fontSize: DFontSize * 2.8,

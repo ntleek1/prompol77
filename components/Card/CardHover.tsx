@@ -32,7 +32,7 @@ const CardHover: React.FC<CardHoverProps> = ({
       </Box>
       <MuiCardContent sx={CSSCardHoverContent}>
         <Typography variant="h6">{title}</Typography>
-        <Typography variant="body2" component="p" color="black">
+        <Typography variant="body1" component="p" color="black">
           {description}
         </Typography>
         <Typography
@@ -40,7 +40,8 @@ const CardHover: React.FC<CardHoverProps> = ({
           component="p"
           color="text.secondary"
           fontWeight="light"
-          pt={1}>
+          pt={1}
+        >
           {type}
           <br />
           {square}

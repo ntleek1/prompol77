@@ -3,9 +3,8 @@ import { createStyles } from "@mui/material/styles";
 
 const styles = createStyles({
   pre: {
-    backgroundColor: "#f5f5f5",
-    borderRadius: 4,
-    padding: "1rem",
+    paddingTop: "1rem",
+    paddingBottom: "1rem",
     overflowX: "auto",
   },
   code: {

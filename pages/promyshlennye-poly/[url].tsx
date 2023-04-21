@@ -28,8 +28,13 @@ const ServicePage = ({ mdxSource }) => {
           <Container maxWidth="lg">
             <Typography variant="h1">{service.title}</Typography>
             <DebugJson data={service} />
-            <Box display="flex" flexDirection="column" gap={3}>
-              <MDXRemote {...mdxSource} components={mdxComponents} />;
+            <Box
+              display="flex"
+              flexDirection="column"
+              gap={3}
+              component="article"
+            >
+              <MDXRemote {...mdxSource} components={mdxComponents} />
             </Box>
           </Container>
         </Box>

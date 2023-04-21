@@ -16,7 +16,7 @@ const Service = () => {
     <Box id="services" sx={sxService}>
       <Container maxWidth="lg" className="service-Container">
         <Typography variant="h2">{title}</Typography>
-        <Typography variant="body1">{subtitle}</Typography>
+        <Typography variant="body2">{subtitle}</Typography>
         <Box className="service-GridWrapper">
           <Grid container spacing={{ xs: 2, lg: 3 }}>
             {data.map(({ title, description, url, imageSrc }, index) => (
