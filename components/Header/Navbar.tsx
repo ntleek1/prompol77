@@ -9,7 +9,7 @@ const Navbar = () => {
   const { sxNavbar } = useHeaderStyles();
 
   return (
-    <Box component="section" id="navbar" sx={sxNavbar}>
+    <Box id="navbar" sx={sxNavbar}>
       <Container className="navbar__container">
         <Box className="navbar__logo">
           <Link
@@ -25,7 +25,7 @@ const Navbar = () => {
           </Link>
         </Box>
 
-        <Box className="navbar__menu">
+        <Box component="nav" className="navbar__menu">
           <Link href="#services" variant="body2">
             Виды полов
           </Link>
@@ -42,6 +42,7 @@ const Navbar = () => {
 
         <Box className="navbar__buttonGroup">
           <Button
+            href="#services"
             variant="contained"
             color="error"
             size="small"
@@ -50,6 +51,7 @@ const Navbar = () => {
             Выбрать вид полов
           </Button>
           <Button
+            href="#portfolio"
             variant="contained"
             color="primary"
             size="small"

@@ -11,7 +11,7 @@ const Topbar = () => {
   const isMobile = useIsMobile();
 
   return (
-    <Box component="section" sx={sxTopbar}>
+    <Box sx={sxTopbar}>
       <Container className="topbar__container">
         <Typography variant="small" className="topbar__schedule">
           г. Москва, Пн-Пт с 09:00 до 19:00, Сб-Вс выходные

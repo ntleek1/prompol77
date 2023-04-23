@@ -1,5 +1,7 @@
 import { useTheme, createStyles, Theme } from "@mui/material/styles";
 
+export const APPBAR_HEIGHT = 112;
+
 const headerStyles = (theme: Theme) =>
   createStyles({
     sxTopbar: {

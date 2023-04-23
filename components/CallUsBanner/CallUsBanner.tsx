@@ -11,7 +11,7 @@ const CallUsBanner = () => {
   const isMobile = useIsMobile();
 
   return (
-    <Box component="section" id="BannerBox" sx={sxCallUsBanner}>
+    <Box id="BannerBox" component="section" sx={sxCallUsBanner}>
       <Container>
         <Box className="callUsBanner__container">
           <Box flex={1}>

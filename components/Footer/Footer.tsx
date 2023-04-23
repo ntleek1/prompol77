@@ -1,28 +1,25 @@
 import React from "react";
+import Link from "next/link";
 import { Box, Container, Typography } from "@mui/material";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
+import useFooterStyles from "./styles";
 
 const Footer = () => {
+  const { sxFooter } = useFooterStyles();
   return (
-    <Container>
-      <Box
-        sx={{
-          justifyContent: "space-between",
-          display: "flex",
-          py: 8,
-        }}
-      >
-        <Typography variant="subtitle2">&copy; ПОЛ77, 2023</Typography>
-        <Box ml="auto">
-          <a href="#" style={{ textDecoration: "none", color: "#365FA1" }}>
-            <Typography display="flex" gap={1} variant="subtitle2">
+    <Box id="footer" sx={sxFooter}>
+      <Container>
+        <Typography>&copy; ПОЛ77, 2023</Typography>
+        <Box>
+          <Link href="#">
+            <Typography display="flex" gap={1}>
               <AccountTreeIcon fontSize="small" />
               Карта сайта
             </Typography>
-          </a>
+          </Link>
         </Box>
-      </Box>
-    </Container>
+      </Container>
+    </Box>
   );
 };
 

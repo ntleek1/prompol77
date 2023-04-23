@@ -17,7 +17,7 @@ const Portfolio = () => {
   const { sxPortfolio } = usePortfolioStyles();
 
   return (
-    <Box id="portfolio" sx={sxPortfolio}>
+    <Box id="portfolio" component="section" sx={sxPortfolio}>
       <Container maxWidth="lg" className="portfolio-Container">
         <Typography variant="h2">{title}</Typography>
         <Typography variant="body2">{subtitle}</Typography>

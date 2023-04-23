@@ -1,6 +1,11 @@
+import { APPBAR_HEIGHT } from "@/components/Header/styles";
 import { DefaultTheme } from "../DefaultTheme";
 
 export const globalStyles = {
+  html: {
+    scrollBehavior: "smooth",
+    scrollPaddingTop: APPBAR_HEIGHT,
+  },
   body: {
     maxWidth: "100vw",
     overflowX: "hidden",

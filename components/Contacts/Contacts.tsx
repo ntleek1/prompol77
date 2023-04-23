@@ -10,14 +10,14 @@ const Contacts = () => {
   const { sxContacts } = useContactsStyles();
 
   return (
-    <Box id="contacts" sx={sxContacts}>
+    <Box id="contacts" component="section" sx={sxContacts}>
       <Container>
         <Box display="flex" flexDirection="column" gap={4}>
           <Typography variant="h2" className="contacts-Header">
             Контактная информация
           </Typography>
 
-          <Box display="flex" flexDirection="column" gap={0}>
+          <Box display="flex" flexDirection="column" gap={4}>
             <Box className="contacts-FlexBox">
               <Typography>
                 <PhoneIcon fontSize="small" />
@@ -54,7 +54,8 @@ const Contacts = () => {
             <Typography fontWeight={600}>
               <a
                 href="mailto:info@pol77.ru"
-                style={{ textDecoration: "none", color: "#365FA1" }}>
+                style={{ textDecoration: "none", color: "#365FA1" }}
+              >
                 9857271414@mail.ru
               </a>
             </Typography>
@@ -64,7 +65,7 @@ const Contacts = () => {
             График работы
           </Typography>
 
-          <Box display="flex" flexDirection="column" gap={0}>
+          <Box display="flex" flexDirection="column" gap={4}>
             <Box className="contacts-FlexBox">
               <Typography>
                 <CalendarMonthIcon fontSize="small" />

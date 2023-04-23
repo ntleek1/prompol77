@@ -13,7 +13,7 @@ const Service = () => {
   const { sxService } = useServiceStyles();
 
   return (
-    <Box id="services" sx={sxService}>
+    <Box id="services" component="section" sx={sxService}>
       <Container maxWidth="lg" className="service-Container">
         <Typography variant="h2">{title}</Typography>
         <Typography variant="body2">{subtitle}</Typography>

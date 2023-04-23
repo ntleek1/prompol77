@@ -16,7 +16,7 @@ const About = () => {
   const { sxAbout } = useAboutStyles();
 
   return (
-    <Box id="about" sx={sxAbout}>
+    <Box id="about" component="section" sx={sxAbout}>
       <Container className="about-Container">
         <Typography variant="h2" textAlign={"center"}>
           О компании

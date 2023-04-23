@@ -7,14 +7,15 @@ const WarrantyBanner = () => {
   const { sxWarrantyBanner } = useWarrantyBannerStyles();
 
   return (
-    <Box component="section" id="BannerBox" sx={sxWarrantyBanner}>
+    <Box id="BannerBox" component="section" sx={sxWarrantyBanner}>
       <Container sx={{ height: "100%" }}>
         <Box className="warrantyBanner-Container">
           <Box>
             <Typography
               variant="h2"
               component="p"
-              className="warrantyBanner-Header">
+              className="warrantyBanner-Header"
+            >
               2 года гарантии качества
               <br /> и результата
             </Typography>
