@@ -9,14 +9,14 @@ const Footer = () => {
   return (
     <Box id="footer" sx={sxFooter}>
       <Container>
-        <Typography>&copy; ПОЛ77, 2023</Typography>
-        <Box>
-          <Link href="#">
-            <Typography display="flex" gap={1}>
-              <AccountTreeIcon fontSize="small" />
-              Карта сайта
-            </Typography>
-          </Link>
+        <Box className="footer__Flexbox">
+          <Typography className="footer__Copyright">
+            &copy; Все права защищены, «ПОЛ77», {new Date().getFullYear()}
+          </Typography>
+          <Typography component={Link} href="#" className="footer__Sitemap">
+            <AccountTreeIcon fontSize="small" />
+            Карта сайта
+          </Typography>
         </Box>
       </Container>
     </Box>

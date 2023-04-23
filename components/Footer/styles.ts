@@ -4,13 +4,16 @@ const FooterStyles = (theme: Theme) =>
   createStyles({
     sxFooter: {
       backgroundColor: theme.palette.background.default,
-      "& > *": {
+      ".footer__Flexbox": {
         justifyContent: "space-between",
         display: "flex",
         py: 8,
       },
-      a: {
-        color: theme.palette.primary.main,
+      ".footer__Sitemap": {
+        display: "flex",
+        gap: 1,
+        color: "inherit",
+        opacity: 0.8,
       },
     },
   });

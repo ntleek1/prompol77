@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Container, Link, Typography } from "@mui/material";
+import Link from "next/link";
+import { Box, Container, Typography } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import PhoneIcon from "@mui/icons-material/Phone";
 import MailIcon from "@mui/icons-material/Mail";
@@ -28,21 +29,23 @@ const Topbar = () => {
             </Typography>
           </Link>
           <MailIcon className="topbar__mailIcon" />
-          <Link
+          <Typography
+            component={Link}
             href="mailto:9857271414@mail.ru"
             variant="small"
             className="topbar__mailLink"
           >
             9857271414@mail.ru
-          </Link>
+          </Typography>
           <PhoneIcon className="topbar__phoneIcon" />
-          <Link
-            href="tel:+7 (985) 727-14-14"
+          <Typography
+            component={Link}
+            href="tel:+79857271414"
             variant="small"
             className="topbar__phoneLink"
           >
             +7 (985) 727-14-14
-          </Link>
+          </Typography>
         </Box>
       </Container>
     </Box>

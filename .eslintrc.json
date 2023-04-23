@@ -33,6 +33,22 @@
     ],
     "no-restricted-syntax": "error",
     "prefer-template": "error",
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "@mui/material/Link",
+            "message": "Please use the Link component from \"next/link\" instead of MUI Link."
+          },
+          {
+            "name": "@mui/material",
+            "importNames": ["Link"],
+            "message": "Please use the Link component from \"next/link\" instead of MUI Link."
+          }
+        ]
+      }
+    ],
     "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/no-unused-vars": [
       "warn",

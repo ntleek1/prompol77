@@ -1,6 +1,6 @@
 import React from "react";
-import { CardActionArea, SxProps } from "@mui/material";
 import Link from "next/link";
+import { CardActionArea, SxProps } from "@mui/material";
 import MuiCard from "@mui/material/Card";
 import MuiCardMedia from "@mui/material/CardMedia";
 import MuiCardContent from "@mui/material/CardContent";

@@ -9,6 +9,7 @@ const LayoutStyles = (theme: Theme) =>
       right: 0,
       top: 0,
       zIndex: theme.zIndex.appBar,
+      boxShadow: theme.shadows[5],
     },
     sxAppSpace: {
       height: APPBAR_HEIGHT,

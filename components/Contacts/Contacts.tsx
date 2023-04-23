@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Box, Container, Typography } from "@mui/material";
 import PhoneIcon from "@mui/icons-material/Phone";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
@@ -24,24 +25,29 @@ const Contacts = () => {
                 Телефон в Москве
               </Typography>
               <Box component="hr" className="contacts-Line" />
-              <Typography fontWeight={600}>+7 (985) 727-14-14</Typography>
-            </Box>
-            {/* <Box sx={ContactsFlexBoxCSS}>
-              <Typography>
-                &nbsp;
-              </Typography>
-              <Box component="hr" />
-              <Typography fontWeight={600}>
+              <Typography
+                component={Link}
+                href="tel:+79857271414"
+                fontWeight={600}
+                color="inherit"
+              >
                 +7 (985) 727-14-14
               </Typography>
-            </Box> */}
+            </Box>
             <Box className="contacts-FlexBox" color="green">
               <Typography>
                 <WhatsAppIcon fontSize="small" />
                 WhatsApp
               </Typography>
               <Box component="hr" className="contacts-Line" />
-              <Typography fontWeight={600}>+7 (985) 727-14-14</Typography>
+              <Typography
+                component={Link}
+                href="https://api.whatsapp.com/send?phone=79857271414"
+                fontWeight={600}
+                color="green"
+              >
+                +7 (985) 727-14-14
+              </Typography>
             </Box>
           </Box>
 
@@ -51,13 +57,13 @@ const Contacts = () => {
               Электронная почта
             </Typography>
             <Box component="hr" className="contacts-Line" />
-            <Typography fontWeight={600}>
-              <a
-                href="mailto:info@pol77.ru"
-                style={{ textDecoration: "none", color: "#365FA1" }}
-              >
-                9857271414@mail.ru
-              </a>
+            <Typography
+              component={Link}
+              href="mailto:info@pol77.ru"
+              fontWeight={600}
+              color="inherit"
+            >
+              9857271414@mail.ru
             </Typography>
           </Box>
 

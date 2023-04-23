@@ -38,6 +38,13 @@ export const globalStyles = {
   ".clearfix": {
     clear: "both",
   },
+  a: {
+    color: DefaultTheme.palette.primary.main,
+    textDecoration: "none",
+    "&:hover": {
+      textDecoration: "underline",
+    },
+  },
   article: {
     img: {
       borderRadius: "8px",

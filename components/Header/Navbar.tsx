@@ -1,6 +1,7 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
-import { Box, Container, Button, Link } from "@mui/material";
+import { Box, Typography, Container, Button } from "@mui/material";
 import useHeaderStyles from "./styles";
 import PlaylistAddCheckOutlinedIcon from "@mui/icons-material/PlaylistAddCheckOutlined";
 import ImageOutlinedIcon from "@mui/icons-material/ImageOutlined";
@@ -12,7 +13,8 @@ const Navbar = () => {
     <Box id="navbar" sx={sxNavbar}>
       <Container className="navbar__container">
         <Box className="navbar__logo">
-          <Link
+          <Typography
+            component={Link}
             href="/"
             variant="h4"
             display="flex"
@@ -22,22 +24,42 @@ const Navbar = () => {
           >
             <Image src="/images/logo.png" alt="Logo" width={68} height={48} />
             ПолПромРФ
-          </Link>
+          </Typography>
         </Box>
 
         <Box component="nav" className="navbar__menu">
-          <Link href="#services" variant="body2">
+          <Typography
+            component={Link}
+            href="#services"
+            variant="body2"
+            scroll={false}
+          >
             Виды полов
-          </Link>
-          <Link href="#portfolio" variant="body2">
+          </Typography>
+          <Typography
+            component={Link}
+            href="#portfolio"
+            variant="body2"
+            scroll={false}
+          >
             Наши работы
-          </Link>
-          <Link href="#about" variant="body2">
+          </Typography>
+          <Typography
+            component={Link}
+            href="#about"
+            variant="body2"
+            scroll={false}
+          >
             Гарантии
-          </Link>
-          <Link href="#contacts" variant="body2">
+          </Typography>
+          <Typography
+            component={Link}
+            href="#contacts"
+            variant="body2"
+            scroll={false}
+          >
             Контакты
-          </Link>
+          </Typography>
         </Box>
 
         <Box className="navbar__buttonGroup">

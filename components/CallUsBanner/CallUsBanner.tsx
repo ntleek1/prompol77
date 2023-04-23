@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Container, Typography, Button, Link } from "@mui/material";
+import Link from "next/link";
+import { Box, Container, Typography, Button } from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
 import useIsMobile from "@/hooks/useIsMobile";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
@@ -51,29 +52,24 @@ const CallUsBanner = () => {
 
             <Box className="callUsBanner-Phones">
               <Box>
-                <Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                  <LocalPhoneIcon fontSize="medium" color="primary" />
-                  <Link href="tel:+79857271414" color="inherit">
-                    <Typography variant="h5" component="p">
-                      +7 (985) 727-14-14
-                    </Typography>
-                  </Link>
-                </Box>
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "8px",
-                    mt: 1,
-                  }}
+                <LocalPhoneIcon fontSize="medium" color="primary" />
+                <Typography
+                  href="tel:+79857271414"
+                  variant="h5"
+                  component={Link}
                 >
-                  <MailOutlineIcon fontSize="medium" color="primary" />
-                  <Link href="mailto:9857271414@mail.ru" color="inherit">
-                    <Typography variant="h5" component="p">
-                      9857271414@mail.ru
-                    </Typography>
-                  </Link>
-                </Box>
+                  +7 (985) 727-14-14
+                </Typography>
+              </Box>
+              <Box>
+                <MailOutlineIcon fontSize="medium" color="primary" />
+                <Typography
+                  href="mailto:9857271414@mail.ru"
+                  variant="h5"
+                  component={Link}
+                >
+                  9857271414@mail.ru
+                </Typography>
               </Box>
             </Box>
           </Box>

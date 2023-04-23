@@ -27,6 +27,14 @@ const callUsBannerStyles = (theme: Theme) =>
           alignSelf: "flex-start",
           mt: 0,
         },
+        display: "flex",
+        flexDirection: "column",
+        gap: 1,
+        "& > *": {
+          display: "flex",
+          alignItems: "center",
+          gap: "8px",
+        },
       },
 
       "& .callUsBanner-Button": {
