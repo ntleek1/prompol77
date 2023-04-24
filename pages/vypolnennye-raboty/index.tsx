@@ -19,9 +19,7 @@ const PortfolioPage = () => {
       />
       <Layout>
         <Box id="portfolio">
-          <Container maxWidth="lg">
-            <Portfolio headerVariant="h1" />
-          </Container>
+          <Portfolio headerVariant="h1" />
         </Box>
       </Layout>
     </>

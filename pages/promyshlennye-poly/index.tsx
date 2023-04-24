@@ -19,9 +19,7 @@ const ServicePage = () => {
       />
       <Layout>
         <Box id="service">
-          <Container maxWidth="lg">
-            <Service headerVariant="h1" />
-          </Container>
+          <Service headerVariant="h1" />
         </Box>
       </Layout>
     </>
