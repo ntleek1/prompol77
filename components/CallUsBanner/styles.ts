@@ -9,16 +9,24 @@ const callUsBannerStyles = (theme: Theme) =>
       backgroundPosition: "center",
       boxSizing: "border-box",
       minHeight: 480, // Установка высоты
-      "& .callUsBanner__container": {
+
+      "& .callUsBanner__Container": {
         display: "flex",
         gap: 3,
         [theme.breakpoints.down("md")]: {
           flexDirection: "column",
         },
       },
+
+      "& .callUsBanner__Description": {
+        textAlign: "justify",
+        maxWidth: 480,
+        pt: 1,
+      },
+
       "& .callUsBanner-Phones": {
         background: theme.palette.background.default,
-        borderRadius: 8,
+        borderRadius: 6,
         py: theme.spacing(2),
         px: theme.spacing(5),
         mt: 4,
@@ -48,7 +56,7 @@ const callUsBannerStyles = (theme: Theme) =>
             content: "''",
             position: "absolute",
             left: "-73px",
-            mt: 16,
+            mt: 18,
             width: 0,
             height: 0,
             borderStyle: "solid",

@@ -14,7 +14,7 @@ const CallUsBanner = () => {
   return (
     <Box id="BannerBox" component="section" sx={sxCallUsBanner}>
       <Container>
-        <Box className="callUsBanner__container">
+        <Box className="callUsBanner__Container">
           <Box flex={1}>
             <Typography
               variant="h2"
@@ -32,11 +32,9 @@ const CallUsBanner = () => {
             alignItems="baseline"
           >
             <Typography
+              className="callUsBanner__Description"
               variant="subtitle2"
-              align="justify"
-              maxWidth="480px"
               component="p"
-              pt={0}
             >
               Консультация по выбору полов - бесплатно! Обращайтесь к нам за
               помощью в выборе наилучшего решения для вашего помещения.

@@ -23,15 +23,17 @@ const WarrantyPage = ({ mdxSource }) => {
       <Layout>
         <Box id="warranty">
           <WarrantyBanner showButtons={false} />
-          <Box
-            display="flex"
-            flexDirection="column"
-            gap={3}
-            py={6}
-            component="article"
-          >
-            <MDXRemote {...mdxSource} components={mdxComponents} />
-          </Box>
+          <Container maxWidth="lg">
+            <Box
+              display="flex"
+              flexDirection="column"
+              gap={3}
+              py={6}
+              component="article"
+            >
+              <MDXRemote {...mdxSource} components={mdxComponents} />
+            </Box>
+          </Container>
         </Box>
       </Layout>
     </>
