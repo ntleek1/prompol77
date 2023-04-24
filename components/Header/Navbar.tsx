@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { CompanyName } from "@/next-seo.config";
-import { Box, Typography, Container } from "@mui/material";
-import useHeaderStyles from "./styles";
 import { MenuNav } from "@/routes";
+import { CompanyName } from "@/next-seo.config";
+import { Box, Typography, Container, IconButton } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import Order from "../Order/Order";
+import useHeaderStyles from "./styles";
 
 const Navbar = () => {
   const { sxNavbar } = useHeaderStyles();
+  const [menuIsVisible, setMenuVisibility] = useState(false);
+  const onMenuToggle = () => {
+    setMenuVisibility(!menuIsVisible);
+  };
 
   return (
     <Box id="navbar" sx={sxNavbar}>
@@ -23,29 +29,39 @@ const Navbar = () => {
             gap={2}
             color="black"
           >
-            <Image src="/images/logo.png" alt="Лого" width={68} height={48} />
+            <Image src="/images/logo.png" alt="Лого" width={60} height={40} />
             {CompanyName}
           </Typography>
         </Box>
 
-        <Box component="nav" className="navbar__menu">
-          {MenuNav.map((navItem) =>
-            navItem.isVisible ? (
-              <Typography
-                key={navItem.anchor}
-                component={Link}
-                href={navItem.anchor}
-                variant="body2"
-                scroll={false}
-              >
-                {navItem.label}
-              </Typography>
-            ) : null
-          )}
-        </Box>
+        <IconButton className="navbar__burger" onClick={onMenuToggle}>
+          {!menuIsVisible ? <MenuIcon /> : <CloseIcon />}
+        </IconButton>
 
-        <Box className="navbar__buttonGroup">
-          <Order size="small" />
+        <Box
+          className={[
+            "navbar__menu",
+            menuIsVisible ? "navbar__menu_visible" : "",
+          ].join(" ")}
+        >
+          <Box component="nav" className="navbar__navigation">
+            {MenuNav.map((navItem) =>
+              navItem.isVisible ? (
+                <Typography
+                  key={navItem.anchor}
+                  component={Link}
+                  href={navItem.anchor}
+                  variant="body2"
+                  scroll={false}
+                >
+                  {navItem.label}
+                </Typography>
+              ) : null
+            )}
+          </Box>
+          <Box className="navbar__buttonGroup">
+            <Order size="small" />
+          </Box>
         </Box>
       </Container>
     </Box>

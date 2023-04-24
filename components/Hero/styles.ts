@@ -1,6 +1,7 @@
 import { Theme, useTheme, createStyles } from "@mui/material/styles";
 import { keyframes } from "@emotion/react";
 import { th } from "date-fns/locale";
+import { APPBAR_HEIGHT } from "../Header/styles";
 
 const floatAnimation = keyframes`
   0% {
@@ -20,8 +21,6 @@ const HeroStyles = (theme: Theme) =>
       display: "flex",
       flexDirection: "column",
       gap: theme.spacing(1),
-      minHeight: "600px",
-      height: "calc(100vh - 80px - 32px)",
       justifyContent: "space-evenly",
       py: 6,
       color: theme.palette.common.white,
@@ -29,6 +28,11 @@ const HeroStyles = (theme: Theme) =>
       backgroundSize: "cover",
       backgroundPosition: "center",
       boxSizing: "border-box",
+      minHeight: "600px",
+      height: `calc(100vh - ${APPBAR_HEIGHT}px)`,
+      [theme.breakpoints.down("md")]: {
+        height: "auto",
+      },
 
       "& .hero__container": {
         "& .hero__headerText": {

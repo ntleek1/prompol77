@@ -17,7 +17,7 @@ const Topbar = () => {
         <Typography variant="small" className="topbar__schedule">
           г. Москва, Пн-Пт с 09:00 до 19:00, Сб-Вс выходные
         </Typography>
-        <Box display="flex" alignItems="center" justifyContent="center" gap={2}>
+        <Box className="topbar__phones">
           <WhatsAppIcon className="topbar__whatsAppIcon" />
           <Link
             href="https://api.whatsapp.com/send?phone=79857271414"

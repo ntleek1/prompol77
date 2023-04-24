@@ -90,19 +90,21 @@ const Hero = () => {
         </Box>
       </Container>
 
-      <Box className="hero__scrollDown">
-        <Link href="#service" scroll={false}>
-          <Typography
-            variant="h6"
-            component="span"
-            fontWeight={600}
-            color="inherit"
-          >
-            Подробнее читайте ниже
-          </Typography>
-          <ArrowDownwardIcon fontSize="large" />
-        </Link>
-      </Box>
+      {!isMobile ? (
+        <Box className="hero__scrollDown">
+          <Link href="#service" scroll={false}>
+            <Typography
+              variant="h6"
+              component="span"
+              fontWeight={600}
+              color="inherit"
+            >
+              Прокрутите вниз для продолжения
+            </Typography>
+            <ArrowDownwardIcon fontSize="large" />
+          </Link>
+        </Box>
+      ) : null}
     </Box>
   );
 };
