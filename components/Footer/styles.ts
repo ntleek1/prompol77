@@ -8,6 +8,12 @@ const FooterStyles = (theme: Theme) =>
         justifyContent: "space-between",
         display: "flex",
         py: 8,
+        gap: 2,
+        [theme.breakpoints.down("md")]: {
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        },
       },
       ".footer__Sitemap": {
         display: "flex",

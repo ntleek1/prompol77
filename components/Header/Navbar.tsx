@@ -12,8 +12,12 @@ import useHeaderStyles from "./styles";
 const Navbar = () => {
   const { sxNavbar } = useHeaderStyles();
   const [menuIsVisible, setMenuVisibility] = useState(false);
+
   const onMenuToggle = () => {
     setMenuVisibility(!menuIsVisible);
+  };
+  const onNavItemClick = () => {
+    setMenuVisibility(false);
   };
 
   return (
@@ -43,6 +47,7 @@ const Navbar = () => {
             "navbar__menu",
             menuIsVisible ? "navbar__menu_visible" : "",
           ].join(" ")}
+          onClick={onNavItemClick}
         >
           <Box component="nav" className="navbar__navigation">
             {MenuNav.map((navItem) =>

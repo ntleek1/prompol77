@@ -37,6 +37,12 @@ const ServiceStyles = (theme: Theme) =>
             backgroundColor: theme.palette.info.main,
             borderRadius: theme.shape.borderRadius,
           },
+
+          [theme.breakpoints.down("md")]: {
+            "&::before, &::after": {
+              display: "none",
+            },
+          },
         },
       },
     },
