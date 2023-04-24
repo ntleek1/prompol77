@@ -1,9 +1,8 @@
 export enum Routes {
   Home = "/",
-  Services = "/promyshlennye-poly",
-  Portfolio = "/portfolio",
-  Warranty = "/warranty",
-  Contacts = "/contacts",
+  Service = "/promyshlennye-poly",
+  Portfolio = "/vypolnennye-raboty",
+  Warranty = "/garantii-kachestva",
 }
 
 export const generateHref = (url, route) => `${route}/${url}`;
