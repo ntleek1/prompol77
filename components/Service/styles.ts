@@ -3,16 +3,18 @@ import { useTheme, createStyles, Theme } from "@mui/material/styles";
 const ServiceStyles = (theme: Theme) =>
   createStyles({
     sxService: {
+      py: 6,
       backgroundColor: theme.palette.grey[200],
 
       "& .service-Container": {
         display: "flex",
         flexDirection: "column",
-        gap: theme.spacing(4),
-        py: theme.spacing(6),
+        gap: 4,
+        pb: 4,
 
         "& .service-GridWrapper": {
           position: "relative",
+          my: 4,
 
           "&::before": {
             content: '""',

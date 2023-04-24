@@ -122,7 +122,7 @@ const About = () => {
         <Typography variant="h3" mt={8} textAlign={"center"}>
           Почему лучше нанимать фирму, а не бригаду?
         </Typography>
-        <Typography variant="body2" component="p" mt={3}>
+        <Typography variant="body2" component="p" mt={4}>
           В наше время, когда средства связи и коммуникаций очень
           распространены, заказчики имеют возможность напрямую обращаться к
           рабочим. И те будут рады по причине того, что заказчик разбирается в
@@ -132,7 +132,7 @@ const About = () => {
       </Container>
 
       <Container>
-        <Grid container spacing={6} py={4}>
+        <Grid container spacing={6} py={6}>
           <Grid item xs={12} md={6}>
             <Box>
               <Box className="about-ReasonsStyle">

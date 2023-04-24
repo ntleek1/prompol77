@@ -9,7 +9,7 @@ import mdxContent from "@/lib/mdxContent";
 import mdxComponents from "@/lib/mdxComponents";
 import DebugJson from "@/utils/DebugJson";
 
-const ServicePage = ({ mdxSource }) => {
+const ServiceViewPage = ({ mdxSource }) => {
   const router = useRouter();
   const { url } = router.query;
 
@@ -24,7 +24,7 @@ const ServicePage = ({ mdxSource }) => {
     <>
       <NextSeo title={service.title} description={service.description} />
       <Layout>
-        <Box id="service" py={4}>
+        <Box id="service" py={6}>
           <Container maxWidth="lg">
             <Typography variant="h1">{service.title}</Typography>
             <DebugJson data={service} />
@@ -43,7 +43,7 @@ const ServicePage = ({ mdxSource }) => {
   );
 };
 
-export default ServicePage;
+export default ServiceViewPage;
 
 export async function getStaticPaths() {
   const urls = servicesData.map((service) => service.url);

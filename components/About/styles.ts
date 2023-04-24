@@ -74,7 +74,7 @@ const AboutStyles = (theme: Theme) =>
         p: 2,
         borderRadius: 5,
         boxShadow: theme.shadows[2],
-        minHeight: 156,
+        minHeight: 192,
         "& .about-VerifiedIconStyle": {
           flexShrink: 0,
           width: "100px",

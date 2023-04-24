@@ -30,7 +30,7 @@ const Navbar = () => {
         <Box component="nav" className="navbar__menu">
           <Typography
             component={Link}
-            href="#services"
+            href="#service"
             variant="body2"
             scroll={false}
           >
@@ -64,7 +64,7 @@ const Navbar = () => {
 
         <Box className="navbar__buttonGroup">
           <Button
-            href="#services"
+            href="#service"
             variant="contained"
             color="error"
             size="small"

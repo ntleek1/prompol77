@@ -65,7 +65,7 @@ const Hero = () => {
 
           <Box className="hero-ButtonsGroup">
             <Button
-              href="#services"
+              href="#service"
               variant="contained"
               color="error"
               size={isMobile ? "medium" : "large"}

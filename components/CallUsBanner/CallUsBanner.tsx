@@ -57,6 +57,7 @@ const CallUsBanner = () => {
                   href="tel:+79857271414"
                   variant="h5"
                   component={Link}
+                  color="inherit"
                 >
                   +7 (985) 727-14-14
                 </Typography>
@@ -67,6 +68,7 @@ const CallUsBanner = () => {
                   href="mailto:9857271414@mail.ru"
                   variant="h5"
                   component={Link}
+                  color="inherit"
                 >
                   9857271414@mail.ru
                 </Typography>

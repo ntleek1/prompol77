@@ -19,6 +19,9 @@ function useCardStyles() {
     [theme.breakpoints.down("md")]: {
       position: "static",
     },
+    img: {
+      minHeight: 225,
+    },
   };
 
   const CSSContent: SxProps = {
