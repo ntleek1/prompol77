@@ -19,6 +19,7 @@ const WarrantyBannerStyles = (theme: Theme) =>
 
       "& .warrantyBanner-Header": {
         textAlign: "center",
+        maxWidth: 460,
       },
 
       "& .warrantyBanner-Bottom": {
