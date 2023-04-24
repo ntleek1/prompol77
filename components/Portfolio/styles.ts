@@ -5,6 +5,15 @@ const PortfolioStyles = (theme: Theme) =>
     sxPortfolio: {
       backgroundColor: theme.palette.grey[200],
 
+      "& .portfolio__ClientsHeader": {
+        display: "flex",
+        flexDirection: "column",
+        textAlign: "center",
+        gap: 2,
+        mt: 2,
+        px: 4,
+      },
+
       "& .portfolio-Container": {
         display: "flex",
         flexDirection: "column",
@@ -22,7 +31,6 @@ const PortfolioStyles = (theme: Theme) =>
           backgroundColor: "white",
           boxShadow: theme.shadows[2],
           borderRadius: 8,
-          mt: 4,
           overflow: "hidden",
           p: 4,
         },

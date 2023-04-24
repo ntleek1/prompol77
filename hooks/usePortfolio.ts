@@ -1,15 +1,18 @@
+import { Meta } from "@/next-seo.config";
+import Routes from "@/routes";
 import portfolioData from "../data/portfolio.json";
 import clientsData from "../data/clients.json";
 
-function usePortfolio() {
-  const title = "Выполненные работы";
-  const subtitle =
-    "Мы рады представить вам галерею фотографий наших завершенных проектов. Устройство промышленных полов - это наше любимое дело, и мы подходим к нему с максимальной ответственностью. Мы надеемся, что фотографии наших работ помогут вам убедиться в высоком качестве наших услуг и присоединиться к числу наших довольных клиентов.";
+interface usePortfolioProps {
+  limit?: number;
+}
+
+function usePortfolio({ limit }: usePortfolioProps = {}) {
+  const data = portfolioData.slice(0, limit);
 
   return {
-    title,
-    subtitle,
-    data: portfolioData,
+    ...Meta[Routes.Portfolio],
+    data,
     clientsData,
   };
 }

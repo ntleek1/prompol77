@@ -10,17 +10,27 @@ import ImageOutlinedIcon from "@mui/icons-material/ImageOutlined";
 import usePortfolioStyles from "./styles";
 import Image from "next/image";
 import useIsMobile from "@/hooks/useIsMobile";
+import Link from "next/link";
+import Routes from "@/routes";
 
-const Portfolio = () => {
+interface PortfolioProps {
+  headerVariant?: "h1" | "h2" | "h3";
+  limit?: number;
+}
+
+const Portfolio: React.FC<PortfolioProps> = ({
+  headerVariant = "h2",
+  limit,
+}) => {
   const isMobile = useIsMobile();
-  const { title, subtitle, data, clientsData } = usePortfolio();
+  const { header, description, data, clientsData } = usePortfolio({ limit });
   const { sxPortfolio } = usePortfolioStyles();
 
   return (
     <Box id="portfolio" component="section" sx={sxPortfolio}>
       <Container maxWidth="lg" className="portfolio-Container">
-        <Typography variant="h2">{title}</Typography>
-        <Typography variant="body2">{subtitle}</Typography>
+        <Typography variant={headerVariant}>{header}</Typography>
+        <Typography variant="body2">{description}</Typography>
         <Box className="portfolio-Wrapper">
           <Grid container spacing={2}>
             {data.map(
@@ -39,16 +49,24 @@ const Portfolio = () => {
             )}
           </Grid>
         </Box>
-        <Box sx={{ display: "flex", justifyContent: "center" }}>
-          <Button variant="contained" startIcon={<ImageOutlinedIcon />}>
-            Смотреть портфолио
-          </Button>
-        </Box>
+        {limit !== undefined ? (
+          <Box textAlign="center">
+            <Link href={Routes.Portfolio} passHref>
+              <Button
+                color="error"
+                variant="contained"
+                startIcon={<ImageOutlinedIcon />}
+              >
+                Смотреть все работы
+              </Button>
+            </Link>
+          </Box>
+        ) : null}
       </Container>
 
-      <Box sx={{ textAlign: "center", mt: 2, px: 4 }}>
+      <Box className="portfolio__ClientsHeader">
         <Typography variant="h3">Клиенты которые нам доверяют</Typography>
-        <Typography variant="body2" component="p" mt={2}>
+        <Typography variant="body2" component="p">
           Мы ценим наши отношения с клиентами и всегда стараемся оправдать их
           доверие.
         </Typography>
@@ -81,21 +99,21 @@ const Portfolio = () => {
         </Box>
       </Container>
       <Container>
-        <Box display="flex" flexDirection="column" gap={2} pt={8}>
-          <Typography variant="body2" component="p" align="justify">
+        <Box display="flex" flexDirection="column" gap={2} pt={4}>
+          <Typography component="p" align="justify">
             Промышленные полы в современном мире являются одними из самых важных
             элементов любого производственного и коммерческого помещения. Они
             обеспечивают не только эстетическую функцию, но и являются основой
             для безопасной работы и эффективного использования пространства
           </Typography>
-          <Typography variant="body2" component="p" align="justify">
+          <Typography component="p" align="justify">
             В настоящее время устройство промышленных полов достигло невероятных
             высот благодаря инновационным технологиям и материалам, которые
             обеспечивают высокую прочность, износостойкость, устойчивость к
             химическим веществам и температурным перепадам, а также
             антистатические и антибактериальные свойства.
           </Typography>
-          <Typography variant="body2" component="p" align="justify">
+          <Typography component="p" align="justify">
             Мы внимательно следим за всеми новинками и тенденциями в отрасли,
             постоянно совершенствуем свои знания и умения, чтобы предложить
             нашим клиентам самые передовые решения для устройства промышленных
