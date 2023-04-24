@@ -1,13 +1,17 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { CompanyName } from "@/next-seo.config";
 import { Box, Typography, Container, Button } from "@mui/material";
 import useHeaderStyles from "./styles";
 import PlaylistAddCheckOutlinedIcon from "@mui/icons-material/PlaylistAddCheckOutlined";
 import ImageOutlinedIcon from "@mui/icons-material/ImageOutlined";
+import { MenuNav } from "@/routes";
 
 const Navbar = () => {
   const { sxNavbar } = useHeaderStyles();
+
+  const [redButton, blueButton] = MenuNav.filter((navItem) => navItem.isButton);
 
   return (
     <Box id="navbar" sx={sxNavbar}>
@@ -22,66 +26,52 @@ const Navbar = () => {
             gap={2}
             color="black"
           >
-            <Image src="/images/logo.png" alt="Logo" width={68} height={48} />
-            ПолПромРФ
+            <Image src="/images/logo.png" alt="Лого" width={68} height={48} />
+            {CompanyName}
           </Typography>
         </Box>
 
         <Box component="nav" className="navbar__menu">
-          <Typography
-            component={Link}
-            href="#service"
-            variant="body2"
-            scroll={false}
-          >
-            Виды полов
-          </Typography>
-          <Typography
-            component={Link}
-            href="#portfolio"
-            variant="body2"
-            scroll={false}
-          >
-            Наши работы
-          </Typography>
-          <Typography
-            component={Link}
-            href="#about"
-            variant="body2"
-            scroll={false}
-          >
-            Гарантии
-          </Typography>
-          <Typography
-            component={Link}
-            href="#contacts"
-            variant="body2"
-            scroll={false}
-          >
-            Контакты
-          </Typography>
+          {MenuNav.map((navItem) =>
+            navItem.isVisible && !navItem.isButton ? (
+              <Typography
+                key={navItem.anchor}
+                component={Link}
+                href={navItem.anchor}
+                variant="body2"
+                scroll={false}
+              >
+                {navItem.label}
+              </Typography>
+            ) : null
+          )}
         </Box>
-
-        <Box className="navbar__buttonGroup">
-          <Button
-            href="#service"
-            variant="contained"
-            color="error"
-            size="small"
-            startIcon={<PlaylistAddCheckOutlinedIcon />}
-          >
-            Выбрать вид полов
-          </Button>
-          <Button
-            href="#portfolio"
-            variant="contained"
-            color="primary"
-            size="small"
-            startIcon={<ImageOutlinedIcon />}
-          >
-            Портфолио
-          </Button>
-        </Box>
+        {redButton.isVisible || blueButton.isVisible ? (
+          <Box className="navbar__buttonGroup">
+            {redButton.isVisible ? (
+              <Button
+                href={redButton.anchor}
+                variant="contained"
+                color="error"
+                size="small"
+                startIcon={<PlaylistAddCheckOutlinedIcon />}
+              >
+                {redButton.label}
+              </Button>
+            ) : null}
+            {blueButton.isVisible ? (
+              <Button
+                href={blueButton.anchor}
+                variant="contained"
+                color="primary"
+                size="small"
+                startIcon={<ImageOutlinedIcon />}
+              >
+                {blueButton.label}
+              </Button>
+            ) : null}
+          </Box>
+        ) : null}
       </Container>
     </Box>
   );
