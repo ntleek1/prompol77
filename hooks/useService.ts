@@ -1,14 +1,17 @@
+import { Meta } from "@/next-seo.config";
+import Routes from "@/routes";
 import servicesData from "../data/services.json";
 
-function useService() {
-  const title = "Промышленные полы";
-  const subtitle =
-    "Наша компания специализируется на производстве высококачественных промышленных полов, мы используем только качественные материалы от проверенных производителей. Предлагаем ознакомиться со списком видов полов и их назначения.";
+interface useServiceProps {
+  limit?: number;
+}
+
+function useService({ limit }: useServiceProps = {}) {
+  const data = servicesData.slice(0, limit);
 
   return {
-    title,
-    subtitle,
-    data: servicesData,
+    ...Meta[Routes.Service],
+    data,
   };
 }
 
