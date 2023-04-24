@@ -2,16 +2,13 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { CompanyName } from "@/next-seo.config";
-import { Box, Typography, Container, Button } from "@mui/material";
+import { Box, Typography, Container } from "@mui/material";
 import useHeaderStyles from "./styles";
-import PlaylistAddCheckOutlinedIcon from "@mui/icons-material/PlaylistAddCheckOutlined";
-import ImageOutlinedIcon from "@mui/icons-material/ImageOutlined";
 import { MenuNav } from "@/routes";
+import Order from "../Order/Order";
 
 const Navbar = () => {
   const { sxNavbar } = useHeaderStyles();
-
-  const [redButton, blueButton] = MenuNav.filter((navItem) => navItem.isButton);
 
   return (
     <Box id="navbar" sx={sxNavbar}>
@@ -33,7 +30,7 @@ const Navbar = () => {
 
         <Box component="nav" className="navbar__menu">
           {MenuNav.map((navItem) =>
-            navItem.isVisible && !navItem.isButton ? (
+            navItem.isVisible ? (
               <Typography
                 key={navItem.anchor}
                 component={Link}
@@ -46,32 +43,10 @@ const Navbar = () => {
             ) : null
           )}
         </Box>
-        {redButton.isVisible || blueButton.isVisible ? (
-          <Box className="navbar__buttonGroup">
-            {redButton.isVisible ? (
-              <Button
-                href={redButton.anchor}
-                variant="contained"
-                color="error"
-                size="small"
-                startIcon={<PlaylistAddCheckOutlinedIcon />}
-              >
-                {redButton.label}
-              </Button>
-            ) : null}
-            {blueButton.isVisible ? (
-              <Button
-                href={blueButton.anchor}
-                variant="contained"
-                color="primary"
-                size="small"
-                startIcon={<ImageOutlinedIcon />}
-              >
-                {blueButton.label}
-              </Button>
-            ) : null}
-          </Box>
-        ) : null}
+
+        <Box className="navbar__buttonGroup">
+          <Order size="small" />
+        </Box>
       </Container>
     </Box>
   );

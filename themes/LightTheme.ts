@@ -17,6 +17,7 @@ export const LightTheme = createTheme({
       styleOverrides: (theme) => ({
         ...globalStyles,
         body: {
+          ...globalStyles.body,
           backgroundColor: "#eee",
         },
       }),

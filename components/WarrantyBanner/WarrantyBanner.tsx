@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Meta } from "@/next-seo.config";
 import Routes from "@/routes";
 import { Box, Container, Typography, Button } from "@mui/material";
-import EmailIcon from "@mui/icons-material/Email";
+import Order from "../Order/Order";
 import useWarrantyBannerStyles from "./styles";
 
 interface WarrantyBannerProps {
@@ -30,9 +30,7 @@ const WarrantyBanner: React.FC<WarrantyBannerProps> = ({
           </Box>
           {showButtons ? (
             <Box className="warrantyBanner-Bottom">
-              <Button variant="contained" startIcon={<EmailIcon />}>
-                Оставить заявку
-              </Button>
+              <Order />
               <Link
                 href={Routes.Warranty}
                 passHref

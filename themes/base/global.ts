@@ -9,7 +9,8 @@ export const globalStyles = {
   body: {
     maxWidth: "100vw",
     overflowX: "hidden",
-    scrollBehavior: "smooth",
+    overflowY: "scroll !important",
+    padding: "0 !important",
   },
   main: {
     minHeight: "100vh",

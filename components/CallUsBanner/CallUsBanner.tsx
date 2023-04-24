@@ -1,11 +1,11 @@
 import React from "react";
 import Link from "next/link";
-import { Box, Container, Typography, Button } from "@mui/material";
-import EmailIcon from "@mui/icons-material/Email";
+import { Box, Container, Typography } from "@mui/material";
 import useIsMobile from "@/hooks/useIsMobile";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import useCallUsBannerStyles from "./styles";
+import Order from "../Order/Order";
 
 const CallUsBanner = () => {
   const { sxCallUsBanner } = useCallUsBannerStyles();
@@ -42,13 +42,9 @@ const CallUsBanner = () => {
               помощью в выборе наилучшего решения для вашего помещения.
             </Typography>
 
-            <Button
-              className="callUsBanner-Button"
-              variant="contained"
-              startIcon={<EmailIcon />}
-            >
-              Оставить заявку
-            </Button>
+            <Box className="callUsBanner-Button">
+              <Order />
+            </Box>
 
             <Box className="callUsBanner-Phones">
               <Box>
