@@ -1,4 +1,18 @@
 import { Theme, useTheme, createStyles } from "@mui/material/styles";
+import { keyframes } from "@emotion/react";
+import { th } from "date-fns/locale";
+
+const floatAnimation = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`;
 
 const HeroStyles = (theme: Theme) =>
   createStyles({
@@ -6,8 +20,9 @@ const HeroStyles = (theme: Theme) =>
       display: "flex",
       flexDirection: "column",
       gap: theme.spacing(1),
-      minHeight: "calc(100vh - 80px - 32px)",
-      justifyContent: "center",
+      minHeight: "600px",
+      height: "calc(100vh - 80px - 32px)",
+      justifyContent: "space-evenly",
       py: 6,
       color: theme.palette.common.white,
       backgroundImage: `url(/images/pictures.png)`,
@@ -15,12 +30,12 @@ const HeroStyles = (theme: Theme) =>
       backgroundPosition: "center",
       boxSizing: "border-box",
 
-      "& .hero-Container": {
-        height: "100%",
-        "& > *": {
-          height: "100%",
+      "& .hero__container": {
+        "& .hero__headerText": {
+          textShadow: `0 4px 8px  ${theme.palette.text.primary}`,
         },
-        "& .hero-ButtonsGroup": {
+
+        "& .hero__buttonsGroup": {
           display: "flex",
           alignItems: "center",
           gap: 2,
@@ -29,7 +44,7 @@ const HeroStyles = (theme: Theme) =>
           },
         },
 
-        "& .hero-Benefits": {
+        "& .hero__benefits": {
           display: "flex",
           alignItems: "center",
           justifyContent: "start",
@@ -63,6 +78,23 @@ const HeroStyles = (theme: Theme) =>
             [theme.breakpoints.down(367)]: {
               minWidth: "65%",
             },
+          },
+        },
+      },
+
+      "& .hero__scrollDown": {
+        py: theme.spacing(4),
+        textAlign: "center",
+        "& a": {
+          color: "inherit",
+          display: "flex",
+          flexDirection: "column",
+          gap: 2,
+          alignItems: "center",
+          textShadow: `0px 2px 4px ${theme.palette.text.primary}`,
+          svg: {
+            animation: `${floatAnimation} 2s infinite ease-in-out`,
+            filter: `drop-shadow(0px 3px 5px ${theme.palette.text.primary})`,
           },
         },
       },

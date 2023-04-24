@@ -1,8 +1,10 @@
 import React from "react";
+import Link from "next/link";
 import { Box, Container, Typography, Button } from "@mui/material";
 import PlaylistAddCheckOutlinedIcon from "@mui/icons-material/PlaylistAddCheckOutlined";
 import ImageOutlinedIcon from "@mui/icons-material/ImageOutlined";
 import VerifiedIcon from "@mui/icons-material/Verified";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import useIsMobile from "@/hooks/useIsMobile";
 import useHeroStyles from "./styles";
 
@@ -12,14 +14,16 @@ const Hero = () => {
 
   return (
     <Box id="heroScreen" component="section" sx={sxHero}>
-      <Container maxWidth="md" className="hero-Container">
+      <Container maxWidth="md" className="hero__container">
         <Box
           display="flex"
           flexDirection="column"
           justifyContent="center"
           gap={4}
         >
-          <Typography variant="h1">Производство промышленных полов</Typography>
+          <Typography variant="h1" className="hero__headerText">
+            Производство промышленных полов
+          </Typography>
 
           <Typography variant="subtitle1" component="p" align="justify">
             Мы обладаем значительным опытом работы в данной сфере и точно знаем,
@@ -27,7 +31,7 @@ const Hero = () => {
             организации, которые ценят свое время и деньги.
           </Typography>
 
-          <Box className="hero-Benefits">
+          <Box className="hero__benefits">
             <Box>
               <VerifiedIcon color="success" fontSize="large" />
               <Box>
@@ -63,7 +67,7 @@ const Hero = () => {
             </Box>
           </Box>
 
-          <Box className="hero-ButtonsGroup">
+          <Box className="hero__buttonsGroup">
             <Button
               href="#service"
               variant="contained"
@@ -85,6 +89,20 @@ const Hero = () => {
           </Box>
         </Box>
       </Container>
+
+      <Box className="hero__scrollDown">
+        <Link href="#service" scroll={false}>
+          <Typography
+            variant="h6"
+            component="span"
+            fontWeight={600}
+            color="inherit"
+          >
+            Подробнее читайте ниже
+          </Typography>
+          <ArrowDownwardIcon fontSize="large" />
+        </Link>
+      </Box>
     </Box>
   );
 };
