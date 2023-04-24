@@ -30,6 +30,7 @@ const WarrantyBannerStyles = (theme: Theme) =>
         color: "white",
         [theme.breakpoints.down("md")]: {
           flexDirection: "column",
+          textAlign: "center",
         },
       },
     },

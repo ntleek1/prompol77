@@ -1,12 +1,17 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
 import EmailIcon from "@mui/icons-material/Email";
-import TextField from "@mui/material/TextField";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
+import CloseIcon from "@mui/icons-material/Close";
+import MarkEmailReadIcon from "@mui/icons-material/MarkEmailRead";
+import {
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  DialogActions,
+  TextField,
+  IconButton,
+} from "@mui/material";
 
 interface OrderProps {
   size?: React.ComponentProps<typeof Button>["size"];
@@ -14,6 +19,34 @@ interface OrderProps {
 
 const Order: React.FC<OrderProps> = ({ size }) => {
   const [open, setOpen] = React.useState(false);
+  const [email, setEmail] = React.useState("");
+  const [phone, setPhone] = React.useState("");
+  const [emailError, setEmailError] = React.useState("");
+  const [phoneError, setPhoneError] = React.useState("");
+
+  const phoneInputRef = React.useRef<HTMLInputElement>(null);
+  const emailInputRef = React.useRef<HTMLInputElement>(null);
+
+  // Focus on the phone field when the dialog opens
+  React.useEffect(() => {
+    if (open) {
+      const focusPhoneField = () => {
+        if (phoneInputRef.current) {
+          phoneInputRef.current.focus();
+        }
+      };
+      setTimeout(focusPhoneField, 0);
+    }
+  }, [open]);
+
+  // Focus on the first error field after validation
+  React.useEffect(() => {
+    if (phoneError) {
+      phoneInputRef.current?.focus();
+    } else if (emailError) {
+      emailInputRef.current?.focus();
+    }
+  }, [phoneError, emailError]);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -21,6 +54,49 @@ const Order: React.FC<OrderProps> = ({ size }) => {
 
   const handleClose = () => {
     setOpen(false);
+    setEmail("");
+    setPhone("");
+    setEmailError("");
+    setPhoneError("");
+  };
+
+  const isPhoneValid = (phone: string) => {
+    const phoneRegex =
+      /^(\+7)\s?\(?(\d{3})\)?[-\s]?(\d{3})[-\s]?(\d{2})[-\s]?(\d{2})$/;
+    return phoneRegex.test(phone);
+  };
+
+  const isEmailValid = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleSubmit = () => {
+    let isValid = true;
+
+    if (!email && !phone) {
+      setEmailError("Введите email или телефон!");
+      setPhoneError("Введите телефон или email!");
+      isValid = false;
+    } else {
+      setEmailError("");
+      setPhoneError("");
+    }
+
+    if (phone && !isPhoneValid(phone)) {
+      setPhoneError("Неверный формат, введите номер вида +79995551122");
+      isValid = false;
+    }
+
+    if (email && !isEmailValid(email)) {
+      setEmailError("Неверный формат email!");
+      isValid = false;
+    }
+
+    if (isValid) {
+      // Submit the form and close the dialog
+      handleClose();
+    }
   };
 
   return (
@@ -31,40 +107,71 @@ const Order: React.FC<OrderProps> = ({ size }) => {
         onClick={handleClickOpen}
         size={size}
       >
-        Оставить заявку
+        Отправить заявку
       </Button>
-      <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>Оставить заявку</DialogTitle>
+      <Dialog open={open} onClose={handleClose} fullWidth>
+        <DialogTitle>
+          Отправить заявку
+          <IconButton
+            edge="end"
+            color="inherit"
+            size="small"
+            onClick={handleClose}
+            sx={{ position: "absolute", top: 20, right: 20 }}
+          >
+            <CloseIcon />
+          </IconButton>
+        </DialogTitle>
         <DialogContent>
           <DialogContentText>
             Пожалуйста, введите Ваш телефон или емайл. <br />
             Мы перезвоним или ответим на почту!
           </DialogContentText>
           <TextField
-            autoFocus
-            margin="dense"
+            inputRef={phoneInputRef}
+            margin="normal"
             id="phone"
             label="Номер телефона"
             type="tel"
             fullWidth
             variant="standard"
-            inputProps={{
-              pattern:
-                "\\+7\\s?\\(?\\d{3}\\)?[-\\s]?\\d{3}[-\\s]?\\d{2}[-\\s]?\\d{2}",
-            }}
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            error={Boolean(phoneError)}
+            helperText={phoneError}
           />
           <TextField
-            margin="dense"
+            inputRef={emailInputRef}
+            margin="normal"
             id="email"
             label="Адрес почты"
             type="email"
             fullWidth
             variant="standard"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            error={Boolean(emailError)}
+            helperText={emailError}
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Отмена</Button>
-          <Button onClick={handleClose}>Отправить</Button>
+          <Button
+            variant="contained"
+            color="secondary"
+            size="small"
+            onClick={handleClose}
+          >
+            Отмена
+          </Button>
+          <Button
+            variant="contained"
+            color="primary"
+            size="small"
+            onClick={handleSubmit}
+            startIcon={<MarkEmailReadIcon />}
+          >
+            Отправить
+          </Button>
         </DialogActions>
       </Dialog>
     </div>
