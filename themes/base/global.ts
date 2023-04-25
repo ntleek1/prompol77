@@ -26,16 +26,6 @@ export const globalStyles = {
     margin: 0,
     paddingLeft: "1.25rem",
   },
-  ".float-left": {
-    float: "left",
-    marginRight: "3rem",
-    marginBottom: "2rem",
-  },
-  ".float-right": {
-    float: "right",
-    marginLeft: "3rem",
-    marginBottom: "2rem",
-  },
   ".clearfix": {
     clear: "both",
   },
@@ -58,6 +48,23 @@ export const globalStyles = {
     "&::after": {
       content: "''",
       clear: "both",
+    },
+  },
+  "@media (min-width: 768px)": {
+    ".float-left": {
+      float: "left",
+      marginRight: "3rem",
+      marginBottom: "2rem",
+    },
+    ".float-right": {
+      float: "right",
+      marginLeft: "3rem",
+      marginBottom: "2rem",
+    },
+  },
+  "@media (max-width: 767px)": {
+    img: {
+      width: "100%",
     },
   },
 };
