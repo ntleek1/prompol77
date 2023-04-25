@@ -7,7 +7,6 @@ import Layout from "@/layouts/Layout";
 import useService, { servicesData } from "@/hooks/useService";
 import mdxContent from "@/lib/mdxContent";
 import mdxComponents from "@/lib/mdxComponents";
-import DebugJson from "@/utils/DebugJson";
 
 const ServiceViewPage = ({ mdxSource }) => {
   const router = useRouter();
@@ -27,13 +26,13 @@ const ServiceViewPage = ({ mdxSource }) => {
         <Box id="service" py={6}>
           <Container maxWidth="lg">
             <Typography variant="h1">{service.title}</Typography>
-            <DebugJson data={service} />
+
             <Box
               display="flex"
               flexDirection="column"
               gap={3}
               component="article"
-            >
+              py={4}>
               <MDXRemote {...mdxSource} components={mdxComponents} />
             </Box>
           </Container>
