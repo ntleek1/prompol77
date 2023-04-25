@@ -22,8 +22,7 @@ const Topbar = () => {
           <Link
             href="https://api.whatsapp.com/send?phone=79857271414"
             target="_blank"
-            className="topbar__whatsAppLink"
-          >
+            className="topbar__whatsAppLink">
             <Typography variant="small">
               {isMobile ? "" : "Написать в"} WhatsApp
             </Typography>
@@ -33,17 +32,15 @@ const Topbar = () => {
             component={Link}
             href="mailto:9857271414@mail.ru"
             variant="small"
-            className="topbar__mailLink"
-          >
-            9857271414@mail.ru
+            className="topbar__mailLink">
+            Email
           </Typography>
           <PhoneIcon className="topbar__phoneIcon" />
           <Typography
             component={Link}
             href="tel:+79857271414"
             variant="small"
-            className="topbar__phoneLink"
-          >
+            className="topbar__phoneLink">
             +7 (985) 727-14-14
           </Typography>
         </Box>

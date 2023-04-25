@@ -40,7 +40,7 @@ const headerStyles = (theme: Theme) =>
             fontWeight: 400,
             color: "grey",
             [theme.breakpoints.down("md")]: {
-              display: "none",
+              // display: "none",
             },
           },
           "& .topbar__whatsAppIcon": {
@@ -64,7 +64,9 @@ const headerStyles = (theme: Theme) =>
             color: "grey",
             mr: -1.5,
             [theme.breakpoints.down("md")]: {
-              display: "none",
+              // display: "none",
+              fontSize: 16,
+              // ml: 5,
             },
           },
         },
