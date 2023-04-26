@@ -1,19 +1,20 @@
 import { Meta } from "@/next-seo.config";
 import Routes from "@/routes";
-import portfolioData from "../data/portfolio.json";
-import clientsData from "../data/clients.json";
+import portfolioPhotosData from "../data/portfolio/photos.json";
+import portfolioTextData from "../data/portfolio/text.json";
 
 interface usePortfolioProps {
   limit?: number;
 }
 
 function usePortfolio({ limit }: usePortfolioProps = {}) {
-  const data = portfolioData.slice(0, limit);
+  const photoData = portfolioPhotosData.slice(0, limit);
+  const textData = portfolioTextData;
 
   return {
     ...Meta[Routes.Portfolio],
-    data,
-    clientsData,
+    photoData,
+    textData,
   };
 }
 

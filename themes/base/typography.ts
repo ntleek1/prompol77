@@ -22,6 +22,7 @@ export const typography = {
     fontWeight: 300,
     [DefaultTheme.breakpoints.down("md")]: {
       fontSize: DFontSize * 0.875,
+      fontWeight: 400,
     },
   },
   h1: {

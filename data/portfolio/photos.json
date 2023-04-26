@@ -1,7 +1,7 @@
 [
   {
     "title": "ТЭЦ-27 г. Мытищи",
-    "description": " Полимерное покрытие пола",
+    "description": "Полимерное покрытие пола",
     "link": "#",
     "imageSrc": "./images/portfolio1.jpg",
     "type": "Производственные помещения",
@@ -62,14 +62,16 @@
     "imageSrc": "./images/portfolio8.jpg",
     "type": "Производственные помещения",
     "square": "Площадь 5500 кв.м."
-  },{
+  },
+  {
     "title": " ФГУП «НАМИ»",
     "description": "Полимерное покрытие пола    ",
     "link": "#",
     "imageSrc": "./images/portfolio9.jpg",
     "type": "Производственные помещения",
     "square": "Площадь 4700 кв.м."
-  },{
+  },
+  {
     "title": "РПКБ",
     "description": "Полимерное покрытие пола    ",
     "link": "#",
