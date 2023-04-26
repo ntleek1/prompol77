@@ -26,7 +26,7 @@ const Service: React.FC<ServiceProps> = ({ headerVariant = "h2", limit }) => {
         <Typography variant={headerVariant}>{header}</Typography>
         <Typography variant="body2">{description}</Typography>
         <Box className="service-GridWrapper">
-          <Grid container spacing={{ xs: 2, lg: 3 }}>
+          <Grid container spacing={{ xs: 1, md: 2 }}>
             {data.map(({ title, description, url, imageSrc }, index) => (
               <Grid xs={6} key={index}>
                 <Card
@@ -41,7 +41,7 @@ const Service: React.FC<ServiceProps> = ({ headerVariant = "h2", limit }) => {
           </Grid>
         </Box>
         {limit !== undefined ? (
-          <Box textAlign="center">
+          <Box className="button-buttonWrapper">
             <Link href={Routes.Service} passHref>
               <Button
                 color="error"

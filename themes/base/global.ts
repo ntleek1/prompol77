@@ -15,6 +15,14 @@ export const globalStyles = {
   main: {
     minHeight: "100vh",
   },
+  section: {
+    paddingTop: DefaultTheme.spacing(6),
+    paddingBottom: DefaultTheme.spacing(6),
+    [DefaultTheme.breakpoints.down("md")]: {
+      paddingTop: DefaultTheme.spacing(3),
+      paddingBottom: DefaultTheme.spacing(3),
+    },
+  },
   img: {
     maxWidth: "100%",
   },
@@ -50,7 +58,12 @@ export const globalStyles = {
       clear: "both",
     },
   },
-  "@media (min-width: 768px)": {
+  ".button-buttonWrapper": {
+    textAlign: "center",
+    paddingTop: DefaultTheme.spacing(3),
+    paddingBottom: DefaultTheme.spacing(3),
+  },
+  [DefaultTheme.breakpoints.down("md")]: {
     ".float-left": {
       float: "left",
       marginRight: "3rem",
@@ -62,7 +75,7 @@ export const globalStyles = {
       marginBottom: "2rem",
     },
   },
-  "@media (max-width: 767px)": {
+  [DefaultTheme.breakpoints.down("md")]: {
     img: {
       width: "100%",
     },

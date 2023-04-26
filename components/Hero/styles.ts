@@ -1,6 +1,5 @@
 import { Theme, useTheme, createStyles } from "@mui/material/styles";
 import { keyframes } from "@emotion/react";
-import { th } from "date-fns/locale";
 import { APPBAR_HEIGHT } from "../Header/styles";
 
 const floatAnimation = keyframes`
@@ -22,7 +21,6 @@ const HeroStyles = (theme: Theme) =>
       flexDirection: "column",
       gap: theme.spacing(1),
       justifyContent: "space-evenly",
-      py: 6,
       color: theme.palette.common.white,
       backgroundImage: `url(/images/pictures.png)`,
       backgroundSize: "cover",

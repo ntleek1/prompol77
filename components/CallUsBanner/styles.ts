@@ -3,7 +3,6 @@ import { useTheme, Theme, createStyles } from "@mui/material/styles";
 const callUsBannerStyles = (theme: Theme) =>
   createStyles({
     sxCallUsBanner: {
-      py: theme.spacing(6),
       backgroundImage: `url(/images/banner.jpg)`,
       backgroundSize: "cover",
       backgroundPosition: "center",

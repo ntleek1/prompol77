@@ -3,28 +3,30 @@ import { Theme, useTheme, createStyles } from "@mui/material/styles";
 const AboutStyles = (theme: Theme) =>
   createStyles({
     sxAbout: {
+      pt: 2,
       backgroundColor: theme.palette.grey[200],
       backgroundImage: `url(/images/bannerStripes.jpg)`,
       backgroundSize: "contain",
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center bottom",
-      py: theme.spacing(6),
 
-      "& .about-Container": {
+      "& .about-headerContainer": {
         display: "flex",
         flexDirection: "column",
         gap: theme.spacing(2),
-        pb: theme.spacing(4),
+        pb: 3,
       },
+
+      "& .about-subHeaderContainer": {
+        mt: 6,
+        textAlign: "center",
+        [theme.breakpoints.down("md")]: {
+          mt: 4,
+        },
+      },
+
       "& .about-Wrapper": {
         position: "relative",
-      },
-      "& .about-GridItemStyles": {
-        marginTop: 5,
-        backgroundColor: "transparent",
-      },
-      "& .about-GridItemStyles2": {
-        backgroundColor: "transparent",
       },
 
       "& .about-CheckCircleOutlineIconStyle": {

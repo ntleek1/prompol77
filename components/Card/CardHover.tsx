@@ -4,7 +4,7 @@ import MuiCard from "@mui/material/Card";
 import MuiCardMedia from "@mui/material/CardMedia";
 import MuiCardContent from "@mui/material/CardContent";
 import { useCardHoverStyles } from "./styles";
-import { Typography } from "@mui/material";
+import { Typography, SxProps } from "@mui/material";
 
 interface CardHoverProps {
   imageSrc: string;
@@ -13,6 +13,7 @@ interface CardHoverProps {
   description: string;
   type: string;
   square: string;
+  sx?: SxProps;
 }
 
 const CardHover: React.FC<CardHoverProps> = ({
@@ -22,11 +23,12 @@ const CardHover: React.FC<CardHoverProps> = ({
   description,
   type,
   square,
+  sx,
 }): React.ReactElement => {
   const { CSSCardHover, CSSCardHoverContent } = useCardHoverStyles();
 
   return (
-    <MuiCard sx={CSSCardHover}>
+    <MuiCard sx={{ ...CSSCardHover, ...sx }}>
       <Box position="relative">
         <MuiCardMedia component="img" image={imageSrc} />
       </Box>

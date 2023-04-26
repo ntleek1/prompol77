@@ -1,7 +1,7 @@
 import React from "react";
-import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Circle from "./Circle";
 import HourglassBottomIcon from "@mui/icons-material/HourglassBottom";
@@ -17,23 +17,23 @@ const About = () => {
 
   return (
     <Box id="about" component="section" sx={sxAbout}>
-      <Container className="about-Container">
-        <Typography variant="h2" textAlign={"center"}>
-          О компании
-        </Typography>
-        <Typography variant="body2" mt={3}>
-          Наша компания - это профессиональная команда, специализирующаяся на
-          создании надежных бетонных полов в помещениях с повышенными
-          требованиями к износостойкости. Мы гарантируем высокое качество работ
-          благодаря использованию передовых технологий и материалов, а также
-          опыту и мастерству наших специалистов. При обращении к нам, вы
-          получите не только безупречно выполненные работы, но и множество
-          других преимуществ.
-        </Typography>
-      </Container>
-
       <Container>
-        <Grid container spacing={3}>
+        <Box className="about-headerContainer">
+          <Typography variant="h2" textAlign={"center"}>
+            О компании
+          </Typography>
+          <Typography variant="body2" mt={3}>
+            Наша компания - это профессиональная команда, специализирующаяся на
+            создании надежных бетонных полов в помещениях с повышенными
+            требованиями к износостойкости. Мы гарантируем высокое качество
+            работ благодаря использованию передовых технологий и материалов, а
+            также опыту и мастерству наших специалистов. При обращении к нам, вы
+            получите не только безупречно выполненные работы, но и множество
+            других преимуществ.
+          </Typography>
+        </Box>
+
+        <Grid container spacing={{ xs: 1, md: 3 }}>
           <Grid item xs={12} sm={6}>
             <Box className="about-SmallBoxStyle">
               <HourglassBottomIcon className="about-HourglassBottomIconStyle" />
@@ -116,10 +116,8 @@ const About = () => {
             </Box>
           </Grid>
         </Grid>
-      </Container>
 
-      <Container>
-        <Typography variant="h3" mt={8} textAlign={"center"}>
+        <Typography variant="h3" className="about-subHeaderContainer">
           Почему лучше нанимать фирму, а не бригаду?
         </Typography>
         <Typography variant="body2" component="p" mt={4}>
@@ -129,10 +127,8 @@ const About = () => {
           полах меньше чем контролирующий их бригадир и его можно обмануть. Не
           советуем идти таким путём по следующим причинам:
         </Typography>
-      </Container>
 
-      <Container>
-        <Grid container spacing={6} py={6}>
+        <Grid container spacing={{ xs: 3, md: 6 }} py={4}>
           <Grid item xs={12} md={6}>
             <Box>
               <Box className="about-ReasonsStyle">

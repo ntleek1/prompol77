@@ -7,7 +7,8 @@ const FooterStyles = (theme: Theme) =>
       ".footer__Flexbox": {
         justifyContent: "space-between",
         display: "flex",
-        py: 8,
+        mt: 4,
+        py: 4,
         gap: 2,
         [theme.breakpoints.down("md")]: {
           flexDirection: "column",
