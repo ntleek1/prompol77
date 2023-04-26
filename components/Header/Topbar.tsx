@@ -14,7 +14,6 @@ const Topbar = () => {
   const topbarRef = useRef(null);
 
   useEffect(() => {
-    console.log(topbarRef);
     if (
       topbarRef.current &&
       !topbarRef.current.classList.contains("topbar__container_loaded")

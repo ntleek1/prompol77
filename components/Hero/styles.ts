@@ -87,6 +87,9 @@ const HeroStyles = (theme: Theme) =>
       "& .hero__scrollDown": {
         py: theme.spacing(4),
         textAlign: "center",
+        [theme.breakpoints.down("md")]: {
+          display: "none",
+        },
         "& a": {
           color: "inherit",
           display: "flex",
