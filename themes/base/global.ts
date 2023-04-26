@@ -65,7 +65,6 @@ export const globalStyles = {
   "@media (max-width: 767px)": {
     img: {
       width: "100%",
-      marginBottom: "2rem",
     },
   },
 };
