@@ -26,7 +26,7 @@ const HeroStyles = (theme: Theme) =>
       backgroundSize: "cover",
       backgroundPosition: "center",
       boxSizing: "border-box",
-      minHeight: "600px",
+      minHeight: "580px",
       height: `calc(100vh - ${APPBAR_HEIGHT}px)`,
       [theme.breakpoints.down("md")]: {
         height: "auto",

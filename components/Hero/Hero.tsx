@@ -19,7 +19,8 @@ const Hero = () => {
           display="flex"
           flexDirection="column"
           justifyContent="center"
-          gap={4}>
+          gap={{ xs: 2, md: 4 }}
+        >
           <Typography variant="h1" className="hero__headerText">
             Производство промышленных полов
           </Typography>
@@ -72,7 +73,8 @@ const Hero = () => {
               variant="contained"
               color="error"
               size={isMobile ? "medium" : "large"}
-              startIcon={<PlaylistAddCheckOutlinedIcon />}>
+              startIcon={<PlaylistAddCheckOutlinedIcon />}
+            >
               Выбрать вид полов
             </Button>
             <Button
@@ -80,7 +82,8 @@ const Hero = () => {
               variant="contained"
               color="primary"
               size={isMobile ? "medium" : "large"}
-              startIcon={<ImageOutlinedIcon />}>
+              startIcon={<ImageOutlinedIcon />}
+            >
               Смотреть готовые работы
             </Button>
           </Box>
@@ -94,7 +97,8 @@ const Hero = () => {
               variant="h6"
               component="span"
               fontWeight={600}
-              color="inherit">
+              color="inherit"
+            >
               Прокрутите вниз для продолжения
             </Typography>
             <ArrowDownwardIcon fontSize="large" />
