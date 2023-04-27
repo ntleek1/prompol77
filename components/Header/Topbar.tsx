@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import { Box, Container, Typography } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
@@ -11,9 +11,20 @@ const Topbar = () => {
   const { sxTopbar } = useHeaderStyles();
   const isMobile = useIsMobile();
 
+  const topbarRef = useRef(null);
+
+  useEffect(() => {
+    if (
+      topbarRef.current &&
+      !topbarRef.current.classList.contains("topbar__container_loaded")
+    ) {
+      topbarRef.current.classList.add("topbar__container_loaded");
+    }
+  }, [topbarRef]);
+
   return (
     <Box sx={sxTopbar}>
-      <Container className="topbar__container">
+      <Container ref={topbarRef} className="topbar__container">
         <Typography variant="small" className="topbar__schedule">
           г. Москва, Пн-Пт с 09:00 до 19:00, Сб-Вс выходные
         </Typography>
@@ -22,7 +33,8 @@ const Topbar = () => {
           <Link
             href="https://api.whatsapp.com/send?phone=79857271414"
             target="_blank"
-            className="topbar__whatsAppLink">
+            className="topbar__whatsAppLink"
+          >
             <Typography variant="small">
               {isMobile ? "" : "Написать в"} WhatsApp
             </Typography>
@@ -32,7 +44,8 @@ const Topbar = () => {
             component={Link}
             href="mailto:9857271414@mail.ru"
             variant="small"
-            className="topbar__mailLink">
+            className="topbar__mailLink"
+          >
             Email
           </Typography>
           <PhoneIcon className="topbar__phoneIcon" />
@@ -40,7 +53,8 @@ const Topbar = () => {
             component={Link}
             href="tel:+79857271414"
             variant="small"
-            className="topbar__phoneLink">
+            className="topbar__phoneLink"
+          >
             +7 (985) 727-14-14
           </Typography>
         </Box>

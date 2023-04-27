@@ -26,7 +26,7 @@ const HeroStyles = (theme: Theme) =>
       backgroundSize: "cover",
       backgroundPosition: "center",
       boxSizing: "border-box",
-      minHeight: "600px",
+      minHeight: "580px",
       height: `calc(100vh - ${APPBAR_HEIGHT}px)`,
       [theme.breakpoints.down("md")]: {
         height: "auto",
@@ -87,6 +87,9 @@ const HeroStyles = (theme: Theme) =>
       "& .hero__scrollDown": {
         py: theme.spacing(4),
         textAlign: "center",
+        [theme.breakpoints.down("md")]: {
+          display: "none",
+        },
         "& a": {
           color: "inherit",
           display: "flex",

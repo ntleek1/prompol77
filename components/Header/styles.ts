@@ -14,6 +14,11 @@ const headerStyles = (theme: Theme) =>
         alignItems: "center",
         justifyContent: "space-between",
         py: 0.75,
+        opacity: 0,
+        transition: "opacity .3s ease-in-out",
+        "&.topbar__container_loaded": {
+          opacity: 1,
+        },
         "& .topbar__schedule": {
           color: "grey",
           [theme.breakpoints.down("md")]: {

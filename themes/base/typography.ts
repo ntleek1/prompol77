@@ -62,11 +62,11 @@ export const typography = {
     fontSize: DFontSize * 1.15,
     fontWeight: 400,
     [DefaultTheme.breakpoints.down("md")]: {
-      fontSize: DFontSize,
+      fontSize: DFontSize * 0.875,
     },
   },
   subtitle2: {
-    fontSize: DFontSize,
+    fontSize: DFontSize * 0.875,
     fontWeight: 400,
   },
 } as TypographyOptions;
