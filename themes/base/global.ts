@@ -57,6 +57,16 @@ export const globalStyles = {
       content: "''",
       clear: "both",
     },
+    ".float-left": {
+      float: "left",
+      marginRight: "3rem",
+      marginBottom: "2rem",
+    },
+    ".float-right": {
+      float: "right",
+      marginLeft: "3rem",
+      marginBottom: "2rem",
+    },
   },
   ".button-buttonWrapper": {
     textAlign: "center",
@@ -75,6 +85,7 @@ export const globalStyles = {
       marginBottom: "2rem",
     },
   },
+
   [DefaultTheme.breakpoints.down("md")]: {
     img: {
       width: "100%",
