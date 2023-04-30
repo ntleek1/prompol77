@@ -1,7 +1,7 @@
 import React from "react";
 // import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
-import { Box, Container } from "@mui/material";
+import { Box } from "@mui/material";
 import Layout from "@/layouts/Layout";
 import Routes from "@/routes";
 import { Meta } from "@/next-seo.config";

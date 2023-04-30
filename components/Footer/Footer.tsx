@@ -13,7 +13,12 @@ const Footer = () => {
           <Typography className="footer__Copyright">
             &copy; Все права защищены, «ПОЛ77», {new Date().getFullYear()}
           </Typography>
-          <Typography component={Link} href="#" className="footer__Sitemap">
+          <Typography
+            component={Link}
+            href="/sitemap.xml"
+            target="_blank"
+            className="footer__Sitemap"
+          >
             <AccountTreeIcon fontSize="small" />
             Карта сайта
           </Typography>

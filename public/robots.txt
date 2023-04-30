@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://floors.vercel.app
+
+# Sitemaps
+Sitemap: https://floors.vercel.app/sitemap.xml
