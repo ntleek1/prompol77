@@ -2,7 +2,7 @@ import React from "react";
 import Topbar from "@/components/Header/Topbar";
 import Navbar from "@/components/Header/Navbar";
 import Footer from "@/components/Footer/Footer";
-import { Box, useTheme } from "@mui/material";
+import Box from "@mui/material/Box";
 import useLayoutStyles from "./styles";
 
 interface LayoutProps {

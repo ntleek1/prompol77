@@ -1,38 +1,108 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ПолПромРФ: Производство промышленных полов
+Домен: [PolProm77.ru](https://www.polprom77.ru/)\
+Под капотом: [Next.js](https://nextjs.org/docs)\
+Деплой: [Vercel](https://vercel.com/)
 
-## Getting Started
+## ⚙️ Установка проекта:
+### Предустановка среды разработки
+1. Наличие [Git](https://www.polprom77.ru/) на компьютере (проверить в cmd: `git --version`).
+2. Наличие [Node.js](https://nodejs.org/en) на компьютере (проверить в cmd: `node --version`).
+3. Наличие [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable) на компьютере (проверить в cmd: `yarn --version`).
+4. Наличие [Visual Studio Code](https://code.visualstudio.com/) или другого редактора кода.
 
-First, run the development server:
+### Подключение к системе контроля версий
+1. Запустить редактор кода, создать проект в папке, например на диске `C:/projects/polprom77`.
+2. В редакторе кода открыть терминал, для этого можно нажать `Ctrl+~` (Visual Studio Code) или использовать CMD отдельно.
+3. Перейти в папку проекта с помощью команды: `cd C:/projects/polprom77`.
+4. Подключиться к удаленному репозиторию проекта и склонировать исходный код себе на компьютер: 
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+git clone https://github.com/eleave/floors.git .
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Установка зависимостей проекта
+После успешного подключения к репозиторию через GIT будут скачены файлы исходного кода.
+Теперь нужно установить зависимости для проекта, это может занять некоторое время.
+Здесь же в терминале выполнить следующую команду:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+yarn install
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### Установка плагинов для Visual Studio Code
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Перейти на вкладку "Расширения" (`Ctrl+Shift+X`) и установить рекомендуемые плагины:
+- ESLint (очень желательно)
+- Prettier (очень желательно)
+- Image preview
+- MDX
+- MUI Snippets
+- GitLens
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🚀 Запуск проекта:
+После установки проекта запустить команду в терминале в директории проекта:
 
-## Learn More
+```bash
+yarn dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Это запускает локальный сервер и процесс локальной разработки.\
+Нужно открыть [http://localhost:3000](http://localhost:3000) в браузере, чтобы увидеть сайт.\
+Теперь можно работать. При правке файлов в проекте браузер будет автоматически обновлять изменения на странице.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Структура проекта
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **components** - папка содержит веб-компоненты и HTML секций страниц.
+- **data** - содержит все редактируемые данные, статьи в формате MDX (Markdown).
+- **hooks** - хуки, нужны как прослойка между данными и компонентами, здесь содержится сложная логика приложения.
+- **layouts** - общие HTML шаблоны, который содержат хедер, футер и другие статические части сайта.
+- **lib** - дополнительные большие отдельные библиотеки и их логика для проекта.
+- **pages** - страницы сайта (подробнее о том как управлять страницами в [Next.js Routing](https://nextjs.org/docs/routing/introduction)).
+- **public** - содержит публичные данные, картинки, фавиконку, robot.txt, sitemap.xml.
+- **styles** - глобальные стили, сейчас мы не используем их.
+- **themes** - все стили для компонентов и страниц, а также темы устанавливаются здесь.
 
-## Deploy on Vercel
+### SEO оптимизация
+- **next-seo.config.ts** - в корне проекта отвечает за настройки SEO, здесь же расположены мета данные для мета тегов.
+- **next-sitemap.config.js** - в корне проекта отвечает за настройки генерации Sitemap, генерация происходит автоматически.
+- **data** - здесь редактируются конент: текста и статьи для сайта
+- **public** - здесь можно редактировать robot.txt и добавлять любые другие публичные файлы
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 💾 Сохранение и отправка изменений
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Используется простая и гибкая система контроля версий, поэтому при внесении изменений следует быть внимательными, тщательно тестировать их на локальной машине перед отправкой в продакшен.
+
+Если в редакторе кода не установлены плагины ESLint и Prettier, перед выполнением действий введите следующую команду в терминал:
+```bash
+yarn lint:fix && yarn prettier:fix
+```
+
+Команда запускает линтер и форматирование кода. Если их не выполнить, изменения не будут отправлены в продакшен.\
+Если плагины установлены, изменения применяются автоматически при сохранении файла и эту команду вызывать не нужно.
+
+### Порядок фиксации и отправки изменений
+
+1. Откройте панель Управления Исходным Кодом, нажав `Ctrl+Shift+G G` (сначала комбинацию клавиш, затем еще раз отдельно G).
+2. Изучите список измененных файлов. Можно кликнуть на файлы и сравнить их состояние ДО и ПОСЛЕ изменений, чтобы убедиться в правильности внесенных правок.
+3. Чтобы одобрить и добавить изменения в файлы, нажмите на иконку с плюсом.
+4. Введите сообщение, кратко и ясно описывающее внесенные изменения. Каждое изменение сохраняется и фиксируется в системе контроля версий проекта, и все участники разработки видят это сообщение. Важно, чтобы оно точно и лаконично отражало суть изменений для понятной и читаемой истории всей команды разработки.
+5. Нажмите на кнопку ниже, чтобы "закоммитить" (подтвердить) изменения.
+6. В заключение, нажмите на кнопку "Запушить" (отправить), чтобы изменения были отправлены на деплой в продакшен.
+
+Если вы используете другой редактор кода, фиксация и отправка изменений могут быть выполнены через терминал. Введите следующие команды поочередно:
+
+```bash
+git add .
+git commit -m "Обновлен заголовок статьи для Полимерных полов"
+git push
+```
+
+### Результаты обновления на продакшене
+
+Проверить произошла ли успешно выкладка изменений на продакшен можно на GitHub в разделе Deployment:\
+https://github.com/eleave/floors/deployments
+
+Здесь находится история обновлений и развертывания изменений на продакшене.\
+Если зеленый цвет, значит изменения активны и были успешно выложены.\
+Если красный цвет, значит произошла ошибка и изменения не попали на продакшен.\
+Если желтый цвет, значит изменения в процессе построения и нужно подождать немного.

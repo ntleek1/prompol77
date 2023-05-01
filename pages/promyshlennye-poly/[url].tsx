@@ -32,7 +32,8 @@ const ServiceViewPage = ({ mdxSource }) => {
               flexDirection="column"
               gap={3}
               component="article"
-              py={4}>
+              py={4}
+            >
               <MDXRemote {...mdxSource} components={mdxComponents} />
             </Box>
           </Container>
