@@ -91,6 +91,7 @@ const Document = () => {
           content="/images/favicon/ms-icon-144x144.png"
         />
         <meta name="theme-color" content="#ffffff" />
+        <meta name="yandex-verification" content="0cacfcd249953d2f" />
       </Head>
       <body>
         <Main />
