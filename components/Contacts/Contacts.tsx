@@ -103,7 +103,7 @@ const Contacts = () => {
             <Typography sx={{ marginRight: 5 }}>
               141006, МО, г. Мытищи, Шараповский проезд, д. 1Б, офис 205
             </Typography>
-            <Button
+            {/* <Button
               variant="contained"
               color="error"
               startIcon={<PlaceIcon />}
@@ -112,10 +112,10 @@ const Contacts = () => {
               target="_blank"
             >
               Смотреть на Яндекс Картах
-            </Button>
+            </Button> */}
           </Box>
 
-          <Box>
+          {/* <Box>
             <Card
               sx={{
                 borderRadius: "10px",
@@ -132,7 +132,7 @@ const Contacts = () => {
                 }}
               />
             </Card>
-          </Box>
+          </Box> */}
 
           {/* <Typography variant="h3" sx={ContactsHeaderCSS}>
             Реквизиты компании
