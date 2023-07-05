@@ -1,9 +1,17 @@
 import React from "react";
 import Link from "next/link";
-import { Box, Container, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardMedia,
+  Container,
+  Typography,
+} from "@mui/material";
 import PhoneIcon from "@mui/icons-material/Phone";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import EmailIcon from "@mui/icons-material/Email";
+import PlaceIcon from "@mui/icons-material/Place";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import useContactsStyles from "./styles";
 
@@ -85,6 +93,45 @@ const Contacts = () => {
               <Box component="hr" className="contacts-Line" />
               <Typography fontWeight={600}>Выходные дни</Typography>
             </Box>
+          </Box>
+
+          <Typography variant="h3" mt={3}>
+            Адрес и схема проезда
+          </Typography>
+
+          <Box display="flex" alignItems="center">
+            <Typography sx={{ marginRight: 5 }}>
+              141006, МО, г. Мытищи, Шараповский проезд, д. 1Б, офис 205
+            </Typography>
+            <Button
+              variant="contained"
+              color="error"
+              startIcon={<PlaceIcon />}
+              size="small"
+              href="https://yandex.ru/maps/-/CDXIB7q"
+              target="_blank"
+            >
+              Смотреть на Яндекс Картах
+            </Button>
+          </Box>
+
+          <Box>
+            <Card
+              sx={{
+                borderRadius: "10px",
+                boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.25)",
+              }}
+            >
+              <CardMedia
+                component="img"
+                image="/images/map.jpg"
+                alt="Карта"
+                sx={{
+                  width: "100%",
+                  height: "auto",
+                }}
+              />
+            </Card>
           </Box>
 
           {/* <Typography variant="h3" sx={ContactsHeaderCSS}>
