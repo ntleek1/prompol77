@@ -7,7 +7,7 @@ import { DefaultSeoProps } from "next-seo";
 import Routes from "./routes";
 
 export const CompanyName = "ПолПромРФ";
-export const DefaultPageTitle = "Промышленные полы, промышленные наливные полы от компании полпром";
+export const DefaultPageTitle = "Промышленные полы, промышленные бетонные полы от компании полпром";
 
 const Config: DefaultSeoProps = {
   titleTemplate: `%s - ${CompanyName}`,
