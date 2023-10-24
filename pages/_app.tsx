@@ -5,6 +5,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { LightTheme } from "@/themes";
 import { DefaultSeo } from "next-seo";
 import SEO from "../next-seo.config";
+import { YandexMetricaProvider } from "next-yandex-metrica";
 
 const App = ({ Component, pageProps }) => {
   return (
@@ -14,7 +15,17 @@ const App = ({ Component, pageProps }) => {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Component {...pageProps} />
+      <YandexMetricaProvider
+        tagID={93456435}
+        initParameters={{
+          clickmap: true,
+          trackLinks: true,
+          accurateTrackBounce: true,
+          webvisor: true,
+        }}
+      >
+        <Component {...pageProps} />
+      </YandexMetricaProvider>
     </ThemeProvider>
   );
 };
