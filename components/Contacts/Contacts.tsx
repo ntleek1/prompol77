@@ -50,7 +50,7 @@ const Contacts = () => {
               <Box component="hr" className="contacts-Line" />
               <Typography
                 component={Link}
-                href="https://api.whatsapp.com/send?phone=79857271414"
+                href="https://api.whatsapp.com/send?phone=79775002266"
                 fontWeight={600}
                 color="green"
               >
