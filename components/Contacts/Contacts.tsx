@@ -35,11 +35,11 @@ const Contacts = () => {
               <Box component="hr" className="contacts-Line" />
               <Typography
                 component={Link}
-                href="tel:+79857271414"
+                href="tel:+79775002266"
                 fontWeight={600}
                 color="inherit"
               >
-                +7 (985) 727-14-14
+                +7 (977) 500-22-66
               </Typography>
             </Box>
             <Box className="contacts-FlexBox" color="green">
@@ -54,7 +54,7 @@ const Contacts = () => {
                 fontWeight={600}
                 color="green"
               >
-                +7 (985) 727-14-14
+                +7 (977) 500-22-66
               </Typography>
             </Box>
           </Box>
@@ -67,11 +67,11 @@ const Contacts = () => {
             <Box component="hr" className="contacts-Line" />
             <Typography
               component={Link}
-              href="mailto:info@pol77.ru"
+              href="mailto:9775002266@pol77.ru"
               fontWeight={600}
               color="inherit"
             >
-              9857271414@mail.ru
+              9775002266@mail.ru
             </Typography>
           </Box>
 
