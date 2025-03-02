@@ -42,7 +42,7 @@ const Topbar = () => {
           <MailIcon className="topbar__mailIcon" />
           <Typography
             component={Link}
-            href="mailto:9857271414@mail.ru"
+            href="mailto:9775002266@mail.ru"
             variant="small"
             className="topbar__mailLink"
           >
@@ -51,11 +51,11 @@ const Topbar = () => {
           <PhoneIcon className="topbar__phoneIcon" />
           <Typography
             component={Link}
-            href="tel:+79857271414"
+            href="tel:+79775002266"
             variant="small"
             className="topbar__phoneLink"
           >
-            +7 (985) 727-14-14
+            +7 (977) 500-22-66
           </Typography>
         </Box>
       </Container>
