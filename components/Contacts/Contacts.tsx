@@ -95,7 +95,7 @@ const Contacts = () => {
             </Box>
           </Box>
 
-          <Typography variant="h3" mt={3}>
+          <!--<Typography variant="h3" mt={3}>
             Адрес и схема проезда
           </Typography>
 
@@ -113,7 +113,7 @@ const Contacts = () => {
             >
               Смотреть на Яндекс Картах
             </Button> */}
-          </Box>
+          </Box>-->
 
           {/* <Box>
             <Card
