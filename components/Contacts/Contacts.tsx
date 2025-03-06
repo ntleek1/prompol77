@@ -95,13 +95,13 @@ const Contacts = () => {
             </Box>
           </Box>
 
-          <!--<Typography variant="h3" mt={3}>
+          <<Typography variant="h3" mt={3}>
             Адрес и схема проезда
           </Typography>-->
 
           <Box display="flex" alignItems="center">
             <Typography sx={{ marginRight: 5 }}>
-              141006, МО, г. Мытищи, Шараповский проезд, д. 1Б, офис 205
+             __
             </Typography>
             {/* <Button
               variant="contained"
@@ -113,7 +113,7 @@ const Contacts = () => {
             >
               Смотреть на Яндекс Картах
             </Button> */}
-          </Box>-->
+          </Box>
 
           {/* <Box>
             <Card
