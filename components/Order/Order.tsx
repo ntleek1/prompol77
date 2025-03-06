@@ -105,7 +105,7 @@ const Order: React.FC<OrderProps> = ({ size }) => {
         variant="contained"
         startIcon={<EmailIcon />}
         // onClick={handleClickOpen}
-        href="mailto:9857271414@mail.ru"
+        href="mailto:9775002266@mail.ru"
         size={size}
       >
         Отправить заявку
