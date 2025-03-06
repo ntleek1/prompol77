@@ -67,7 +67,7 @@ const Contacts = () => {
             <Box component="hr" className="contacts-Line" />
             <Typography
               component={Link}
-              href="mailto:9775002266@pol77.ru"
+              href="mailto:9775002266@mail.ru"
               fontWeight={600}
               color="inherit"
             >
