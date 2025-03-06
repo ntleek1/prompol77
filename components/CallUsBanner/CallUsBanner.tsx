@@ -48,23 +48,23 @@ const CallUsBanner = () => {
               <Box>
                 <LocalPhoneIcon fontSize="medium" color="primary" />
                 <Typography
-                  href="tel:+79857271414"
+                  href="tel:+79775002266"
                   variant="h5"
                   component={Link}
                   color="inherit"
                 >
-                  +7 (985) 727-14-14
+                  +7 (977) 500-22-66
                 </Typography>
               </Box>
               <Box>
                 <MailOutlineIcon fontSize="medium" color="primary" />
                 <Typography
-                  href="mailto:9857271414@mail.ru"
+                  href="mailto:9775002266@mail.ru"
                   variant="h5"
                   component={Link}
                   color="inherit"
                 >
-                  9857271414@mail.ru
+                  9775002266@mail.ru
                 </Typography>
               </Box>
             </Box>
