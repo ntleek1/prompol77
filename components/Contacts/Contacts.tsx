@@ -97,7 +97,7 @@ const Contacts = () => {
 
           <!--<Typography variant="h3" mt={3}>
             Адрес и схема проезда
-          </Typography>
+          </Typography>-->
 
           <Box display="flex" alignItems="center">
             <Typography sx={{ marginRight: 5 }}>
