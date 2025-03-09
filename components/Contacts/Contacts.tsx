@@ -101,7 +101,7 @@ const Contacts = () => {
 
           <Box display="flex" alignItems="center">
             <Typography sx={{ marginRight: 5 }}>
-              141006, МО, г. Мытищи, Шараповский проезд, д. 1Б, офис 205
+            _
             </Typography>
             {/* <Button
               variant="contained"
