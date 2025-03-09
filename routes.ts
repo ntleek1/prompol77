@@ -17,7 +17,7 @@ export const MenuNav = [
   },
   {
     anchor: "/#portfolio",
-    label: "Наши работы",
+    label: "Выполненные работы",
     isVisible: true,
   },
   {
