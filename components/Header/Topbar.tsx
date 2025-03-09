@@ -31,7 +31,7 @@ const Topbar = () => {
         <Box className="topbar__phones">
           <WhatsAppIcon className="topbar__whatsAppIcon" />
           <Link
-            href="https://api.whatsapp.com/send?phone=79857271414"
+            href="https://api.whatsapp.com/send?phone=79775002266"
             target="_blank"
             className="topbar__whatsAppLink"
           >
