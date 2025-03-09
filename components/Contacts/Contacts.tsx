@@ -67,7 +67,7 @@ const Contacts = () => {
             <Box component="hr" className="contacts-Line" />
             <Typography
               component={Link}
-              href="mailto:9775002266@mail.ru"
+              href="mailto:9775002266@pol77.ru"
               fontWeight={600}
               color="inherit"
             >
@@ -95,13 +95,13 @@ const Contacts = () => {
             </Box>
           </Box>
 
-          <<Typography variant="h3" mt={3}>
+          <Typography variant="h3" mt={3}>
             Адрес и схема проезда
-          </Typography>-->
+          </Typography>
 
           <Box display="flex" alignItems="center">
             <Typography sx={{ marginRight: 5 }}>
-             __
+              141006, МО, г. Мытищи, Шараповский проезд, д. 1Б, офис 205
             </Typography>
             {/* <Button
               variant="contained"
