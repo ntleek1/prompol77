@@ -5,6 +5,18 @@
     "url": "betonnye-poly-s-toppingom",
     "imageSrc": "/images/services/betonnye-poly-s-toppingom.jpg"
   },
+    {
+    "title": "Полимерные полы",
+    "description": "Расчёт сметы за м2",
+    "url": "drugie-poly",
+    "imageSrc": "/images/services/drugie-poly.jpg"
+  },
+    {
+    "title": "Полимерцементные полы",
+    "description": "Компания «ПолПром РФ» — устройство промышленных полов в Москве, полимерцементные полы в промышленных, офисных и жилых помещениях. Телефон: +7 (977) 500-22-66",
+    "url": "poly-polimercementnye",
+    "imageSrc": "/images/services/poly-polimercementnye.jpg"
+  },
   {
     "title": "Наливные полы для парковок",
     "description": "Компания «ПолПром РФ» — устройство промышленных бетонных полов в Москве, наливные полы для парковок. Телефоны: +7 (977) 500-22-66",
@@ -60,12 +72,6 @@
     "imageSrc": "/images/services/pishchevaya-promyshlennost.jpg"
   },
   {
-    "title": "Полимерцементные полы, полимерцементное покрытие пола в компании ПолПром РФ",
-    "description": "Компания «ПолПром РФ» — устройство промышленных полов в Москве, полимерцементные полы в промышленных, офисных и жилых помещениях. Телефон: +7 (977) 500-22-66",
-    "url": "poly-polimercementnye",
-    "imageSrc": "/images/services/poly-polimercementnye.jpg"
-  },
-  {
     "title": "Полы для помещений с тяжёлыми условиями эксплуатации",
     "description": "Компания «ПолПром РФ» — устройство промышленных бетонных полов в Москве, эти полы изготовлены из прочных и устойчивых материалов, имеют высокую степень износостойкости.",
     "url": "tyazhyolye-usloviya-ehkspluatacii",
@@ -76,11 +82,5 @@
     "description": "Компания «ПолПром РФ» — устройство промышленных полов в Москве, метилметакрилатные полы в промышленных, офисных и жилых помещениях. Телефон: +7 (977) 500-22-66",
     "url": "poly-metilmetakrilatnye",
     "imageSrc": "/images/services/poly-metilmetakrilatnye.jpg"
-  },
-  {
-    "title": "Полимерные полы",
-    "description": "Другие полы могут быть изготовлены из различных материалов, таких как ламинат, линолеум, ковровые покрытия и т.д",
-    "url": "drugie-poly",
-    "imageSrc": "/images/services/drugie-poly.jpg"
   }
 ]
