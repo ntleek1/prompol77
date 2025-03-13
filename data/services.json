@@ -89,4 +89,10 @@
     "url": "tyazhyolye-usloviya-ehkspluatacii",
     "imageSrc": "/images/services/tyazhyolye-usloviya-ehkspluatacii.jpg"
   }
+    {
+    "title": "Ремонт полов",
+    "description": "Компания «ПолПром РФ» — устройство промышленных бетонных полов в Москве, эти полы изготовлены из прочных и устойчивых материалов, имеют высокую степень износостойкости.",
+    "url": "remont-polov",
+    "imageSrc": "/img/rem2.jpg"
+  }
 ]
