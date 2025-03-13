@@ -28,15 +28,15 @@ const Service: React.FC<ServiceProps> = ({ headerVariant = "h2", limit }) => {
         <Box className="service-GridWrapper">
           <Grid container spacing={{ xs: 1, md: 2 }}>
             {data.map(({ title, description, url, imageSrc }, index) => (
-              <Grid xs={6} key={index}>
-                <Card
-                  title={title}
-                  description={description}
-                  link={generateHref(url, Routes.Service)}
-                  imageSrc={imageSrc}
-                  sx={{ height: "100%" }}
-                />
-              </Grid>
+             <Grid xs={12} sm={6} key={index}>
+  <Card
+    title={title}
+    description={description}
+    link={generateHref(url, Routes.Service)}
+    imageSrc={imageSrc}
+    sx={{ height: "100%" }}
+  />
+</Grid>
             ))}
           </Grid>
         </Box>
