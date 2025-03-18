@@ -67,8 +67,8 @@ const Hero = () => {
             </Box>
           </Box>
 
-          <Box className="hero__buttonsGroup">
-            <Button
+         <Box className="hero__buttonsGroup">
+{/*              <Button
               href="#service"
               variant="contained"
               color="error"
@@ -76,8 +76,8 @@ const Hero = () => {
               startIcon={<PlaylistAddCheckOutlinedIcon />}
             >
               Выбрать вид полов
-            </Button>
-            <Button
+            </Button> */}
+{/*             <Button
               href="#portfolio"
               variant="contained"
               color="primary"
@@ -86,7 +86,7 @@ const Hero = () => {
             >
               Смотреть готовые работы
             </Button>
-          </Box>
+          </Box> */}
         </Box>
       </Container>
 
