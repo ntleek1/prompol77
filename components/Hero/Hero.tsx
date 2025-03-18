@@ -36,10 +36,10 @@ const Hero = () => {
               <VerifiedIcon color="success" fontSize="large" />
               <Box>
                 <Typography variant="h5" component="p" fontWeight={400}>
-                  Гарантия
+                  Гарантии на полы
                 </Typography>
                 <Typography variant="h2" component="p">
-                  от 2 лет
+                  от 2 лет и выше
                 </Typography>
               </Box>
             </Box>
