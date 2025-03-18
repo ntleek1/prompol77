@@ -67,8 +67,8 @@ const Hero = () => {
             </Box>
           </Box>
 
-         <Box className="hero__buttonsGroup">
-{/*              <Button
+         {/* <Box className="hero__buttonsGroup">
+             <Button
               href="#service"
               variant="contained"
               color="error"
