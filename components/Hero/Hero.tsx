@@ -90,7 +90,7 @@ const Hero = () => {
         </Box>
       </Container>
 
-      {!isMobile ? (
+{/*       {!isMobile ? (
         <Box className="hero__scrollDown">
           <Link href="#service" scroll={false}>
             <Typography
@@ -104,7 +104,7 @@ const Hero = () => {
             <ArrowDownwardIcon fontSize="large" />
           </Link>
         </Box>
-      ) : null}
+      ) : null} */}
     </Box>
   );
 };
