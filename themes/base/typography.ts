@@ -16,7 +16,6 @@ export const typography = {
   body1: {
     fontSize: DFontSize * 0.875,
     fontWeight: 400,
-    text-align: justify,
     
   },
   body2: {
@@ -25,7 +24,6 @@ export const typography = {
     [DefaultTheme.breakpoints.down("md")]: {
       fontSize: DFontSize * 0.875,
       fontWeight: 400,
-      text-align: justify,
     },
   },
   h1: {
