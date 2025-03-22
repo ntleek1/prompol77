@@ -11,6 +11,7 @@ export const globalStyles = {
     overflowX: "hidden",
     overflowY: "scroll !important",
     padding: "0 !important",
+    textAlign: "justify",
   },
   main: {
     minHeight: "100vh",
