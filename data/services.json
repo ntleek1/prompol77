@@ -24,10 +24,10 @@
     "imageSrc": "/images/services/treb3.jpg"
   },
     {
-    "title": "Метилметакрилатные полы",
-    "description": "Начало эксплуатации через 2 часа. Укладка при минусовых температурах. Высокая стоимость.",
-    "url": "poly-metilmetakrilatnye",
-    "imageSrc": "/images/services/poly-metilmetakrilatnye/metil.jpg"
+    "title": "Полы для пищевой промышленности",
+    "description": "Промышленные полы на объектах пищевой промышленности должны полностью отвечать нормам санитарно-эпидемиологического надзора, требования к ним очень серьёзные.",
+    "url": "pishchevaya-promyshlennost",
+    "imageSrc": "/images/services/pishchevaya-promyshlennost.jpg"
   },
     {
     "title": "Форма технического задания, ремонт существующих полов",
@@ -53,11 +53,11 @@
     "url": "proizvodstvennye-pomeshcheniya",
     "imageSrc": "/images/services/prom3.jpg"
   },
-    {
-    "title": "Полы для пищевой промышленности",
-    "description": "Промышленные полы на объектах пищевой промышленности должны полностью отвечать нормам санитарно-эпидемиологического надзора, требования к ним очень серьёзные.",
-    "url": "pishchevaya-promyshlennost",
-    "imageSrc": "/images/services/pishchevaya-promyshlennost.jpg"
+  {
+    "title": "Метилметакрилатные полы",
+    "description": "Начало эксплуатации через 2 часа. Укладка при минусовых температурах. Высокая стоимость.",
+    "url": "poly-metilmetakrilatnye",
+    "imageSrc": "/images/services/poly-metilmetakrilatnye/metil.jpg"
   },
   {
     "title": "Эпоксидные полимерные полы",
