@@ -99,8 +99,8 @@ const Contacts = () => {
             Адрес и схема проезда
           </Typography>
 
-          <Box display="flex" alignItems="center">
-           Киевское шоссе, 22-й километр, 4, стр. 2, корп. Г, район Солнцево, Западный административный округ, Москва
+          <Box display="flex" alignItems="center"> Киевское шоссе, 22-й километр, 4, стр. 2, корп. Г, район Солнцево, Западный административный округ, Москва
+          
             </Typography>
             {/* <Button
               variant="contained"
