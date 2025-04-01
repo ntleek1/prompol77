@@ -11,7 +11,7 @@ const Footer = () => {
       <Container>
         <Box className="footer__Flexbox">
           <Typography className="footer__Copyright">
-            &copy; Все права защищены, «ПОЛ77», {new Date().getFullYear()}
+            &copy; Все права защищены, «Промпол77.РФ», {new Date().getFullYear()}
           </Typography>
           <Typography
             component={Link}
