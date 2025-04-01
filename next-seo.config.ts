@@ -6,18 +6,18 @@
 import { DefaultSeoProps } from "next-seo";
 import Routes from "./routes";
 
-export const CompanyName = "ПолПромРФ";
+export const CompanyName = "Промпол77.рф";
 export const DefaultPageTitle =
-  "Промышленные полы, промышленные бетонные полы от компании полпром";
+  "Промышленные полы, промышленные бетонные полы от компании Промпол";
 
 const Config: DefaultSeoProps = {
   titleTemplate: `%s - ${CompanyName}`,
   defaultTitle: DefaultPageTitle,
-  canonical: "https://floors.vercel.app/",
+  canonical: "https://prompol77.vercel.app/",
   openGraph: {
     type: "website",
     locale: "ru_RU",
-    url: "https://floors.vercel.app/",
+    url: "https://prompol77.vercel.app/",
     siteName: CompanyName,
   },
 };
@@ -27,14 +27,14 @@ export default Config;
 export const Meta = {
   [Routes.Home]: {
     title:
-      "Промышленные полы, промышленные бетонные полы от компании ПолПромРФ",
+      "Промышленные полы, промышленные бетонные полы от компании Промпол77.рф",
     header: "Производство промышленных полов",
     description:
       "Компания ПолПром РФ - это профессиональная команда, специализирующаяся в устройстве промышленных полов, для помещений с повышенными требованиями к износостойкости.",
   },
   [Routes.Service]: {
     title:
-      "Промышленные полы, промышленные наливные полы купить в компании ПолПром РФ",
+      "Промышленные полы, промышленные наливные полы купить в компании Промпол77.рф",
     header: "Виды промышленных полов",
     description:
       "Наши специалисты более 20 лет занимаются профессиональным производством промышленных полов различных видов и направленности. Если у Вас существует техническое задание – мы выполним его строго по прописанным в нём пунктам. Если его нет – поможем составить, подобрать лучшие для его выполнения материалы.",
