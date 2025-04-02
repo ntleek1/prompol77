@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://floors.vercel.app
+Host: https://prompol77.vercel.app
 
 # Sitemaps
-Sitemap: https://floors.vercel.app/sitemap.xml
+Sitemap: https://prompol77.vercel.app/sitemap.xml
