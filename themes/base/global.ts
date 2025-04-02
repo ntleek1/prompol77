@@ -16,6 +16,9 @@ export const globalStyles = {
   main: {
     minHeight: "100vh",
   },
+    title: {
+    textAlign: "left",
+  },
   section: {
     paddingTop: DefaultTheme.spacing(6),
     paddingBottom: DefaultTheme.spacing(6),
