@@ -16,7 +16,7 @@ const App = ({ Component, pageProps }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <YandexMetricaProvider
-        tagID={93456435}
+        tagID={100746374}
         initParameters={{
           clickmap: true,
           trackLinks: true,
