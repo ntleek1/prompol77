@@ -1,3 +1,4 @@
+<meta name="yandex-verification" content="95b2e16955acc9a7" />
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
