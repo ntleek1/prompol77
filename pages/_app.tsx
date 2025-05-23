@@ -24,15 +24,6 @@ const App = ({ Component, pageProps }) => {
           webvisor: true,
         }}
       >
-      <YandexMetricaProvider
-        tagID={93456435}
-        initParameters={{
-          clickmap: true,
-          trackLinks: true,
-          accurateTrackBounce: true,
-          webvisor: true,
-        }}
-      >
         <Component {...pageProps} />
       </YandexMetricaProvider>
     </ThemeProvider>
