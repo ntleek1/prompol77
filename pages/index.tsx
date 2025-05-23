@@ -1,3 +1,4 @@
+<meta name="yandex-verification" content="95b2e16955acc9a7" />
 import React from "react";
 import { NextSeo } from "next-seo";
 import Layout from "@/layouts/Layout";
