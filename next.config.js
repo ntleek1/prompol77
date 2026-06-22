@@ -16,9 +16,6 @@ const withMdx = require("@next/mdx")({
 });
 
 const nextConfig = {
-  output: 'export', 
-}
-{
   reactStrictMode: true,
   experimental: {
     scrollRestoration: true,
